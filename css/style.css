@@ -5,13 +5,6 @@ body { padding-top: 20px; padding-bottom: 40px; font-family: 'Merriweather', Geo
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: 'Merriweather', Georgia, Times; font-weight: 700;}
 
-hr {
-    border: none;
-    height: 10px;
-    /* Set the hr color */
-    color: red; /* old IE */
-    background-color: red; /* Modern Browsers */
-}
 
 blockquote p { font-size: 16px; line-height: 1.6em; }
 
@@ -100,4 +93,10 @@ pre.prettyprint { padding: 10px !important; margin: 40px; font-size: 12px;}
 	margin: 5px 15px 0px 0px;
 	font-family: 'Montserrat', Helvetica, sans-serif; }
 
-
+hr {
+    background-color: dimgrey;
+    color: dimgrey;
+    border: solid 2px dimgrey;
+    height: 5px;
+    width: 1000px;
+}
