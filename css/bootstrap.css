@@ -78,7 +78,7 @@ dfn {
 }
 
 hr {
-  height: 1;
+  height: 0;
   -moz-box-sizing: content-box;
        box-sizing: content-box;
 }
