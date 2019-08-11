@@ -94,8 +94,8 @@ pre.prettyprint { padding: 10px !important; margin: 40px; font-size: 12px;}
 	font-family: 'Montserrat', Helvetica, sans-serif; }
 
 hr {
-    background-color: dimgrey;
-    color: dimgrey;
-    border: solid 2px dimgrey;
-    height: 5px;
+    background-color: lightblue;
+    color: lightblue;
+    border: solid 2px lightblue;
+    height: 2px;
 }
