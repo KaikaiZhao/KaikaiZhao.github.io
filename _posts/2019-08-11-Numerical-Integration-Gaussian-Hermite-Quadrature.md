@@ -7,7 +7,7 @@ date: 2019-08-11
 
 ### Why do we need Gaussian-Hermite Quadrature?
 <p>
-Speaking of Bayesian machine learning, you may have to deal with non-Gaussian likelihoods which require some approximation of the posterior as the prior is non-conjugate. 
+Speaking of Bayesian machine learning, you may have to deal with non-Gaussian likelihoods, say Poisson likelihood, which require some approximation of the posterior as the prior is non-conjugate. 
 </p>
 <p>
 In the case of variational inference, when we compute the variational evidence lower bound(ELBO), the first term of ELBO usually represents the goodness of fit for a certain model, that is to say, we need to calculate the expectation of log likelihood w.r.t the variational distribution. Generally, our variational distribution is easy to handle, like Gaussian distribution. 
@@ -66,6 +66,7 @@ E[h(y)]=\int_{-\infty}^{+\infty} \frac{1}{\sqrt{\pi}} \exp \left(-x^{2}\right) h
 leading to:
 \begin{equation}
 E[h(y)] \approx \frac{1}{\sqrt{\pi}} \sum_{i=1}^{n} w_{i} h\left(\sqrt{2} \sigma x_{i}+\mu\right)
+\label{eq:Exp-Hermite}
 \end{equation}
 
 ### Implementation
@@ -75,5 +76,13 @@ In this section, we introduce how to get approximate value of the aformentioned 
 x=\frac{z}{\sqrt{2}}
 \end{equation}
 
-Then we obtain
+After $$x$$ is substitute with $$z$$ in Eq. \eqref{eq:Exp-Hermite}, we obtain
+\begin{equation}
+E[h(y)]=\int_{-\infty}^{+\infty} \frac{1}{\sqrt{2\pi}} \exp \left(-z^{2}\right) h(\sigma z+\mu) d z
+\end{equation}
 
+leading to:
+\begin{equation}
+E[h(y)] \approx \frac{1}{\sqrt{2\pi}} \sum_{i=1}^{n} w_{i} h\left(\sqrt{2} \sigma z_{i}+\mu\right)
+\label{eq:Exp-Hermite-z}
+\end{equation}
