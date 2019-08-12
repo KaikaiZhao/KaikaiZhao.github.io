@@ -23,12 +23,13 @@ The above is equivalent to calculate
 
 \begin{equation}
 \int_{-\infty}^{\infty} \frac{1}{\sigma \sqrt{2\pi}} h(y) \exp \left(-\frac{(y-\mu)^{2}}{2 \sigma^{2}}\right) dy
+\label{eq:expect}
 \end{equation}
 
 
 
 <p>
-In many cases, the closed-form of data fit term is not available because of the non-conjugacy between our likelihood and prior. Then we need approximation for calculating the expectation and Gaussian-Hermite Quadrature is a good tool for this.
+In many cases, the closed-form of data fit term, e.g. \eqref{eq:expect}, is not available because of the non-conjugacy between our likelihood and prior. Then we need approximation for calculating the expectation and Gaussian-Hermite Quadrature is a good tool for this.
 </p>
 
  is  In terms of variational inference experienced the case of calculating the expectation of  can use an inline formula $$\forall x \in R$$ like this one \eqref{eq:sample} \eqref{eq:sample1}
