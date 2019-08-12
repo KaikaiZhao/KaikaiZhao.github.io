@@ -87,10 +87,10 @@ E[h(y)] \approx \frac{1}{\sqrt{2\pi}} \sum_{i=1}^{n} w_{i} h\left(\sigma z_{i}+\
 \label{eq:Exp-Hermite-z}
 \end{equation}
 
-Now I present an example to demonstrate how to use this scipy function. We can consider a binary classification task and assume that the latent distribution of the prediction for a test point we've got is $$p(f_*)=N(f_*|u_*,V_*)$$. Then if we use sigmoid function $$\sigma(f_*)=\frac{1}{1+e^f_*}$$, the prediction is supposed to be
+Now I present an example to demonstrate how to use this scipy function. We can consider a binary classification task and assume that the latent distribution of the prediction for a test point we've got is $$p(f_*)=N(f_*|u_*,v_*)$$. Then if we use sigmoid function $$\sigma(f_*)=\frac{1}{1+e^f_*}$$, the prediction is supposed to be
 \begin{equation}
 \begin{aligned}
-p\left(y_{*}=1 | \mathbf{x}_{*}, u_*, V_*\right) &\approx \int \sigma\left(f_{*}\right) p\left(f_{*} | \mathbf{x}_{*}, u_*, V_*\right) d f_{*}\\
+p\left(y_{*}=1 | \mathbf{x}_{*}, u_*, v_*\right) &\approx \int \sigma\left(f_{*}\right) p\left(f_{*} | \mathbf{x}_{*}, u_*, v_*\right) d f_{*}\\
 &\approx\frac{1}{\sqrt{2\pi}} \sum_{j=1}^{n} w_{j}\sigma(\sqrt{v_*} z_j+u_*)
 \end{aligned}
 \end{equation}
