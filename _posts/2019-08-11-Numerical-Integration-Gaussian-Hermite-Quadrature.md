@@ -71,7 +71,7 @@ E[h(y)] \approx \frac{1}{\sqrt{\pi}} \sum_{i=1}^{n} w_{i} h\left(\sqrt{2} \sigma
 
 ### Implementation
 
-In this section, we introduce how to get approximate value of the aformentioned integral through Gaussian-Hermite Quadrature. In this blog, we use the scipy function *roots_hermitenorm* to get the sample points $$x_i$$ and weights $$w_i$$ which employs $$\int_{-\infty}^{+\infty} e^{-\frac{x^{2}}{2}}f(x)dx$$ in the integrand not the above $$\int_{-\infty}^{+\infty} e^{-x^{2}} f(x) dx$$, so we change variables as follows
+In this section, we introduce how to get approximate value of the aformentioned integral through Gaussian-Hermite Quadrature. In this blog, we use the scipy function [*roots_hermitenorm*](https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.roots_hermitenorm.html) to get the sample points $$x_i$$ and weights $$w_i$$ which employs $$\int_{-\infty}^{+\infty} e^{-\frac{x^{2}}{2}}f(x)dx$$ in the integrand not the above $$\int_{-\infty}^{+\infty} e^{-x^{2}} f(x) dx$$, so we change variables as follows
 \begin{equation}
 x=\frac{z}{\sqrt{2}}
 \end{equation}
