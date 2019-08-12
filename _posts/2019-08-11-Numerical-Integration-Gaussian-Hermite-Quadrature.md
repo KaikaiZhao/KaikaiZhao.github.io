@@ -5,6 +5,7 @@ description: How to calculate the expectation of a function w.r.t a normal distr
 date: 2019-08-11
 ---
 
+## Why do we need Gaussian-Hermite Quadrature?
 <p>
 Speaking of Bayesian machine learning, you may have to deal with non-Gaussian likelihoods which require some approximation of the posterior as the prior is non-conjugate. 
 </p>
@@ -26,7 +27,7 @@ The above is equivalent to calculate
 \label{eq:expect}
 \end{equation}
 
-
+## The mathematical formulations
 
 <p>
 In many cases, the closed-form of data fit term, e.g. \eqref{eq:expect}, is not available because of the non-conjugacy between our likelihood and prior. Then we need approximation for calculating the expectation and Gaussian-Hermite Quadrature is a good tool for this.
@@ -46,21 +47,8 @@ The basic idea is
 \int_{-\infty}^{+\infty} e^{-x^{2}} f(x) d x \approx \sum_{i=1}^{n} w_{i} f\left(x_{i}\right)
 \end{equation}
 
-where $$n$$ is the number of sample points used. The $$x_i$$ are the roots of the physicists' version of the Hermite polynomial $$Hn(x) (i = 1,2,\ldots,n)$$, and the associated weights $$w_i$$ are given by
+where $$n$$ is the number of sample points used. The $$x_i$$ are the roots of the physicists' version of the Hermite polynomial $$H_n(x) (i = 1,2,\ldots,n)$$, and the associated weights $$w_i$$ are given by
 \begin{equation}
 w_{i}=\frac{2^{n-1} n ! \sqrt{\pi}}{n^{2}\left[H_{n-1}\left(x_{i}\right)\right]^{2}}
 \end{equation}
 
-\begin{equation}
-  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
-  \label{eq:sample}
-\end{equation}
-
-\begin{equation}
-M = \left( \begin{array}{ccc}
-x_{11} & x_{12} & \ldots \\
-x_{21} & x_{22} & \ldots \\
-\vdots & \vdots & \ldots \\
-\end{array} \right)
-\label{eq:sample1}
-\end{equation}
