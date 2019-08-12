@@ -7,20 +7,20 @@ date: 2019-08-11
 
 you can use an inline formula $$\forall x \in R$$ like this one \eqref{eq:sample}
 
-\\begin{equation}
+$$
 M = \left( \begin{array}{ccc}
 x_{11} & x_{12} & \ldots \\
 x_{21} & x_{22} & \ldots \\
 \vdots & \vdots & \ldots \\
 \end{array} \right)
 \label{eq:sample}
-\\end{equation}
+$$
 
-\begin{equation}\nonumber
+$$\nonumber
 M = \left( \begin{array}{ccc}
 x_{11} & x_{12} & \ldots \\
 x_{21} & x_{22} & \ldots \\
 \vdots & \vdots & \ldots \\
 \end{array} \right)
 \label{eq:sample1}
-\end{equation}
+$$
