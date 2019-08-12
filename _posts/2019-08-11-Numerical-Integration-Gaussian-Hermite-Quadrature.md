@@ -53,4 +53,27 @@ where $$n$$ is the number of sample points used. The $$x_i$$ are the roots of th
 w_{i}=\frac{2^{n-1} n ! \sqrt{\pi}}{n^{2}\left[H_{n-1}\left(x_{i}\right)\right]^{2}}
 \end{equation}
 
-As we can see that Eq. \eqref{eq:expect} does not exactly correspond to the Hermite polynomial, i.e. Eq. \eqref{eq:expect}, we need to change variables:
+As we can see that Eq. \eqref{eq:expect} does not exactly correspond to the Hermite polynomial, i.e. Eq. \eqref{eq:Hermite}, we need to change variables:
+\begin{equation}
+x=\frac{y-\mu}{\sqrt{2} \sigma} \Leftrightarrow y=\sqrt{2} \sigma x+\mu
+\end{equation}
+
+Then we obtain
+\begin{equation}
+E[h(y)]=\int_{-\infty}^{+\infty} \frac{1}{\sqrt{\pi}} \exp \left(-x^{2}\right) h(\sqrt{2} \sigma x+\mu) d x
+\end{equation}
+
+leading to:
+\begin{equation}
+E[h(y)] \approx \frac{1}{\sqrt{\pi}} \sum_{i=1}^{n} w_{i} h\left(\sqrt{2} \sigma x_{i}+\mu\right)
+\end{equation}
+
+### Implementation
+
+In this section, we introduce how to get approximate value of the aformentioned integral through Gaussian-Hermite Quadrature. In this blog, we use the scipy function *roots_hermitenorm* to get the sample points $$x_i$$ and weights $$w_i$$ which employs $$\int_{-\infty}^{+\infty} e^{-\frac{x^{2}}{2}}f(x)dx$$ in the integrand not the above $$\int_{-\infty}^{+\infty} e^{-x^{2}} f(x) dx$$, so we change variables as follows
+\begin{equation}
+x=\frac{z}{\sqrt{2}}
+\end{equation}
+
+Then we obtain
+
