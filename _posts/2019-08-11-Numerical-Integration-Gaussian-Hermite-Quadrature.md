@@ -5,18 +5,18 @@ description: How to calculate the expectation of a function w.r.t a normal distr
 date: 2019-08-11
 ---
 
-you can use an inline formula $$\forall x \in R$$ like this one \eqref{eq:sample} \eqref{eq:sample}
+you can use an inline formula $$\forall x \in R$$ like this one \eqref{eq:sample} \eqref{eq:sample1}
 
 \begin{equation}
   \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
   \label{eq:sample}
 \end{equation}
 
-$$
+\begin{equation}
 M = \left( \begin{array}{ccc}
 x_{11} & x_{12} & \ldots \\
 x_{21} & x_{22} & \ldots \\
 \vdots & \vdots & \ldots \\
 \end{array} \right)
 \label{eq:sample1}
-$$
+\end{equation}
