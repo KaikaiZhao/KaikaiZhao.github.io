@@ -5,6 +5,6 @@ description: How to calculate the expectation of a function w.r.t a normal distr
 date: 2019-08-11
 ---
 
-# Numerical Integration
 
-$E=mc^2$
+
+$$E=mc^2$$
