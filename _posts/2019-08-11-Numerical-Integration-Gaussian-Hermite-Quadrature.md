@@ -16,7 +16,7 @@ What I'm trying to say is how to calculate
 </p>
 
 \begin{equation}
-\mathrm{E}[h(y)] \text{with} y \sim N\left(\mu, \sigma^{2}\right)
+\mathrm{E}[h(y)]  \text{with}  y \sim N\left(\mu, \sigma^{2}\right)
 \end{equation}
 
 The above is equivalent to calculate
