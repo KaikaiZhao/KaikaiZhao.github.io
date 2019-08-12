@@ -19,6 +19,14 @@ What I'm trying to say is how to calculate
 \mathrm{E}[h(y)] \text{with} y \sim N\left(\mu, \sigma^{2}\right)
 \end{equation}
 
+The above is equivalent to calculate
+
+\begin{equation}
+\int_{-\infty}^{\infty} \frac{1}{\sigma \sqrt{2\pi}} h(y) \exp \left(-\frac{(y-\mu)^{2}}{2 \sigma^{2}}\right) dy
+\end{equation}
+
+
+
 <p>
 In many cases, the closed-form of data fit term is not available because of the non-conjugacy between our likelihood and prior. Then we need approximation for calculating the expectation and Gaussian-Hermite Quadrature is a good tool for this.
 </p>
