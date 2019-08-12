@@ -5,6 +5,12 @@ description: How to calculate the expectation of a function w.r.t a normal distr
 date: 2019-08-11
 ---
 
-
-
 you can use an inline formula $$\forall x \in R$$ like this one
+
+$$
+M = \left( \begin{array}{ccc}
+x_{11} & x_{12} & \ldots \\
+x_{21} & x_{22} & \ldots \\
+\vdots & \vdots & \ldots \\
+\end{array} \right)
+$$
