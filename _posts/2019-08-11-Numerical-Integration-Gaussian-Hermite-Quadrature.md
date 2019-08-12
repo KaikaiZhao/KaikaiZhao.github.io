@@ -16,13 +16,13 @@ What I'm trying to say is how to calculate
 </p>
 
 \begin{equation}
-\mathrm{E}[h(y)] \text{ with }  y \sim N\left(\mu, \sigma^{2}\right)
+\mathrm{E}[h(x)] \text{ with }  x \sim N\left(\mu, \sigma^{2}\right)
 \end{equation}
 
 The above is equivalent to calculate
 
 \begin{equation}
-\int_{-\infty}^{\infty} \frac{1}{\sigma \sqrt{2\pi}} h(y) \exp \left(-\frac{(y-\mu)^{2}}{2 \sigma^{2}}\right) dy
+\int_{-\infty}^{\infty} \frac{1}{\sigma \sqrt{2\pi}} h(x) \exp \left(-\frac{(x-\mu)^{2}}{2 \sigma^{2}}\right) dx
 \label{eq:expect}
 \end{equation}
 
@@ -32,7 +32,17 @@ The above is equivalent to calculate
 In many cases, the closed-form of data fit term, e.g. \eqref{eq:expect}, is not available because of the non-conjugacy between our likelihood and prior. Then we need approximation for calculating the expectation and Gaussian-Hermite Quadrature is a good tool for this.
 </p>
 
- is  In terms of variational inference experienced the case of calculating the expectation of  can use an inline formula $$\forall x \in R$$ like this one \eqref{eq:sample} \eqref{eq:sample1}
+<p>
+In numerical analysis, Gaussian-Hermite Quadrature is used to approximate the value of integrals of the following kind:
+</p>
+
+\begin{equation}
+\int_{-\infty}^{+\infty} e^{-x^{2}} f(x) dx
+\end{equation}
+
+The basic idea is
+
+
 
 \begin{equation}
   \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
