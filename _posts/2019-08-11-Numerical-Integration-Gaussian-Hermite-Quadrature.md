@@ -33,7 +33,7 @@ In many cases, the closed-form of data fit term, e.g. \eqref{eq:expect}, is not 
 </p>
 
 <p>
-In numerical analysis, Gaussian-Hermite Quadrature is used to approximate the value of integrals of the following kind:
+In numerical analysis, <a href="https://en.wikipedia.org/wiki/Gauss%E2%80%93Hermite_quadrature" target="_blank">Gaussian-Hermite Quadrature</a> is used to approximate the value of integrals of the following kind:
 </p>
 
 \begin{equation}
