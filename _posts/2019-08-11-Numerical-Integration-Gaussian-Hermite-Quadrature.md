@@ -42,6 +42,10 @@ In numerical analysis, Gaussian-Hermite Quadrature is used to approximate the va
 
 The basic idea is
 
+\begin{equation}
+\int_{-\infty}^{+\infty} e^{-x^{2}} f(x) d x \approx \sum_{i=1}^{n} w_{i} f\left(x_{i}\right)
+\end{equation}
+
 
 
 \begin{equation}
