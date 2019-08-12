@@ -5,7 +5,7 @@ description: How to calculate the expectation of a function w.r.t a normal distr
 date: 2019-08-11
 ---
 
-## Why do we need Gaussian-Hermite Quadrature?
+### Why do we need Gaussian-Hermite Quadrature?
 <p>
 Speaking of Bayesian machine learning, you may have to deal with non-Gaussian likelihoods which require some approximation of the posterior as the prior is non-conjugate. 
 </p>
@@ -27,7 +27,7 @@ The above is equivalent to calculate
 \label{eq:expect}
 \end{equation}
 
-## The mathematical formulations
+### The mathematical formulations
 
 <p>
 In many cases, the closed-form of data fit term, e.g. \eqref{eq:expect}, is not available because of the non-conjugacy between our likelihood and prior. Then we need approximation for calculating the expectation and Gaussian-Hermite Quadrature is a good tool for this.
@@ -39,6 +39,7 @@ In numerical analysis, <a href="https://en.wikipedia.org/wiki/Gauss%E2%80%93Herm
 
 \begin{equation}
 \int_{-\infty}^{+\infty} e^{-x^{2}} f(x) dx
+\label{eq:Hermite}
 \end{equation}
 
 The basic idea is
@@ -52,3 +53,4 @@ where $$n$$ is the number of sample points used. The $$x_i$$ are the roots of th
 w_{i}=\frac{2^{n-1} n ! \sqrt{\pi}}{n^{2}\left[H_{n-1}\left(x_{i}\right)\right]^{2}}
 \end{equation}
 
+As we can see that Eq. \eqref{eq:expect} does not exactly correspond to the Hermite polynomial, i.e. Eq. \eqref{eq:expect}, we need to change variables:
