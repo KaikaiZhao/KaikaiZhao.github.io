@@ -17,13 +17,13 @@ What I'm trying to say is how to calculate
 </p>
 
 \begin{equation}
-\mathrm{E}[h(x)] \text{ with }  x \sim N\left(\mu, \sigma^{2}\right)
+\mathrm{E}[h(y)] \text{ with }  y \sim N\left(\mu, \sigma^{2}\right)
 \end{equation}
 
 The above is equivalent to calculate
 
 \begin{equation}
-\int_{-\infty}^{\infty} \frac{1}{\sigma \sqrt{2\pi}} h(x) \exp \left(-\frac{(x-\mu)^{2}}{2 \sigma^{2}}\right) dx
+\int_{-\infty}^{\infty} \frac{1}{\sigma \sqrt{2\pi}} h(y) \exp \left(-\frac{(y-\mu)^{2}}{2 \sigma^{2}}\right) dy
 \label{eq:expect}
 \end{equation}
 
