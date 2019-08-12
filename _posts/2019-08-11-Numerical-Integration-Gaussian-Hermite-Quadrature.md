@@ -46,7 +46,10 @@ The basic idea is
 \int_{-\infty}^{+\infty} e^{-x^{2}} f(x) d x \approx \sum_{i=1}^{n} w_{i} f\left(x_{i}\right)
 \end{equation}
 
-
+where $$n$$ is the number of sample points used. The $$x_i$$ are the roots of the physicists' version of the Hermite polynomial $$Hn(x) (i = 1,2,\ldots,n)$$, and the associated weights $$w_i$$ are given by
+\begin{equation}
+w_{i}=\frac{2^{n-1} n ! \sqrt{\pi}}{n^{2}\left[H_{n-1}\left(x_{i}\right)\right]^{2}}
+\end{equation}
 
 \begin{equation}
   \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
