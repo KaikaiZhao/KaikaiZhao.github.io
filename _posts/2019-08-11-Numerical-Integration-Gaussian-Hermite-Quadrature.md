@@ -9,7 +9,18 @@ date: 2019-08-11
 Speaking of Bayesian machine learning, you may have to deal with non-Gaussian likelihoods which require some approximation of the posterior as the prior is non-conjugate. 
 </p>
 <p>
-In the case of variational inference, when we compute the variational evidence lower bound(ELBO), the first term of ELBO usually represents the goodness of fit for a certain model, that is to say, we need to calculate the expectation of log likelihood w.r.t the variational distribution. Generally, our variational distribution is easy to handle, like Gaussian distribution. In many cases, the closed-form of data fit term is not available because of the non-conjugacy between our likelihood and prior. Then we need approximation for calculating the expectation and Gaussian-Hermite Quadrature is a good tool for this.
+In the case of variational inference, when we compute the variational evidence lower bound(ELBO), the first term of ELBO usually represents the goodness of fit for a certain model, that is to say, we need to calculate the expectation of log likelihood w.r.t the variational distribution. Generally, our variational distribution is easy to handle, like Gaussian distribution. 
+</p>
+<p>
+What I'm trying to say is how to calculate
+</p>
+
+\begin{equation}
+\mathrm{E}[h(y)] \text{with} y \sim N\left(\mu, \sigma^{2}\right)
+\end{equation}
+
+<p>
+In many cases, the closed-form of data fit term is not available because of the non-conjugacy between our likelihood and prior. Then we need approximation for calculating the expectation and Gaussian-Hermite Quadrature is a good tool for this.
 </p>
 
  is  In terms of variational inference experienced the case of calculating the expectation of  can use an inline formula $$\forall x \in R$$ like this one \eqref{eq:sample} \eqref{eq:sample1}
