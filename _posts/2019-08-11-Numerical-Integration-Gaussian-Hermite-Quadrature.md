@@ -99,3 +99,9 @@ $$
     &\approx\frac{1}{\sqrt{2\pi}} \sum_{j=1}^{n} w_{j}\sigma(\sqrt{v_*} z_j+u_*)
     \end{aligned}
 $$
+
+\begin{aligned}
+p\left(y_{*}=1 | \mathbf{x}_{*}, u_*, v_*\right) 
+&\approx \int \sigma\left(f_{*}\right) p\left(f_{*} | \mathbf{x}_{*}, u_*, v_*\right) d f_{*}\\
+&\approx\frac{1}{\sqrt{2\pi}} \sum_{j=1}^{n} w_{j}\sigma(\sqrt{v_*} z_j+u_*)
+\end{aligned}
