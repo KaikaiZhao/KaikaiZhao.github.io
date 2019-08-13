@@ -76,7 +76,7 @@ In this section, we introduce how to get approximate value of the aformentioned 
 x=\frac{z}{\sqrt{2}}
 \end{equation}
 
-After $$x$$ is substitute with $$z$$ in Eq. \eqref{eq:Exp-Hermite}, we obtain
+After $$x$$ is substituted with $$z$$ in Eq. \eqref{eq:Exp-Hermite}, we obtain
 \begin{equation}
 E[h(y)]=\int_{-\infty}^{+\infty} \frac{1}{\sqrt{2\pi}} \exp \left(-z^{2}\right) h(\sigma z+\mu) d z
 \end{equation}
