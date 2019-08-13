@@ -100,6 +100,8 @@ $$
     \end{aligned}\tag{12}
 $$
 
+Its corresponding code is as follows,
+
 ```python
 import numpy as np
 from scipy.special import loggamma, roots_hermitenorm, expit # sigmoid function
@@ -107,11 +109,3 @@ from scipy.special import loggamma, roots_hermitenorm, expit # sigmoid function
 z,w = roots_hermitenorm(n=50);
 expectation = 1/np.sqrt(2*pi)*np.dot(w, expit(np.sqrt(v)*z+u))
 ```
-
-<pre><code>
-import numpy as np
-from scipy.special import loggamma, roots_hermitenorm, expit # sigmoid function
-
-z,w = roots_hermitenorm(n=50);
-expectation = 1/np.sqrt(2*pi)*np.dot(w, expit(np.sqrt(v)*z+u))
-</code><pre>
