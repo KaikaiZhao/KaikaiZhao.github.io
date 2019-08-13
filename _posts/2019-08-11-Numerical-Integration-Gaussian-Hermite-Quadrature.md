@@ -30,7 +30,7 @@ The above is equivalent to calculate
 ### The mathematical formulations
 
 <p>
-In many cases, the closed form of data fit term, e.g. \eqref{eq:expect}, is not available because of the non-conjugacy between our likelihood and prior. Then we need approximation for calculating the expectation and Gaussian-Hermite Quadrature is a good tool for this.
+In many cases, the closed form of data fit term, e.g. Eq. \eqref{eq:expect}, is not available because of the non-conjugacy between our likelihood and prior. Then we need approximation for calculating the expectation and Gaussian-Hermite Quadrature is a good tool for this.
 </p>
 
 <p>
