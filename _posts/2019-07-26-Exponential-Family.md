@@ -50,7 +50,7 @@ $$
     \end{aligned}\tag{4}
 $$
 
-Let's see what happens if we take second derivative,
+Let's see what will happen if we take second derivative,
 
 $$
     \begin{aligned} 
