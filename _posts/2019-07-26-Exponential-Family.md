@@ -61,7 +61,7 @@ $$
     \end{aligned}
 $$
 
-Another property from exponential family is that the second derivative of log normalizer equals the variance of sufficient statistics.
+The above derivation tells us another property from exponential family, that is, the second derivative of log normalizer equals the variance of sufficient statistics.
 
 ### Some examples
 
