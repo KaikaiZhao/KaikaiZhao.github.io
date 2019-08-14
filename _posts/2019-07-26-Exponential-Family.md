@@ -79,7 +79,7 @@ $$
 which, after some simple rearrangement, can be cast in the standard exponential family form with
 
 $$
-\eta=\left[\begin{array}{l}{\eta_{1}} \\ {\eta_{2}}\end{array}\right]=\left[\begin{array}{c}{\frac{\mu}{\sigma_{1}^{2}}} \\ {-\frac{1}{2 \sigma^{2}}}\end{array}\right]
+\eta=\left[\begin{array}{l}{\eta_{1}} \\ {\eta_{2}}\end{array}\right]=\left[\begin{array}{c}{\frac{\mu}{\sigma_{1}^{2}}} \\ {-\frac{1}{2 \sigma^{2}}}\end{array}\right], \quad T(x)=\left[\begin{array}{c}{x} \\ {x^{2}}\end{array}\right], \quad h(x)=(2 \pi)^{-1/2}
 $$
 
 $$
