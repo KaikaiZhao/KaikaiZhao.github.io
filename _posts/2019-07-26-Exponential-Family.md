@@ -44,7 +44,9 @@ $$
     &=\frac{\partial \log \left(\int h(x) \exp \{\eta^{T}T(x)\}dx\right) }{\partial \eta}\\
     &=\frac{\int h(x) \exp \{\eta^{T}T(x)\}T(x)dx }{\int h(x) \exp \{\eta^{T}T(x) \}dx}\\
     &\overset{\eqref{eq:integral}}{=}\frac{\int h(x)\exp\{\eta^{T}T(x)\}T(x)dx}{\exp\{A(\eta)\}}\\
-    &=\int h(x)\exp\{\eta^{T}T(x)-A(\eta)\}T(x)dx
+    &=\int h(x)\exp\{\eta^{T}T(x)-A(\eta)\}T(x)dx\\
+    &=\int p(x|\eta)T(x)dx\\
+    &=E[T(x)]
     \end{aligned}\tag{4}
 $$
 
