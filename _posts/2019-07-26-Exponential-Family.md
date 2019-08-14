@@ -71,7 +71,8 @@ Let's look at some common probability distributions which can be written in the 
 
 $$
     \begin{aligned}
-        p\left(x | \mu, \sigma^{2}\right) &=\frac{1}{\left(2 \pi \sigma^{2}\right)^{1 / 2}} \exp \left\{-\frac{1}{2 \sigma^{2}}(x-\mu)^{2}\right\} \\ &=\frac{1}{\left(2 \pi \sigma^{2}\right)^{1 / 2}} \exp \left\{-\frac{1}{2 \sigma^{2}} x^{2}+\frac{\mu}{\sigma^{2}} x-\frac{1}{2 \sigma^{2}} \mu^{2}\right\}
+        p\left(x | \mu, \sigma^{2}\right) &=\frac{1}{\left(2 \pi \sigma^{2}\right)^{1 / 2}} \exp \left\{-\frac{1}{2 \sigma^{2}}(x-\mu)^{2}\right\} \\ &=\frac{1}{\left(2 \pi \sigma^{2}\right)^{1 / 2}} \exp \left\{-\frac{1}{2 \sigma^{2}} x^{2}+\frac{\mu}{\sigma^{2}} x-\frac{1}{2 \sigma^{2}} \mu^{2}\right\}\\
+        &=\frac{1}{\left(2 \pi\right)^{1 / 2}} \exp \left\{\underbrace{\left[\begin{array}{c}{x} \\ {x^{2}}\end{array}\right]^{T}}_{T(X)}\underbrace{\left[\begin{array}{c}{\frac{\mu}{\sigma_{1}^{2}}} \\ {-\frac{1}{2 \sigma^{2}}}\end{array}\right]}_{\eta}-\underbrace{\left(\frac{\mu^{2}}{2 \sigma^{2}}+\frac{1}{2} \ln (\sigma^{2})\right)}_{A(\eta)}\right\}
     \end{aligned}
 $$
 
@@ -90,7 +91,11 @@ h(x)=(2 \pi)^{-1/2}
 $$
 
 $$
-A(\eta)=\frac{-\eta_{1}^{2}}{4 \eta_{2}}
+\eta_{2}=-\frac{1}{2 \sigma^{2}} \Longrightarrow \sigma^{2}=-\frac{1}{2 \eta_{2}} \quad \mu=\eta_{1} \sigma^{2}=\eta_{1} \frac{-1}{2 \eta_{2}}=\frac{-\eta_{1}}{2 \eta_{2}}
+$$
+
+$$
+A(\eta)=\frac{\mu^{2}}{2 \sigma^{2}}+\frac{1}{2} \ln (\sigma^{2})=\frac{\left(\frac{-\eta_{1}}{2 \eta_{2}}\right)^{2}}{2\left(\frac{-1}{2 \eta_{2}}\right)}+\frac{1}{2} \ln (-\frac{1}{2 \eta_{2}})=\frac{-\eta_{1}^{2}}{4 \eta_{2}}-\frac{1}{2} \ln \left(-2 \eta_{2}\right)
 $$
 
 #### Dirichlet distribution
