@@ -47,7 +47,7 @@ $$
     &=\int h(x)\exp\{\eta^{T}T(x)-A(\eta)\}T(x)dx\\
     &=\int p(x|\eta)T(x)dx\\
     &=E[T(x)]
-    \end{aligned}\tag{4}
+    \end{aligned}
 $$
 
 Let's see what will happen if we take second derivative,
@@ -147,7 +147,8 @@ After setting the gradient of $\ln{p(\mathbf{X} | \boldsymbol{\eta})}$ w.r.t $\b
 
 \begin{equation}
     A^{\prime}(\boldsymbol{\eta_{\text{ML}}})=\frac{1}{N}\sum_{n=1}^{N} T\left(\mathbf{x}_{n}\right)
+    \label{eq:max-lik}
 \end{equation}
 which can in principle be solved to obtain $\boldsymbol{\eta_{\text{ML}}}$. We see that the solution for the maximum likelihood estimator depends on the data only through $\sum_{n} T\left(\mathbf{x}_{n}\right)$, which is therefore called the sufficient statistic of the exponential family distribution. We do not need to store the entire data set itself but only the value of the sufficient statistic. For the Gaussian distribution, for instance, $T(x)=\left(x, x^{2}\right)^{\mathrm{T}}$, and so we should keep both the sum of $\left\{x_{n}\right\}$ and the sum of $\left\{x_{n}^2\right\}$.
 
-If we consider the limit $N \rightarrow \infty$, then the right-hand side of becomes $\mathbb{E}[T(\mathbf{x})]$, and so by comparing with we see in this limit $\boldsymbol{\eta_{\text{ML}}}$ will equal the true value $\boldsymbol{\eta}$.
+If we consider the limit $N \rightarrow \infty$, then the right-hand side of Eq. \eqref{eq:max-lik} becomes $\mathbb{E}[T(\mathbf{x})]$, and so by comparing with the first property we have got, we see in this limit $\boldsymbol{\eta_{\text{ML}}}$ will equal the true value $\boldsymbol{\eta}$.
