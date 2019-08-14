@@ -125,3 +125,29 @@ $$
 $$
 
 where $\Psi(\cdot)$ is the first derivative of log gamma function and it is called the digamma function. The above form is helpful for the derivations in latent Dirichlet allocation with variational inference. Here we have a glimpse of the application of exponential family. It is powerful in variational models.
+
+### Maximum likelihood and sufficient statistics
+
+Consider a set of independent identically distributed data denoted by $\mathbf{X}=\left\{\mathbf{x}_{1}, \ldots, \mathbf{x}_{n}\right\}$, for which the likelihood function is given by
+
+\begin{equation}
+p(\mathbf{X} | \boldsymbol{\eta})=\left(\prod_{n=1}^{N} h\left(\mathbf{x}_{n}\right)\right)  \exp \left\{\boldsymbol{\eta}^{\mathrm{T}} \sum_{n=1}^{N} T\left(\mathbf{x}_{n}\right)-N\cdot A(\boldsymbol{\eta})\right\}
+\end{equation}
+
+\begin{equation}
+\ln{p(\mathbf{X} | \boldsymbol{\eta})} =\sum_{n=1}^{N} T\left(\mathbf{x}_{n}\right) + \boldsymbol{\eta}^{\mathrm{T}} \sum_{n=1}^{N} T\left(\mathbf{x}_{n}\right)-N\cdot A(\boldsymbol{\eta})
+\end{equation}
+
+
+\begin{equation}
+\frac{\partial \ln{p(\mathbf{X} | \boldsymbol{\eta})}}{\partial \boldsymbol{\eta}} = \sum_{n=1}^{N} T\left(\mathbf{x}_{n}\right)-N\cdot A^{\prime}(\boldsymbol{\eta})=0
+\end{equation}
+
+After setting the gradient of $\ln{p(\mathbf{X} | \boldsymbol{\eta})}$ w.r.t $\boldsymbol{\eta}$ to zero, we get the following condition to be satisfied by the maximum likelihood estimator $\boldsymbol{\eta_{\text{ML}}}$ 
+
+\begin{equation}
+    A^{\prime}(\boldsymbol{\eta_{\text{ML}}})=\frac{1}{N}\sum_{n=1}^{N} T\left(\mathbf{x}_{n}\right)
+\end{equation}
+which can in principle be solved to obtain $\boldsymbol{\eta_{\text{ML}}}$. We see that the solution for the maximum likelihood estimator depends on the data only through $\sum_{n} T\left(\mathbf{x}_{n}\right)$, which is therefore called the sufficient statistic of the exponential family distribution. We do not need to store the entire data set itself but only the value of the sufficient statistic. For the Gaussian distribution, for instance, $T(x)=\left(x, x^{2}\right)^{\mathrm{T}}$, and so we should keep both the sum of $\left\{x_{n}\right\}$ and the sum of $\left\{x_{n}^2\right\}$.
+
+If we consider the limit $N \rightarrow \infty$, then the right-hand side of becomes $\mathbb{E}[T(\mathbf{x})]$, and so by comparing with we see in this limit $\boldsymbol{\eta_{\text{ML}}}$ will equal the true value $\boldsymbol{\eta}$.
