@@ -6,7 +6,7 @@ description: When the probability distributions can be written in the form of ex
 date: 2019-07-26
 ---
 
-<p> When I was delving into the classical <a href="http://www.columbia.edu/~jwp2128/Papers/HoffmanBleiWangPaisley2013.pdf" target="_blank">Stochastic Variational Inference</a>(SVI) paper, I found SVI is built upon natural gradients which are based on the form of exponential family. In particular, exponential family significantly facilitates the derivations of the expectations of variational distributions.</p>
+<p> When I was delving into the classical <a href="http://www.columbia.edu/~jwp2128/Papers/HoffmanBleiWangPaisley2013.pdf" target="_blank">Stochastic Variational Inference</a>(SVI) paper, I found SVI is built upon natural gradients which are based on the form of exponential family. In particular, exponential family significantly facilitates the derivations of the expectations of likelihood with respect to variational distributions.</p>
 
 Most of the distributions we have seen are from exponential family, except the Gaussian mixture. In this blog, I will summarize what I have explored and learned about exponential family. Also, I will present some beautiful properties from exponential family.
 
