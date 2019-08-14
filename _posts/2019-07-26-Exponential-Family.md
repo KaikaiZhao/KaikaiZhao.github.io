@@ -85,13 +85,13 @@ $$
 T(x)=\left[\begin{array}{c}{x} \\ {x^{2}}\end{array}\right]
 $$
 
-\begin{equation}
+$$
 h(x)=(2 \pi)^{-1/2}
-\end{equation}
+$$
 
-\begin{equation}
+$$
 A(\eta)=\frac{-\eta_{1}^{2}}{4 \eta_{2}}
-\end{equation}
+$$
 
 #### Dirichlet distribution
 
@@ -104,17 +104,18 @@ $$
 $$
 
 which can be cast in the standard exponential family form with
-\begin{equation}
+
+$$
 \eta=\alpha-1
-\end{equation}
+$$
 
-\begin{equation}
+$$
 A(\eta)=\sum_{k} \log \Gamma\left(\alpha_{k}\right)-\log \Gamma\left(\sum_{k} \alpha_{k}\right)
-\end{equation}
+$$
 
-\begin{equation}
+$$
 T(\mu)=\log \mu
-\end{equation}
+$$
 
 Then the expectation of sufficient statistics equals
 
