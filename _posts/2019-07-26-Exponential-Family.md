@@ -81,9 +81,9 @@ $$
 \eta=\left[\begin{array}{l}{\eta_{1}} \\ {\eta_{2}}\end{array}\right]=\left[\begin{array}{c}{\frac{\mu}{\sigma_{1}^{2}}} \\ {-\frac{1}{2 \sigma^{2}}}\end{array}\right]
 $$
 
-\begin{equation}
+$$
 T(x)=\left[\begin{array}{c}{x} \\ {x^{2}}\end{array}\right]
-\end{equation}
+$$
 
 \begin{equation}
 h(x)=(2 \pi)^{-1/2}
