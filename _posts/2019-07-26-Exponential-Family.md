@@ -136,7 +136,7 @@ p(\mathbf{X} | \boldsymbol{\eta})=\left(\prod_{n=1}^{N} h\left(\mathbf{x}_{n}\ri
 $$
 
 $$
-\ln{p(\mathbf{X} | \boldsymbol{\eta})} =\sum_{n=1}^{N} T\left(\mathbf{x}_{n}\right) + \boldsymbol{\eta}^{\mathrm{T}} \sum_{n=1}^{N} T\left(\mathbf{x}_{n}\right)-N\cdot A(\boldsymbol{\eta})
+\ln{p(\mathbf{X} | \boldsymbol{\eta})} =\sum_{n=1}^{N} h\left(\mathbf{x}_{n}\right) + \boldsymbol{\eta}^{\mathrm{T}} \sum_{n=1}^{N} T\left(\mathbf{x}_{n}\right)-N\cdot A(\boldsymbol{\eta})
 $$
 
 
