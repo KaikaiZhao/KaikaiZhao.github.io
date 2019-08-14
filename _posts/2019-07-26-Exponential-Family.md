@@ -128,7 +128,7 @@ $$
 where $\Psi(\cdot)$ is the first derivative of log gamma function and it is called the digamma function. The above form is helpful for the derivations in latent Dirichlet allocation with variational inference. Here we already have a glimpse of the application of exponential family. It is powerful in variational models.
 
 ### Maximum likelihood and sufficient statistics
-<p>For this part, we closely follow the Section 2.4.1 of Bishop's PRML book</p>
+<p>For this part, we closely follow the Section 2.4.1 of Bishop's PRML book.</p>
 
 Consider a set of independent identically distributed data denoted by $$\mathbf{X}=\left\{\mathbf{x}_{1}, \ldots, \mathbf{x}_{n}\right\}$$, for which the likelihood function is given by
 
