@@ -83,14 +83,6 @@ $$
 $$
 
 $$
-T(x)=\left[\begin{array}{c}{x} \\ {x^{2}}\end{array}\right]
-$$
-
-$$
-h(x)=(2 \pi)^{-1/2}
-$$
-
-$$
 \eta_{2}=-\frac{1}{2 \sigma^{2}} \Longrightarrow \sigma^{2}=-\frac{1}{2 \eta_{2}} \quad \mu=\eta_{1} \sigma^{2}=\eta_{1} \frac{-1}{2 \eta_{2}}=\frac{-\eta_{1}}{2 \eta_{2}}
 $$
 
