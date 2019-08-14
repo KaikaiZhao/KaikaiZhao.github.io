@@ -6,7 +6,7 @@ description: If a conjugate prior is available for a likelihood function, the po
 date: 2019-07-29
 ---
 
-<p>When I was learning variational inference, conjugacy ever made me confused. In this blog, I would like to write down what I have learned and my thoughts as well. I hope it could be helpful for the friends who are struggling with this concept.</p>
+<p>When I was learning variational inference, conjugacy ever made me confused. I spent some time figuring it out and found it is important for us to read some top-conference papers. So I would like to write down what I have learned and my thoughts as well. I hope it could be helpful for the friends who are struggling with this concept.</p>
 
 ### Definition
 
