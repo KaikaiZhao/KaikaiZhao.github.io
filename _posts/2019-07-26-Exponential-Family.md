@@ -127,6 +127,7 @@ $$
 where $\Psi(\cdot)$ is the first derivative of log gamma function and it is called the digamma function. The above form is helpful for the derivations in latent Dirichlet allocation with variational inference. Here we have a glimpse of the application of exponential family. It is powerful in variational models.
 
 ### Maximum likelihood and sufficient statistics
+<p>For this part, we closely follow the Section 2.4.1 of Bishop's PRML book</p>
 
 Consider a set of independent identically distributed data denoted by $$\mathbf{X}=\left\{\mathbf{x}_{1}, \ldots, \mathbf{x}_{n}\right\}$$, for which the likelihood function is given by
 
@@ -150,6 +151,6 @@ $$
     \label{eq:max-lik}
 \end{equation}
 
-which can in principle be solved to obtain $$\boldsymbol{\eta_{\text{ML}}}$$. We see that the solution for the maximum likelihood estimator depends on the data only through $\sum_{n} T\left(\mathbf{x}_{n}\right)$, which is therefore called the sufficient statistic of the exponential family distribution. We do not need to store the entire data set itself but only the value of the sufficient statistic. For the Gaussian distribution, for instance, $$T(x)=\left(x, x^{2}\right)^{\mathrm{T}}$$, and so we should keep both the sum of $$\left\{x_{n}\right\}$$ and the sum of $$\left\{x_{n}^2\right\}$$.
+which can in principle be solved to obtain $$\boldsymbol{\eta_{\text{ML}}}$$. We see that the solution for the maximum likelihood estimator depends on the data only through $\sum_{n} T\left(\mathbf{x}_{n}\right)$, which is therefore called the **sufficient statistic** of the exponential family distribution. We do not need to store the entire data set itself but only the value of the sufficient statistic. For the Gaussian distribution, for instance, $$T(x)=\left(x, x^{2}\right)^{\mathrm{T}}$$, and so we should keep both the sum of $$\left\{x_{n}\right\}$$ and the sum of $$\left\{x_{n}^2\right\}$$.
 
 If we consider the limit $N \rightarrow \infty$, then the right-hand side of Eq. \eqref{eq:max-lik} becomes $$\mathbb{E}[T(\mathbf{x})]$$, and so by comparing with the first property we have got, we see in this limit $$\boldsymbol{\eta_{\text{ML}}}$$ will equal the true value $$\boldsymbol{\eta}$$.
