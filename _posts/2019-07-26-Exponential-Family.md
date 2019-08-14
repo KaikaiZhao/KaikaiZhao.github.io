@@ -130,9 +130,9 @@ where $\Psi(\cdot)$ is the first derivative of log gamma function and it is call
 
 Consider a set of independent identically distributed data denoted by $$\mathbf{X}=\left\{\mathbf{x}_{1}, \ldots, \mathbf{x}_{n}\right\}$$, for which the likelihood function is given by
 
-\begin{equation}
+$$
 p(\mathbf{X} | \boldsymbol{\eta})=\left(\prod_{n=1}^{N} h\left(\mathbf{x}_{n}\right)\right)  \exp \left\{\boldsymbol{\eta}^{\mathrm{T}} \sum_{n=1}^{N} T\left(\mathbf{x}_{n}\right)-N\cdot A(\boldsymbol{\eta})\right\}
-\end{equation}
+$$
 
 \begin{equation}
 \ln{p(\mathbf{X} | \boldsymbol{\eta})} =\sum_{n=1}^{N} T\left(\mathbf{x}_{n}\right) + \boldsymbol{\eta}^{\mathrm{T}} \sum_{n=1}^{N} T\left(\mathbf{x}_{n}\right)-N\cdot A(\boldsymbol{\eta})
