@@ -143,9 +143,7 @@ $$
 \frac{\partial \ln{p(\mathbf{X} | \boldsymbol{\eta})}}{\partial \boldsymbol{\eta}} = \sum_{n=1}^{N} T\left(\mathbf{x}_{n}\right)-N\cdot A^{\prime}(\boldsymbol{\eta})=0
 \end{equation}
 
-<p>After setting the gradient of $\ln{p(\mathbf{X} | \boldsymbol{\eta})}$</p>
-
-w.r.t $$\boldsymbol{\eta}$$ to zero, we get the following condition to be satisfied by the maximum likelihood estimator $$\boldsymbol{\eta_{\text{ML}}}$$ 
+<p>After setting the gradient of $\ln{p(\mathbf{X} | \boldsymbol{\eta})}$ w.r.t $\boldsymbol{\eta}$ to zero, we get the following condition to be satisfied by the maximum likelihood estimator $\boldsymbol{\eta_{\text{ML}}}$</p>
 
 \begin{equation}
     A^{\prime}(\boldsymbol{\eta_{\text{ML}}})=\frac{1}{N}\sum_{n=1}^{N} T\left(\mathbf{x}_{n}\right)
