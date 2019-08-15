@@ -118,4 +118,4 @@ $$
     </tr>
 </table>
 
-<p>As can been seen from the above table, when the likelihood function belongs to Gaussian distribution, its conjugate prior for the parameter $\mu$ is the Gaussian distribution while its conjugate prior for the variance is Wishart distribution. Hence, we should <b>specify the parameter first when we talk about conjugate priors</b>.</p>
+<p>As can been seen from the above table, when the likelihood function belongs to Gaussian distribution, its conjugate prior for the parameter $\mu$ is the Gaussian distribution while its conjugate prior for the variance is Wishart distribution. Hence, we should <b><font color="red">specify the parameter first when we talk about conjugate priors</font></b>.</p>
