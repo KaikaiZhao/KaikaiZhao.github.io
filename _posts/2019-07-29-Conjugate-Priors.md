@@ -40,6 +40,6 @@ The following derivation will end up a very useful and interesting result. Here 
 * Likelihood density:
 
 $$
-p\left(x | \beta\right)=h\left(x\right) \exp \left\{t\left(x\right) \beta -\underbrace{\color{red}{A_{l}(\beta)}}_{\text { same }}\right\}
+p\left(x | \beta\right)=h\left(x\right) \exp \left\{t\left(x\right) \beta -\color{red}{A_l(\beta)}\right\}
 $$
 
