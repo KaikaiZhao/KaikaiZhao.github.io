@@ -101,16 +101,20 @@ Gaussian $e^{-\left\|\mu-\mu_{0}\right\|^{2} /\left(2 \sigma^{2}\right)}$ | Gaus
 Beta | Bernoulli
 
 <table style="width:100%">
-  <tr>
-    <th>Prior</th>
-    <th>Likelihood</th> 
-  </tr>
-  <tr>
-    <td>Gaussian $e^{-\left\|\mu-\mu_{0}\right\|^{2} /\left(2 \sigma^{2}\right)}$</td>
-    <td>Gaussian $e^{-\|x-\mu\|^{2} /\left(2 \sigma^{2}\right)}$</td> 
-  </tr>
-  <tr>
-    <td>Beta $\frac{\Gamma(r+s)}{\Gamma(r) \Gamma(s)} \alpha^{r-1}(2-\alpha)^{s-1}$</td>
-    <td>Bernoulli Bernoulli $\quad \alpha^{x}(1-\alpha)^{1-x}$</td> 
-  </tr>
+    <tr>
+        <th>Prior</th>
+        <th>Likelihood</th> 
+    </tr>
+    <tr>
+        <td>Gaussian $e^{-\left\|\mu-\mu_{0}\right\|^{2} /\left(2 \sigma^{2}\right)}$</td>
+        <td>Gaussian $e^{-\|x-\mu\|^{2} /\left(2 \sigma^{2}\right)}$</td> 
+    </tr>
+    <tr>
+        <td>Beta $\frac{\Gamma(r+s)}{\Gamma(r) \Gamma(s)} \alpha^{r-1}(2-\alpha)^{s-1}$</td>
+        <td>Bernoulli $\quad \alpha^{x}(1-\alpha)^{1-x}$</td> 
+    </tr>
+    <tr>
+        <td>Dirichlet $\frac{\Gamma(r+s)}{\Gamma(r) \Gamma(s)} \alpha^{r-1}(2-\alpha)^{s-1}$</td>
+        <td>Multinomial $\quad \alpha^{x}(1-\alpha)^{1-x}$</td> 
+    </tr>
 </table>
