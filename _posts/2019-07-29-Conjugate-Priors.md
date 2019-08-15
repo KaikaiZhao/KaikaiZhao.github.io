@@ -65,3 +65,17 @@ $$
 
 <p>Finally, we find the posterior distribution has the same form as the prior distribution if <b>the second term of the sufficient statistics for the prior distribution is equal to the log normalizer of the likelihood function</b>.</p>
 
+### Examples
+
+<p>If we have a binomial distribution with the parameter $\mu$ and $N$, we have</p>
+
+$$
+\operatorname{Bin}(m | N, \mu)=\left(\begin{array}{c}{N} \\ {m}\end{array}\right) \mu^{m}(1-\mu)^{N-m}
+$$
+
+where
+
+$$
+\left(\begin{array}{c}{N} \\ {m}\end{array}\right) \equiv \frac{N !}{(N-m) ! m !}
+$$
+
