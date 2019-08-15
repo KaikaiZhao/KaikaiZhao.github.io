@@ -63,4 +63,4 @@ $$
     \end{aligned}\tag{2}
 $$
 
-Finally, we find the posterior distribution has the same form as the prior distribution if the second term of the prior distribution is equal to employs the same . 
+Finally, we find the posterior distribution has the same form as the prior distribution if **the second term of the sufficient statistics for the prior distribution is equal to the log normalizer of the likelihood function**. 
