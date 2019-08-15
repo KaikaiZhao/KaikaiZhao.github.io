@@ -91,7 +91,7 @@ $$
 p(\mu | m, l, a, b)=\frac{\Gamma(m+a+l+b)}{\Gamma(m+a) \Gamma(l+b)} \mu^{m+a-1}(1-\mu)^{l+b-1}
 $$
 
-<p>where $l=N-m$</p>
+<p>where $l=N-m$.</p>
 
 #### Conjugate pairs
 
