@@ -39,5 +39,7 @@ The following derivation will end up a very useful and interesting result. Here 
 
 * Likelihood density:
 
-
+$$
+p\left(x | \beta\right)=h\left(x\right) \exp \left\{t\left(x\right) \beta \underbrace{-A_{l}(\beta)}_{\text { same }}\right\}
+$$
 
