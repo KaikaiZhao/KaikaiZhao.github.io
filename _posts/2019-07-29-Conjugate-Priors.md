@@ -21,3 +21,8 @@ date: 2019-07-29
 
 ### Mathematical formulation
 
+Recall the Bayes formula
+
+\begin{equation}
+p(\beta | x)=\frac{p(x | \beta) p(\beta)}{\int p(x | \beta) p(\beta) d \beta}
+\end{equation}
