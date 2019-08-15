@@ -63,7 +63,7 @@ $$
     \end{aligned}\tag{2}
 $$
 
-<p>Finally, we find the posterior distribution has the same form as the prior distribution if <b>the second term of the sufficient statistics for the prior distribution is equal to the log normalizer of the likelihood function</b>.</p>
+<p>\ref{aaa} Finally, we find the posterior distribution has the same form as the prior distribution if <b>the second term of the sufficient statistics for the prior distribution is equal to the log normalizer of the likelihood function</b>.</p>
 
 ### Examples
 
@@ -84,3 +84,6 @@ $$
 $$
 \operatorname{Beta}(\mu | a, b)=\frac{\Gamma(a+b)}{\Gamma(a) \Gamma(b)} \mu^{a-1}(1-\mu)^{b-1}
 $$
+
+<p>The posterior distribution of $\mu$ can be obtained is subject to the following beta distribution</p>
+ 
