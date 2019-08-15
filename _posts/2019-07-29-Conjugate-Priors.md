@@ -85,5 +85,5 @@ $$
 \operatorname{Beta}(\mu | a, b)=\frac{\Gamma(a+b)}{\Gamma(a) \Gamma(b)} \mu^{a-1}(1-\mu)^{b-1}
 $$
 
-<p>The posterior distribution of $\mu$ can be obtained is subject to the following beta distribution</p>
+<p>The posterior distribution of $\mu$ can be obtained by multiplying the beta prior by the binomial likelihood function and normalizing. is subject to the following beta distribution</p>
  
