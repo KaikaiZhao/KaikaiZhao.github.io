@@ -85,7 +85,7 @@ $$
 \operatorname{Beta}(\mu | a, b)=\frac{\Gamma(a+b)}{\Gamma(a) \Gamma(b)} \mu^{a-1}(1-\mu)^{b-1}\tag{2}\label{beta}
 $$
 
-<p>The posterior distribution of $\mu$ can be obtained by multiplying the beta prior \eqref{beta} by the binomial likelihood function \eqref{binomial} and normalizing. is subject to the following beta distribution</p>
+<p>The posterior distribution of $\mu$ can be obtained by multiplying the beta prior \eqref{beta} by the binomial likelihood function \eqref{binomial} and normalizing as follows.</p>
  
 $$
 p(\mu | m, l, a, b)=\frac{\Gamma(m+a+l+b)}{\Gamma(m+a) \Gamma(l+b)} \mu^{m+a-1}(1-\mu)^{l+b-1}
@@ -93,3 +93,8 @@ $$
 
 <p>where $l=N-m$</p>
 
+#### Conjugate pairs
+
+Prior | Likelihood
+----- | ----------
+Gaussian $e^{-\left\|\mu-\mu_{0}\right\|^{2} /\left(2 \sigma^{2}\right)}$ | Gaussian $e^{-\|x-\mu\|^{2} /\left(2 \sigma^{2}\right)}$
