@@ -109,8 +109,8 @@ $$
         <td>Bernoulli $\quad \alpha^{x}(1-\alpha)^{1-x}$</td> 
     </tr>
     <tr>
-        <td>Dirichlet $\frac{\Gamma(r+s)}{\Gamma(r) \Gamma(s)} \alpha^{r-1}(2-\alpha)^{s-1}$</td>
-        <td>Multinomial $\quad \alpha^{x}(1-\alpha)^{1-x}$</td> 
+        <td>Dirichlet $\frac{\Gamma\left(\sum \alpha_{i}\right)}{\prod \Gamma\left(\alpha_{i}\right)} \prod \theta_{i}^{\alpha_{i}-1}$</td>
+        <td>Multinomial $\frac{\left(\sum x_{i}\right) !}{\prod x_{i} !} \prod \theta_{i}^{x_{i}}$</td> 
     </tr>
     <tr>
         <td>Wishart</td>
