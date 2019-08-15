@@ -26,3 +26,7 @@ Recall the Bayes formula
 \begin{equation}
 p(\beta | x)=\frac{p(x | \beta) p(\beta)}{\int p(x | \beta) p(\beta) d \beta}
 \end{equation}
+
+\begin{equation}
+\underbrace{p(\beta | x)}_{\text{posterior}} \propto \underbrace{p(x | \beta)}_{\text {likelihood}}\underbrace{p(\beta) }_{\text{prior}}
+\end{equation}
