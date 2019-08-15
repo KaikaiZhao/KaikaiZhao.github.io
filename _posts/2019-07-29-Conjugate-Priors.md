@@ -33,5 +33,6 @@ $$
 \underbrace{p(\beta | x)}_{\text{posterior}} \propto \underbrace{p(x | \beta)}_{\text {likelihood}}\underbrace{p(\beta) }_{\text{prior}}
 $$
 
+#### Give a certain likelihood function, how can we find its conjugate prior?
 The following derivation will end up a very useful and interesting result.
 
