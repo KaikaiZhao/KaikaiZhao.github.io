@@ -102,18 +102,15 @@ Beta | Bernoulli
 
 <table style="width:100%">
   <tr>
-    <th>Firstname</th>
-    <th>Lastname</th> 
-    <th>Age</th>
+    <th>Prior</th>
+    <th>Likelihood</th> 
   </tr>
   <tr>
-    <td>Jill</td>
-    <td>Smith</td> 
-    <td>50</td>
+    <td>Gaussian $e^{-\left\|\mu-\mu_{0}\right\|^{2} /\left(2 \sigma^{2}\right)}$</td>
+    <td>Gaussian $e^{-\|x-\mu\|^{2} /\left(2 \sigma^{2}\right)}$</td> 
   </tr>
   <tr>
-    <td>Eve</td>
-    <td>Jackson</td> 
-    <td>94</td>
+    <td>Beta</td>
+    <td>Bernoulli</td> 
   </tr>
 </table>
