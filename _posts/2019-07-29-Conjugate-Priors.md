@@ -99,3 +99,21 @@ Prior | Likelihood
 ----- | ----------
 Gaussian $e^{-\left\|\mu-\mu_{0}\right\|^{2} /\left(2 \sigma^{2}\right)}$ | Gaussian $e^{-\|x-\mu\|^{2} /\left(2 \sigma^{2}\right)}$
 Beta | Bernoulli
+
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td> 
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td> 
+    <td>94</td>
+  </tr>
+</table>
