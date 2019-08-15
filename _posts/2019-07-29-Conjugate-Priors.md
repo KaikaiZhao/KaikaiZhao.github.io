@@ -35,7 +35,7 @@ $$
 
 #### Given a certain likelihood function, how can we find its conjugate prior?
 
-The following derivation will end up a very useful and interesting result. Here we employ the exponential family form of probability distributions because it simplifies the derivation process significantly.
+<p>The following derivation will end up a very useful and interesting result. I learned the following result from the Yida Xu's <a href="https://github.com/roboticcam/machine-learning-notes/blob/master/variational.pdf" target="_blank">variational inference</a> tutorial. Here we employ the exponential family form of probability distributions because it simplifies the derivation process significantly.</p>
 
 * **Likelihood density:**
 
