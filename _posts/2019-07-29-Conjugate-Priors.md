@@ -98,3 +98,4 @@ $$
 Prior | Likelihood
 ----- | ----------
 Gaussian $e^{-\left\|\mu-\mu_{0}\right\|^{2} /\left(2 \sigma^{2}\right)}$ | Gaussian $e^{-\|x-\mu\|^{2} /\left(2 \sigma^{2}\right)}$
+Beta | Bernoulli
