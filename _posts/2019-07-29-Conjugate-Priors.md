@@ -117,3 +117,5 @@ $$
         <td>Gaussian(variance)</td> 
     </tr>
 </table>
+
+<p>As can been seen from the above table, when the likelihood function belongs to Gaussian distribution, its conjugate prior for the parameter $\mu$ is Gaussian while its conjugate prior for the variance is Wishart distribution.</p>
