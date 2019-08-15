@@ -52,7 +52,7 @@ $$
 <p>Let sufficient statistics $t(\beta)=\left[\beta\quad -\color{red}{A_l(\beta)}\right]^{T}$ and $\alpha=\left[\alpha_{1}\quad \alpha_{2}\right]^{T}$</p>
 
 $$
-p(\beta)=h(\beta) \exp \left\{\left[\alpha_{1}\quad \alpha_{2}\right]\left[\beta\quad \color{red}{A_l(\beta)}\right]^{T}-A_{g}(\alpha)\right\}\tag{1}
+p(\beta)=h(\beta) \exp \left\{\left[\alpha_{1}\quad \alpha_{2}\right]\left[\beta\quad \color{red}{A_l(\beta)}\right]^{T}-A_{g}(\alpha)\right\}\tag{1}\label{aaa}
 $$
 
 * **Posterior:**
