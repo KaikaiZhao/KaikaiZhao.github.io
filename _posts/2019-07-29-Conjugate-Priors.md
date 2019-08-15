@@ -37,15 +37,16 @@ $$
 
 The following derivation will end up a very useful and interesting result. Here we employ the exponential family form of probability distributions because it simplifies the derivation process significantly.
 
-* Likelihood density:
+* **Likelihood density:**
 
 $$
 p\left(x | \beta\right)=h\left(x\right) \exp \left\{t\left(x\right) \beta -\color{red}{A_l(\beta)}\right\}
 $$
 
-* Prior:
+* **Prior:**
 
 $$
 p(\beta)=h(\beta) \exp \left\{\alpha^{T} t(\beta)-A_{g}(\alpha)\right\}=\underbrace{\exp \left(-A_{g}(\alpha)\right)}_{\text { normalization }} h(\beta) \exp \left\{\alpha^{T} t(\beta)\right\}
 $$
 
+<p>Let sufficient statistics $t(\beta)=\left[\beta,-\color{red}{A_l(\beta)}\right]^{T}$</p>
