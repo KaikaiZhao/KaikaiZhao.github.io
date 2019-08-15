@@ -34,5 +34,10 @@ $$
 $$
 
 #### Give a certain likelihood function, how can we find its conjugate prior?
-The following derivation will end up a very useful and interesting result.
+
+The following derivation will end up a very useful and interesting result. Here we employ the exponential family form of probability distributions because it simplifies the derivation process significantly.
+
+* Likelihood density:
+
+
 
