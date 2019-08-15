@@ -79,3 +79,8 @@ $$
 \left(\begin{array}{c}{N} \\ {m}\end{array}\right) \equiv \frac{N !}{(N-m) ! m !}
 $$
 
+<p>Suppose the prior of its parameter $\mu$ is subject to the following beta distribution</p>
+
+$$
+\operatorname{Beta}(\mu | a, b)=\frac{\Gamma(a+b)}{\Gamma(a) \Gamma(b)} \mu^{a-1}(1-\mu)^{b-1}
+$$
