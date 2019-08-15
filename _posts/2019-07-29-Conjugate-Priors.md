@@ -6,7 +6,7 @@ description: If a conjugate prior is available for a likelihood function, the po
 date: 2019-07-29
 ---
 
-<p>When I was learning variational inference, conjugacy ever made me confused. I spent some time figuring it out and found it is important for us to read some top-conference papers. So I would like to write down what I have learned and my thoughts as well. I hope it could be helpful for the friends who are struggling with this concept.</p>
+<p>When I was studying variational inference, conjugacy ever made me confused. I spent some time figuring it out and found it is important for us to read some top-conference papers. So I would like to write down what I have learned and my thoughts as well. I hope it could be helpful for the friends who are struggling with this concept.</p>
 
 ### Definition
 
@@ -16,3 +16,5 @@ date: 2019-07-29
         In general, for a given probability distribution $p(x|\eta)$, we can seek a prior $p(\eta)$ that is conjugate to the likelihood function, so that the posterior distribution has the same functional form as the prior.
     </p>
 </blockquote>
+
+<p>The critical point in the above definition is the final posterior distribution and the prior share the same form. Note that the exponential family will play an important role in the following explanation for the conjugacy concept. If you are not comfortable with it, welcome to check out my <a href="https://kaikaizhao.github.io/notes/2019/07/26/Exponential-Family" target="_blank">exponential family</a> blog.</p>
