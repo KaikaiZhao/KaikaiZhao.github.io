@@ -59,7 +59,7 @@ $$
 
 $$
     \begin{aligned} 
-    p\left(\beta | x_{n}, z_{n}, \alpha\right) & \propto \underbrace{h(\beta) \exp \left\{\alpha t(\beta)^{T}\right\}}_{\text{likelihood}} \underbrace{\exp \left\{t(x) \beta-A_{l}(\beta)\right\}}_{\text{prior}} \\ &=h(\beta) \exp \left\{\left(\alpha_{1}+t(x)\right) \beta+\alpha_{2} A_{l}(\beta)-A_{l}(\beta)\right\} \\ &=h(\beta) \exp \left\{\left(\alpha_{1}+t(x)\right) \beta+\left(\alpha_{2}+1\right) A_{l}(\beta)\right\} \\ &=h(\beta) \exp \left\{\left[\alpha_{1}+t(x) \quad \alpha_{2}-1\right] t(\beta)^{T}\right\}
+    p\left(\beta | x_{n}, z_{n}, \alpha\right) & \propto \underbrace{h(\beta) \exp \left\{\alpha t(\beta)^{T}\right\}}_{\text{prior}} \underbrace{\exp \left\{t(x) \beta-A_{l}(\beta)\right\}}_{\text{likelihood}} \\ &=h(\beta) \exp \left\{\left(\alpha_{1}+t(x)\right) \beta+\alpha_{2} A_{l}(\beta)-A_{l}(\beta)\right\} \\ &=h(\beta) \exp \left\{\left(\alpha_{1}+t(x)\right) \beta+\left(\alpha_{2}+1\right) A_{l}(\beta)\right\} \\ &=h(\beta) \exp \left\{\left[\alpha_{1}+t(x) \quad \alpha_{2}-1\right] t(\beta)^{T}\right\}
     \end{aligned}\tag{2}
 $$
 
