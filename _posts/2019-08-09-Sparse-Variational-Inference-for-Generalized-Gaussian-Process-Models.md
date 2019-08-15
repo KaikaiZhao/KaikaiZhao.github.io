@@ -12,6 +12,6 @@ In this past summer, I ever worked on the following papers. In this tutorial the
 <ol>
     <li>Rishit Sheth, Yuyang Wang, and Roni Khardon. <a href="http://homes.sice.indiana.edu/rkhardon/PUB/icml15sparseFPGP.pdf" target="_blank">Sparse variational inference for generalized gaussian process</a>
 151 models. ICML 2015.</li>
-    <li>Rishit Sheth, Yuyang Wang, and Roni Khardon. <a href="http://homes.sice.indiana.edu/rkhardon/PUB/icml15sparseFPGP.pdf" target="_blank">Sparse variational inference for generalized gaussian process</a>
-151 models. ICML 2015.</li>
+    <li>Rishit Sheth and Roni Khardon. <a href="http://homes.sice.indiana.edu/rkhardon/PUB/icml15sparseFPGP.pdf" target="_blank">A Fixed-Point Operator for Inference in Variational Bayesian Latent Gaussian Models</a>
+151 models. AISTATS 2016.</li>
 </ol>
