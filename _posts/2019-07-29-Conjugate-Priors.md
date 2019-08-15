@@ -52,7 +52,7 @@ $$
 <p>Let sufficient statistics $t(\beta)=\left[\beta\quad \color{red}{A_l(\beta)}\right]^{T}$ and $\alpha=\left[\alpha_{1}\quad \alpha_{2}\right]^{T}$</p>
 
 $$
-p(\beta)=h(\beta) \exp \left\{\left[\alpha_{1}\quad \alpha_{2}\right]\left[\beta\quad \color{red}{A_l(\beta)}\right]^{T}-A_{g}(\alpha)\right\}\tag{1}\label{aaa}
+p(\beta)=h(\beta) \exp \left\{\left[\alpha_{1}\quad \alpha_{2}\right]\left[\beta\quad \color{red}{A_l(\beta)}\right]^{T}-A_{g}(\alpha)\right\}
 $$
 
 * **Posterior:**
@@ -60,7 +60,7 @@ $$
 $$
     \begin{aligned} 
     p\left(\beta | x \alpha\right) & \propto \underbrace{h(\beta) \exp \left\{\alpha t(\beta)^{T}\right\}}_{\text{prior}} \underbrace{\exp \left\{t(x) \beta-A_{l}(\beta)\right\}}_{\text{likelihood}} \\ &=h(\beta) \exp \left\{\left(\alpha_{1}+t(x)\right) \beta+\alpha_{2} A_{l}(\beta)-A_{l}(\beta)\right\} \\ &=h(\beta) \exp \left\{\left(\alpha_{1}+t(x)\right) \beta+\left(\alpha_{2}-1\right) A_{l}(\beta)\right\} \\ &=h(\beta) \exp \left\{\left[\alpha_{1}+t(x) \quad \alpha_{2}-1\right] t(\beta)^{T}\right\}
-    \end{aligned}\tag{2}
+    \end{aligned}
 $$
 
 <p>\ref{aaa} Finally, we find the posterior distribution has the same form as the prior distribution if <b>the second term of the sufficient statistics for the prior distribution is equal to the log normalizer of the likelihood function</b>.</p>
@@ -76,14 +76,14 @@ $$
 where
 
 $$
-\left(\begin{array}{c}{N} \\ {m}\end{array}\right) \equiv \frac{N !}{(N-m) ! m !}
+\left(\begin{array}{c}{N} \\ {m}\end{array}\right) \equiv \frac{N !}{(N-m) ! m !}\tag{1}\label{binomial}
 $$
 
 <p>Suppose the prior of its parameter $\mu$ is subject to the following beta distribution</p>
 
 $$
-\operatorname{Beta}(\mu | a, b)=\frac{\Gamma(a+b)}{\Gamma(a) \Gamma(b)} \mu^{a-1}(1-\mu)^{b-1}
+\operatorname{Beta}(\mu | a, b)=\frac{\Gamma(a+b)}{\Gamma(a) \Gamma(b)} \mu^{a-1}(1-\mu)^{b-1}\tag{2}\label{beta}
 $$
 
-<p>The posterior distribution of $\mu$ can be obtained by multiplying the beta prior by the binomial likelihood function and normalizing. is subject to the following beta distribution</p>
+<p>The posterior distribution of $\mu$ can be obtained by multiplying the beta prior \eqref{beta} by the binomial likelihood function \eqref{binomial} and normalizing. is subject to the following beta distribution</p>
  
