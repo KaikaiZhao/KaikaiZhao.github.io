@@ -23,9 +23,9 @@ date: 2019-07-29
 
 Recall the Bayes formula
 
-\begin{equation}
+$$
 p(\beta | x)=\frac{p(x | \beta) p(\beta)}{\int p(x | \beta) p(\beta) d \beta}
-\end{equation}
+$$
 
 <p><b>Note:</b> the denominator is not a function w.r.t $\beta$ and it can be considered as a normalization term.</p>
 
@@ -52,11 +52,14 @@ $$
 <p>Let sufficient statistics $t(\beta)=\left[\beta\quad -\color{red}{A_l(\beta)}\right]^{T}$ and $\alpha=\left[\alpha_{1}\quad \alpha_{2}\right]^{T}$</p>
 
 $$
-p(\beta)=h(\beta) \exp \left\{\left[\alpha_{1}\quad \alpha_{2}\right]\left[\beta\quad \color{red}{A_l(\beta)}\right]^{T}-A_{g}(\alpha)\right\}
+p(\beta)=h(\beta) \exp \left\{\left[\alpha_{1}\quad \alpha_{2}\right]\left[\beta\quad \color{red}{A_l(\beta)}\right]^{T}-A_{g}(\alpha)\right\}\tag{1}
 $$
 
 * **Posterior:**
 
 $$
-\begin{aligned} p\left(\beta | x_{n}, z_{n}, \alpha\right) & \propto \underbrace{h(\beta) \exp \left\{\alpha t(\beta)^{T}\right\}}_{\text{likelihood}} \underbrace{\exp \left\{t(x) \beta-A_{l}(\beta)\right\}}_{\text{prior}} \\ &=h(\beta) \exp \left\{\left(\alpha_{1}+t(x)\right) \beta-\alpha_{2} A_{l}(\beta)-A_{l}(\beta)\right\} \\ &=h(\beta) \exp \left\{\left(\alpha_{1}+t(x)\right) \beta-\left(\alpha_{2}+1\right) A_{l}(\beta)\right\} \\ &=h(\beta) \exp \left\{\left[\alpha_{1}+t(x) \quad \alpha_{2}+1\right] t(\beta)^{T}\right\} \end{aligned}
+    \begin{aligned} 
+    p\left(\beta | x_{n}, z_{n}, \alpha\right) & \propto \underbrace{h(\beta) \exp \left\{\alpha t(\beta)^{T}\right\}}_{\text{likelihood}} \underbrace{\exp \left\{t(x) \beta-A_{l}(\beta)\right\}}_{\text{prior}} \\ &=h(\beta) \exp \left\{\left(\alpha_{1}+t(x)\right) \beta-\alpha_{2} A_{l}(\beta)-A_{l}(\beta)\right\} \\ &=h(\beta) \exp \left\{\left(\alpha_{1}+t(x)\right) \beta-\left(\alpha_{2}+1\right) A_{l}(\beta)\right\} \\ &=h(\beta) \exp \left\{\left[\alpha_{1}+t(x) \quad \alpha_{2}+1\right] t(\beta)^{T}\right\}
+    \end{aligned}\tag{2}
 $$
+
