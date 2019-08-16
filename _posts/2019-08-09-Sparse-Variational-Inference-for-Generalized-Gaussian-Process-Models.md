@@ -42,3 +42,9 @@ where the conditional GP prior is $p\left(\mathbf{f} | \mathbf{f}_{m}\right)=N\l
 $$
     \log p(\mathbf{y})=\log \int p(\mathbf{y} | \mathbf{f}) p\left(\mathbf{f} | \mathbf{f}_{m}\right) p\left(\mathbf{f}_{m}\right) d \mathbf{f} d \mathbf{f}_{m}
 $$
+<p>
+The posterior $p(\mathbf{f},\mathbf{f}_{m}|\mathbf{y})$ is approximated by the variational distribution
+</p>
+$$
+q\left(\mathbf{f}, \mathbf{f}_{m}\right)=p\left(\mathbf{f} | \mathbf{f}_{m}\right) \phi\left(\mathbf{f}_{m}\right)
+$$
