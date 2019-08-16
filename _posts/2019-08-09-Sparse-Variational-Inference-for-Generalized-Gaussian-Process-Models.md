@@ -188,7 +188,7 @@ $$
 $$
 
 <p>
-where $z$ denotes sample points and $w$ represents the corresponding weights, so their subscripts are different from $y$, $m$ or $v$.
+where $z$ denotes sample points and $w$ represents the corresponding weights, so their subscripts are different from the subscripts of $y$, $m$ or $v$.
 </p>
 
 Generally, we employ gradient ascent to optimize variational parameters.
