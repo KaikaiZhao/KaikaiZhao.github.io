@@ -202,4 +202,15 @@ $$
 \end{aligned}
 $$
 
+<p>
+In the case of the second term of VLB, i.e. $\mathrm{KL}\left(\phi\left(\boldsymbol{f}_{\mathcal{U}}\right) \| p\left(\boldsymbol{f}_{\mathcal{U}}\right)\right)$, we have
+</p>
+
+$$\label{de-KL}
+    \begin{aligned} \mathrm{KL}\left(\phi\left(\boldsymbol{f}_{\mathcal{U}}\right) \| p\left(\boldsymbol{f}_{\mathcal{U}}\right)\right)&= \frac{1}{2} \log \left|K_MV^{-1}\right|+ \frac{1}{2} \operatorname{tr} K_M^{-1}\left(\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)^{\top}+V-K_M\right)\\
+    &=\frac{1}{2} \log \left|K_M\right|+ \frac{1}{2} \log \left|V^{-1}\right|+ \frac{1}{2} \operatorname{tr} K_M^{-1}\left(\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)^{\top}+V-K_M\right)
+    \end{aligned}
+$$
+
+
 Generally, we employ gradient ascent to optimize variational parameters.
