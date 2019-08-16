@@ -138,7 +138,7 @@ $$
 $$
 
 <p>
-The Poisson only has support for non-negative integers, whereas a Gaussian has support over all real numbers (including negatives). Therefore, we use a link function to connect the Poisson process with the Gaussian process. We have tried two kinds of link functions: $$
+The Poisson only has support for non-negative integers, whereas a Gaussian has support over all real numbers (including negatives). Therefore, we use a link function to connect the Poisson process with the Gaussian process. We have tried two kinds of link functions: $\lambda=e^{f}$ and $\lambda=\ln(1+e^{f})$.
 </p>
 
 Generally, we employ gradient ascent to optimize variational parameters.
