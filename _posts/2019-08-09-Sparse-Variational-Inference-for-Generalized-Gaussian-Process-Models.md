@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sparse Variational Inference for Generalized Gaussian Process Models - Tutorial 2
+title: Sparse Variational Inference for Generalized Gaussian Process Models - Tutorial
 description: This is a tutorial for this ICML 2015 paper 'Sparse Variational Inference for Generalized Gaussian Process Models'. It covers fixed point method, stochastic variational inference and some experiments.
 date: 2019-08-09
 ---
@@ -242,4 +242,4 @@ $$
 \frac{\partial \mathrm{VLB}}{\partial V}=\frac{1}{2} \sum_{i}\left(\lambda_{i} K_{M}^{-1} K_{M i} K_{i M} K_{M}^{-1}\right)+\frac{1}{2}\left(V^{-1}-K_{M}^{-1}\right)\tag{5}\label{de-V}
 $$
 
-<p>where $\rho_i$ and $\lambda_i$ are derived from the first step of chain rule when we calculate the derivatives of log likelihood expectation. They are expectations of the first derivatives and second derivatives of log likelihood. These are available in the Table 1 of the original paper.</p>
+<p>where $\rho_i$ and $\lambda_i$ are derived from the first step of chain rule when we calculate the derivatives of log likelihood expectation. They are expectations of the first derivatives and second derivatives of log likelihood. These are available in the Table 1 of the original paper. In the next article we will continue to talk about this topic.</p>
