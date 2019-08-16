@@ -77,9 +77,10 @@ $$
 After we substitute the integral sign and $m$ with a sum sign and $\mathcal{U}$ respectively, we obtain the Eq. (2) in the first paper, which is
 </p>
 
-\begin{equation}\label{VLB}
+$$
     \log p(\boldsymbol{y}) \geq \sum_{i=1}^{N} \mathbb{E}_{q\left(f\left(\boldsymbol{x}_{i}\right)\right)}\left[\log p\left(y_{i} | f\left(\boldsymbol{x}_{i}\right)\right)\right] -\mathrm{KL}\left(\phi\left(\boldsymbol{f}_{\mathcal{U}}\right) \| p\left(\boldsymbol{f}_{\mathcal{U}}\right)\right)
-\end{equation}
+    \tag{1}\label{VLB}
+$$
 <p>
 Where $q(f(x_i))$ is the marginal distribution of latent function values $f(x_i)$ w.r.t the approximate posterior $q(f_{\mathcal{X}},f_{\mathcal{U}})$. The right hand side of Eq.(\ref{VLB}) is the so-called variational lower bound(VLB).
 </p>
