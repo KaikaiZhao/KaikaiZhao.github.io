@@ -128,4 +128,17 @@ $$
 \end{aligned}\label{cal-exp-logGausslik}
 $$
 
-Generally, we employ gadient ascent to optimize variational parameters.
+<p>
+For the case of count regression, we employ Poisson likelihood.
+</p>
+
+$$
+    p(y|\lambda)=\frac{1}{y!}e^{-\lambda}\lambda^y
+\label{Poisson-lik-lambda}
+$$
+
+<p>
+The Poisson only has support for non-negative integers, whereas a Gaussian has support over all real numbers (including negatives). Therefore, we use a link function to connect the Poisson process with the Gaussian process. We have tried two kinds of link functions: $$
+</p>
+
+Generally, we employ gradient ascent to optimize variational parameters.
