@@ -53,3 +53,18 @@ q\left(\mathbf{f}, \mathbf{f}_{m}\right)=p\left(\mathbf{f} | \mathbf{f}_{m}\righ
 $$
 
 <p>where $\phi$ is a multivariate Gaussian distribution with mean $\boldsymbol{m}}$ and covaraince $\boldsymbol{V}}$ and these two parameters are exactly what we are going to optimize.</p>
+
+<p>
+Applying Jensen's inequality we obtain
+</p>
+
+\begin{align*}
+    \log p(\mathbf{y})&=\log \int p\left(\mathbf{f} | \mathbf{f}_{m}\right)\phi\left(\mathbf{f}_{m}\right)\cdot \frac{p(\mathbf{y} | \mathbf{f}) p\left(\mathbf{f} | \mathbf{f}_{m}\right) p\left(\mathbf{f}_{m}\right)}{p\left(\mathbf{f} | \mathbf{f}_{m}\right)\phi\left(\mathbf{f}_{m}\right)}  d \mathbf{f} d \mathbf{f}_{m}\\
+    &\ge \int p\left(\mathbf{f} | \mathbf{f}_{m}\right) \phi\left(\mathbf{f}_{m}\right) \log \frac{p(\mathbf{y} | \mathbf{f}) p\left(\mathbf{f} | \mathbf{f}_{m}\right) p\left(\mathbf{f}_{m}\right)}{p\left(\mathbf{f} | \mathbf{f}_{m}\right) \phi\left(\mathbf{f}_{m}\right)} d \mathbf{f} d \mathbf{f}_{m}\\
+    &= \int p\left(\mathbf{f} | \mathbf{f}_{m}\right) \phi\left(\mathbf{f}_{m}\right) \log \frac{p(\mathbf{y} | \mathbf{f})  p\left(\mathbf{f}_{m}\right)}{ \phi\left(\mathbf{f}_{m}\right)} d \mathbf{f} d \mathbf{f}_{m}\\
+    &= \int p\left(\mathbf{f} | \mathbf{f}_{m}\right) \phi\left(\mathbf{f}_{m}\right) \log p(\mathbf{y} | \mathbf{f}) d \mathbf{f} d \mathbf{f}_{m} + \int p\left(\mathbf{f} | \mathbf{f}_{m}\right) \phi\left(\mathbf{f}_{m}\right) \log \frac{p\left(\mathbf{f}_{m}\right)}{ \phi\left(\mathbf{f}_{m}\right)} d \mathbf{f} d \mathbf{f}_{m}\\
+    &= \int p\left(\mathbf{f} | \mathbf{f}_{m}\right) \phi\left(\mathbf{f}_{m}\right) \log p(\mathbf{y} | \mathbf{f}) d \mathbf{f} d \mathbf{f}_{m} - \int  \phi\left(\mathbf{f}_{m}\right) \log \frac{\phi\left(\mathbf{f}_{m}\right)}{ p\left(\mathbf{f}_{m}\right)} d \mathbf{f}_{m}\\
+    =& \int q\left(\mathbf{f}, \mathbf{f}_{m}\right) \log p(\mathbf{y} | \mathbf{f}) d \mathbf{f} d \mathbf{f}_{m} - \int  \phi\left(\mathbf{f}_{m}\right) \log \frac{\phi\left(\mathbf{f}_{m}\right)}{ p\left(\mathbf{f}_{m}\right)} d \mathbf{f}_{m}\\
+    =&\int q\left(\mathbf{f}\right) \log p(\mathbf{y} | \mathbf{f}) d \mathbf{f} - \int  \phi\left(\mathbf{f}_{m}\right) \log \frac{\phi\left(\mathbf{f}_{m}\right)}{ p\left(\mathbf{f}_{m}\right)} d \mathbf{f}_{m}\tag{\stepcounter{equation}\theequation}\\
+    =&\int q\left(\mathbf{f}\right) \log p(\mathbf{y} | \mathbf{f}) d \mathbf{f} - KL(\phi(\mathbf{f_m})\|p(\mathbf{f_m}))\\
+\end{align*}
