@@ -35,3 +35,7 @@ For sparse variational Gaussian Processes, we follow <a href="http://proceedings
 $$
     p\left(\mathbf{y}, \mathbf{f}, \mathbf{f}_{m}\right)=p(\mathbf{y} | \mathbf{f}) p\left(\mathbf{f} | \mathbf{f}_{m}\right) p\left(\mathbf{f}_{m}\right)
 $$
+
+<p>
+where the conditional GP prior is $p\left(\mathbf{f} | \mathbf{f}_{m}\right)=N\left(\mathbf{f} | K_{n m} K_{m m}^{-1} \mathbf{f}_{m}, K_{n n}-K_{n m} K_{m m}^{-1} K_{m n}\right)$. Then the true marginal likelihood can be written as
+</p>
