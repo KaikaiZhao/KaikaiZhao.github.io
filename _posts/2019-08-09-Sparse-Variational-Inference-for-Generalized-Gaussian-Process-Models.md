@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sparse Variational Inference for Generalized Gaussian Process Models - a Tutorial
+title: Sparse Variational Inference for Generalized Gaussian Process Models - Tutorial 2
 description: This is a tutorial for this ICML 2015 paper 'Sparse Variational Inference for Generalized Gaussian Process Models'. It covers fixed point method, stochastic variational inference and some experiments.
 date: 2019-08-09
 ---
@@ -243,7 +243,3 @@ $$
 $$
 
 <p>where $\rho_i$ and $\lambda_i$ are derived from the first step of chain rule when we calculate the derivatives of log likelihood expectation. They are expectations of the first derivatives and second derivatives.</p>
-
-
-
-Generally, we employ gradient ascent to optimize variational parameters.
