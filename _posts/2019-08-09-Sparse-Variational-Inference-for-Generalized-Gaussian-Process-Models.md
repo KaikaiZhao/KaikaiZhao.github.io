@@ -212,5 +212,13 @@ $$\label{de-KL}
     \end{aligned}
 $$
 
+### Calculating the gradients of the VLB
+<p>
+Now we have the VLB handy. Our goal is to optimize variational parameters, so we need to calculate the gradients of the VLB w.r.t $\boldsymbol{m}$ and $\boldsymbol{V}$. In the first paper, the chain rule is employed when  the gradients of the log likelihood expectation term are calculated. Specifically, 
+</p>
+$$
+\frac{\partial \mathrm{VL} \mathrm{B}}{\partial \boldsymbol{m}}=\frac{\partial VLB}{\partial m_{q_{i}}}\frac{\partial m_{q_{i}}}{\partial m}
+$$
+
 
 Generally, we employ gradient ascent to optimize variational parameters.
