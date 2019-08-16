@@ -68,7 +68,7 @@ $$
     &= \int p\left(\mathbf{f} | \mathbf{f}_{m}\right) \phi\left(\mathbf{f}_{m}\right) \log p(\mathbf{y} | \mathbf{f}) d \mathbf{f} d \mathbf{f}_{m} + \int p\left(\mathbf{f} | \mathbf{f}_{m}\right) \phi\left(\mathbf{f}_{m}\right) \log \frac{p\left(\mathbf{f}_{m}\right)}{ \phi\left(\mathbf{f}_{m}\right)} d \mathbf{f} d \mathbf{f}_{m}\\
     &= \int p\left(\mathbf{f} | \mathbf{f}_{m}\right) \phi\left(\mathbf{f}_{m}\right) \log p(\mathbf{y} | \mathbf{f}) d \mathbf{f} d \mathbf{f}_{m} - \int  \phi\left(\mathbf{f}_{m}\right) \log \frac{\phi\left(\mathbf{f}_{m}\right)}{ p\left(\mathbf{f}_{m}\right)} d \mathbf{f}_{m}\\
     =& \int q\left(\mathbf{f}, \mathbf{f}_{m}\right) \log p(\mathbf{y} | \mathbf{f}) d \mathbf{f} d \mathbf{f}_{m} - \int  \phi\left(\mathbf{f}_{m}\right) \log \frac{\phi\left(\mathbf{f}_{m}\right)}{ p\left(\mathbf{f}_{m}\right)} d \mathbf{f}_{m}\\
-    =&\int q\left(\mathbf{f}\right) \log p(\mathbf{y} | \mathbf{f}) d \mathbf{f} - \int  \phi\left(\mathbf{f}_{m}\right) \log \frac{\phi\left(\mathbf{f}_{m}\right)}{ p\left(\mathbf{f}_{m}\right)} d \mathbf{f}_{m}\tag{\stepcounter{equation}\theequation}\\
+    =&\int q\left(\mathbf{f}\right) \log p(\mathbf{y} | \mathbf{f}) d \mathbf{f} - \int  \phi\left(\mathbf{f}_{m}\right) \log \frac{\phi\left(\mathbf{f}_{m}\right)}{ p\left(\mathbf{f}_{m}\right)} d \mathbf{f}_{m}\\
     =&\int q\left(\mathbf{f}\right) \log p(\mathbf{y} | \mathbf{f}) d \mathbf{f} - KL(\phi(\mathbf{f_m})\|p(\mathbf{f_m}))\\
 \end{aligned}
 $$
