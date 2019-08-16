@@ -25,3 +25,9 @@ In this tutorial we cannot cover all the ideas in the above papers. The main top
 <p>
 We will assume prior knowledge of (sparse) Gaussian process and variational inference.
 </p>
+
+### Variational Lower Bound for Sparse Gaussian Processes
+
+<p>
+For sparse variational Gaussian Processes, we follow <a href="http://proceedings.mlr.press/v5/titsias09a/titsias09a.pdf" target="_blank">Titsias 2009</a>. We first need to select the inducing inputs $X_m$, and $f$ and $f_m$ denote the training latent function values and the inducing variables, respectively. Then, the initial joint model is
+</p>
