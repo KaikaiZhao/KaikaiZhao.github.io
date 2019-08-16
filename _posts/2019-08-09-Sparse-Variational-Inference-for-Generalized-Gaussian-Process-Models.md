@@ -175,7 +175,8 @@ However, the closed form for the expectation of log Poisson likelihood with the 
 Binary Classification
 </h5>
 <p>
-For binary classification tasks, we use <b>sigmoid function</b> as the likelihood function, 
+For binary classification tasks, we use <b>sigmoid function</b> as the likelihood function. Unfortunately, the closed form for expectation of log likelihood is not available either. 
 </p>
+
 
 Generally, we employ gradient ascent to optimize variational parameters.
