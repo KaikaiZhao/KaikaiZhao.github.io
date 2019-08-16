@@ -5,7 +5,7 @@ description: This is a tutorial for this ICML 2015 paper 'Sparse Variational Inf
 date: 2019-08-10
 ---
 <p>
-Since the canonical link function $\lambda=e^{f}$ may bring numerical issues, we introduce a good alternative link function $\lambda=\ln(1+e^{f})$ which could be stabler. In this continued blog, we will talk about calculating the first derivatives and the second derivatives for this link, including the corresponding expectations. Also, fixed point method will be introduced. Aditionally, we'll talk about a little stochastic variational inference.
+Since the canonical link function $\lambda=e^{f}$ may bring numerical issues, we introduce a good alternative link function, that is, $\lambda=\ln(1+e^{f})$ which could be stabler. In this continued blog, we will talk about calculating the first derivatives and the second derivatives for this link, including the corresponding expectations. Also, fixed point method will be introduced. Aditionally, we'll talk about a little stochastic variational inference.
 </p>
 
 ### Deriving the formulae related to $\lambda=\ln(1+e^{f})$
@@ -42,3 +42,4 @@ $$
 <p>
 Once we obtain the above formulae, we can get expectations of the deravatives w.r.t $\mathcal{N}(f | m, v)$, i.e. $\rho_i$ and $\lambda_i$ in Eq. (4) and (5) of <a href="https://kaikaizhao.github.io/notes/2019/08/09/Sparse-Variational-Inference-for-Generalized-Gaussian-Process-Models" target="_blank">Tutorial 1</a>,  through Gaussian-Hermite quadrature since the closed form expressions are not available.
 </p>
+
