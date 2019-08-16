@@ -91,6 +91,7 @@ As $q(f_{\mathcal{X}},f_{\mathcal{U}})$ is a joint Gaussian distribution, the ma
 $$
     m_{q}(\boldsymbol{x})=m(\boldsymbol{x})+K_{x M} K_{M}^{-1}\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)
 $$
+
 $$
 v_{q}(\boldsymbol{x})=k(\boldsymbol{x}, \boldsymbol{x})+K_{x M} K_{M}^{-1}\left(V-K_{M}\right) K_{M}^{-1} K_{M x}
 $$
