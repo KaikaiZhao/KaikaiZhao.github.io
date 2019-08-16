@@ -178,5 +178,17 @@ Binary Classification
 For binary classification tasks, we use <b>sigmoid function</b> as the likelihood function. Unfortunately, the closed form for expectation of log likelihood is not available either. 
 </p>
 
+$$
+    \begin{aligned}
+    \mathbb{E}_{q_{i}\left(f_{i}\right)}\left[\log p\left(y_{i}|f_{i}\right)\right]
+    &=\frac{1}{\sqrt{2\pi}}\int e^{-\frac{1}{2} z_{i}^{2}} \log \frac{1}{1+\exp(-y_i f_i)}dz_{i}\\
+    &=\frac{1}{\sqrt{2\pi}}\int e^{-\frac{1}{2} z_{i}^{2}} \log \frac{1}{1+\exp(-y_i (z_{i} \sqrt{v_{q_{i}}}+m_{q_{i}}))}dz_{i}\\
+    &\approx\frac{1}{\sqrt{2\pi}}\sum_j^n w_j \log \frac{1}{1+\exp(-y_i (z_{j} \sqrt{v_{q_{i}}}+m_{q_{i}}))}\\
+    \end{aligned}
+$$
+
+<p>
+where $z$ denotes sample points and $w$ represents the corresponding weights, so their subscripts are different from $y$, $m$ or $v$.
+</p>
 
 Generally, we employ gradient ascent to optimize variational parameters.
