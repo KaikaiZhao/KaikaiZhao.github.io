@@ -141,4 +141,21 @@ $$
 The Poisson only has support for non-negative integers, whereas a Gaussian has support over all real numbers (including negatives). Therefore, we use a link function to connect the Poisson process with the Gaussian process. We have tried two kinds of link functions: $\lambda=e^{f}$ and $\lambda=\ln(1+e^{f})$.
 </p>
 
+<p>For the link function $\lambda=e^{f}$,</p>
+
+$$\label{cal-exp-loglik}
+\begin{aligned}
+\mathbb{E}_{q_{i}\left(f_{i}\right)}\left[\log p\left(y_{i} | f_{i}\right)\right]
+&=\frac{1}{\sqrt{2 \pi}} \int \log (\frac{1}{y_i!} e^{-e^{f_i}} e^{f_iy_i}) e^{-\frac{1}{2} z_{i}^{2}} d z_{i}\\
+&=\frac{1}{\sqrt{2 \pi}} \int \left(\log (\frac{1}{y_i!}) - e^{z_{i} \sqrt{v_{q_{i}}}+m_{q_{i}}} + (z_{i} \sqrt{v_{q_{i}}}+m_{q_{i}})y_i\right) e^{-\frac{1}{2} z_{i}^{2}} d z_{i}\\
+&=\frac{1}{\sqrt{2 \pi}}\log (\frac{1}{y_i!})\int e^{-\frac{1}{2} z_{i}^{2}} d z_{i} - \frac{1}{\sqrt{2 \pi}} \int \left(e^{z_{i} \sqrt{v_{q_{i}}}+m_{q_{i}}}e^{-\frac{1}{2} z_{i}^{2}}\right)d z_{i} + \frac{1}{\sqrt{2 \pi}} \int (z_{i} \sqrt{v_{q_{i}}}+m_{q_{i}})y_i e^{-\frac{1}{2} z_{i}^{2}} d z_{i}\\
+&=\frac{1}{\sqrt{2\pi}}\log (\frac{1}{y_i!})\sqrt{2\pi}-\frac{1}{\sqrt{2 \pi}}e^{m_{q_{i}}} \int \left( e^{z_{i} \sqrt{v_{q_{i}}}-\frac{1}{2} z_{i}^{2}}\right)d z_{i} + \frac{y_i\sqrt{v_{q_{i}}}}{\sqrt{2 \pi}} \int z_{i}e^{-\frac{1}{2} z_{i}^{2}} d z_{i} +\frac{m_{q_i}y_i}{\sqrt{2\pi}}\int e^{-\frac{1}{2} z_{i}^{2}} d z_{i}\\
+&=\log (\frac{1}{y_i!})-\frac{1}{\sqrt{2 \pi}}e^{m_{q_{i}}} \int \left( e^{-\frac{1}{2} z_{i}^{2}+z_{i} \sqrt{v_{q_{i}}}-\frac{1}{2} v_{q_{i}}+\frac{1}{2} v_{q_{i}}}\right)d z_{i} +\frac{y_im_{q_i}}{\sqrt{2\pi}}\sqrt{2\pi}\\
+&=\log (\frac{1}{y_i!})-\frac{1}{\sqrt{2 \pi}}e^{\frac{1}{2}v_{q_{i}}}e^{m_{q_{i}}} \int e^{-\frac{1}{2} (z_{i}-\sqrt{v_{q_{i}}})^2}d z_{i} + y_i m_{q_i}\\
+&=-\log y_i!-e^{m_{q_{i}} + \frac{1}{2}v_{q_{i}}} + y_i m_{q_i}\\
+&=-\log\Gamma(y_i+1)-e^{m_{q_{i}} + \frac{1}{2}v_{q_{i}}} + y_i m_{q_i}
+\end{aligned}
+$$
+
+
 Generally, we employ gradient ascent to optimize variational parameters.
