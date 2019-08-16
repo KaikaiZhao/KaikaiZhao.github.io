@@ -171,6 +171,11 @@ where we use the fact that $\Gamma(x+1)=x!$ and $\int e^{-\frac{1}{2\sigma^2}x^2
 However, the closed form for the expectation of log Poisson likelihood with the link function of $\lambda=\ln(1+e^{f})$ is not available. In this case, Gaussian-Hermite quadrature is employed to calculate the approximate expectation.
 </p>
 
-
+<h5>
+Binary Classification
+</h5>
+<p>
+For binary classification tasks, we use <b>sigmoid function</b> as the likelihood function, 
+</p>
 
 Generally, we employ gradient ascent to optimize variational parameters.
