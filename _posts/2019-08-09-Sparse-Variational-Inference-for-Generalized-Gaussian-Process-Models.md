@@ -26,7 +26,7 @@ In this tutorial we cannot cover all the ideas in the above papers. The main top
 We will assume prior knowledge of (sparse) Gaussian process and variational inference.
 </p>
 
-### Variational Lower Bound for Sparse Gaussian Processes
+## Variational Lower Bound for Sparse Gaussian Processes
 
 <p>
 For sparse variational Gaussian Processes, we follow <a href="http://proceedings.mlr.press/v5/titsias09a/titsias09a.pdf" target="_blank">Titsias 2009</a>. We first need to select the inducing inputs $X_m$, and $f$ and $f_m$ denote the training latent function values and the inducing variables, respectively. Then, the initial joint model is
@@ -96,13 +96,13 @@ $$
 v_{q}(\boldsymbol{x})=k(\boldsymbol{x}, \boldsymbol{x})+K_{x M} K_{M}^{-1}\left(V-K_{M}\right) K_{M}^{-1} K_{M x}
 $$
 
-### Calculating VLB
+## Calculating VLB
 In this section we first calculate the VLB and then we derive the gradients for variational parameters in next section. 
 <p>
 The VLB consists of two parts: the expectation of log likelihood and the KL divergence. Actually, we don't need to compute the VLB, because we can stop iterations when there are no changes for the variational parameters $\boldsymbol{m}$ and $\boldsymbol{V}$. However, we would like to observe the changes for the VLB, hence we will calculate it explicitly.
 </p>
 
-#### Expectation of log likelihood
+### Expectation of log likelihood
 <p>
 We use a change of variable to simply the calculation, that is, $f_i = z_{i} \sqrt{v_{q_{i}}}+m_{q_{i}}$. Then the expectation of log likelihood has the following form,
 </p>
@@ -111,9 +111,9 @@ $$\label{VLB-1}
     \mathbb{E}_{q_{i}\left(f_{i}\right)}\left[\log p\left(y_{i} | f_{i}\right)\right]=\frac{1}{\sqrt{2 \pi}} \int \log p\left(y_{i} | z_{i} \sqrt{v_{q_{i}}}+m_{q_{i}}\right) e^{-\frac{1}{2} z_{i}^{2}} d z_{i}
 $$
 
-<h5>
+<h4>
 Regression
-</h5>
+</h4>
 <p>
 For regression tasks, we employ <b>Gaussian likelihood</b>, 
 </p>
@@ -131,9 +131,9 @@ $$
 \end{aligned}\label{cal-exp-logGausslik}
 $$
 
-<h5>
+<h4>
 Count Regression
-</h5>
+</h4>
 <p>
 For count regression tasks, we employ <b>Poisson likelihood</b>, 
 </p>
@@ -171,9 +171,9 @@ where we use the fact that $\Gamma(x+1)=x!$ and $\int e^{-\frac{1}{2\sigma^2}x^2
 However, the closed form for the expectation of log Poisson likelihood with the link function of $\lambda=\ln(1+e^{f})$ is not available. In this case, Gaussian-Hermite quadrature is employed to calculate the approximate expectation.
 </p>
 
-<h5>
+<h4>
 Binary Classification
-</h5>
+</h4>
 <p>
 For binary classification tasks, we use <b>sigmoid function</b> as the likelihood function. Unfortunately, the closed form for expectation of log likelihood is not available either. 
 </p>
@@ -191,7 +191,7 @@ $$
 where $z$ denotes sample points and $w$ represents the corresponding weights, so their subscripts are different from the subscripts of $y$, $m$ or $v$.
 </p>
 
-### Calculating KL divergence
+### KL divergence
 
 
 
