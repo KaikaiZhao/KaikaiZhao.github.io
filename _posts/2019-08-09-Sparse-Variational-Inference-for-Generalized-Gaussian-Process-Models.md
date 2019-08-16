@@ -111,5 +111,21 @@ $$\label{VLB-1}
     \mathbb{E}_{q_{i}\left(f_{i}\right)}\left[\log p\left(y_{i} | f_{i}\right)\right]=\frac{1}{\sqrt{2 \pi}} \int \log p\left(y_{i} | z_{i} \sqrt{v_{q_{i}}}+m_{q_{i}}\right) e^{-\frac{1}{2} z_{i}^{2}} d z_{i}
 $$
 
+<p>
+For the case of Gaussian likelihood, 
+</p>
+
+$$
+\begin{aligned}
+\mathbb{E}_{q_{i}\left(f_{i}\right)}\left[\log p\left(y_{i} | f_{i}\right)\right]
+&=\frac{1}{\sqrt{2 \pi}} \int \log (\frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(y_i-f_i)^2}{2\sigma^2}}) e^{-\frac{1}{2} z_{i}^{2}} d z_{i}\\
+&=\frac{1}{\sqrt{2 \pi}} \int \left(-\log (\sqrt{2\pi}\sigma) -\frac{(y_i-f_i)^2}{2\sigma^2}\right) e^{-\frac{1}{2} z_{i}^{2}} d z_{i}\\
+&=-\log (\sqrt{2\pi}\sigma) - \frac{1}{\sqrt{2 \pi}} \int \frac{y_i^2-2y_if_i+f_i^2}{2\sigma^2}e^{-\frac{1}{2} z_{i}^{2}}d z_{i}\\
+&=-\log (\sqrt{2\pi}\sigma) - \frac{1}{\sqrt{2\pi}}\int \frac{y_i^2}{2\sigma^2}e^{-\frac{1}{2} z_{i}^{2}}d z_{i} + \frac{1}{\sqrt{2 \pi}\sigma^2} \int y_i(z_{i} \sqrt{v_{q_{i}}}+m_{q_{i}}) e^{-\frac{1}{2} z_{i}^{2}} d z_{i}- \frac{1}{\sqrt{2\pi}}\int \frac{f_i^2}{2\sigma^2}e^{-\frac{1}{2} z_{i}^{2}}d z_{i}\\
+&=-\log (\sqrt{2\pi}\sigma) - \frac{y_i^2}{2\sigma^2} + \frac{y_i m_{q_{i}}}{\sigma^2} - \frac{1}{\sqrt{2\pi}}\int \frac{(z_{i} \sqrt{v_{q_{i}}}+m_{q_{i}})^2}{2\sigma^2}e^{-\frac{1}{2} z_{i}^{2}}d z_{i}\\
+&=-\log (\sqrt{2\pi}\sigma) - \frac{y_i^2}{2\sigma^2} + \frac{y_i m_{q_{i}}}{\sigma^2} - \frac{m_{q_{i}}^2+v_{q_{i}}}{2\sigma^2}\\
+&=-\log (\sqrt{2\pi}\sigma) - \frac{(y_i-m_{q_{i}})^2+v_{q_{i}}}{2\sigma^2}
+\end{aligned}\label{cal-exp-logGausslik}
+$$
 
 Generally, we employ gadient ascent to optimize variational parameters.
