@@ -10,7 +10,7 @@ Since the canonical link function $\lambda=e^{f}$ may bring numerical issues, we
 
 ### Deriving the formulae related to $\lambda=\ln(1+e^{f})$
 <p>
-We still use the chain rule. Specifically, we first calculate derivatives of log Poisson likelihood w.r.t $\lambda$ and calculate derivatives of link function $\lambda=\ln(1+e^{f})$ w.r.t $f$.
+We still use the chain rule. Specifically, we first calculate derivatives of log Poisson likelihood w.r.t $\lambda$ and then calculate derivatives of link function $\lambda=\ln(1+e^{f})$ w.r.t $f$.
 </p>
 
 $$
