@@ -48,3 +48,4 @@ The posterior $p(\mathbf{f},\mathbf{f}_{m}|\mathbf{y})$ is approximated by the v
 $$
 q\left(\mathbf{f}, \mathbf{f}_{m}\right)=p\left(\mathbf{f} | \mathbf{f}_{m}\right) \phi\left(\mathbf{f}_{m}\right)
 $$
+<p>where $\phi$ is a multivariate Gaussian distribution with mean $\boldsymbol{m}}$ and covaraince $\boldsymbol{V}}$ and these two parameters are exactly what we are going to optimize.</p>
