@@ -207,10 +207,10 @@ $$
 In the case of the second term of VLB, i.e. $\mathrm{KL}\left(\phi\left(\boldsymbol{f}_{\mathcal{U}}\right) \| p\left(\boldsymbol{f}_{\mathcal{U}}\right)\right)$, we have
 </p>
 
-$$\label{de-KL}
+$$
     \begin{aligned} \mathrm{KL}\left(\phi\left(\boldsymbol{f}_{\mathcal{U}}\right) \| p\left(\boldsymbol{f}_{\mathcal{U}}\right)\right)&= \frac{1}{2} \log \left|K_MV^{-1}\right|+ \frac{1}{2} \operatorname{tr} K_M^{-1}\left(\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)^{\top}+V-K_M\right)\\
     &=\frac{1}{2} \log \left|K_M\right|+ \frac{1}{2} \log \left|V^{-1}\right|+ \frac{1}{2} \operatorname{tr} K_M^{-1}\left(\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)^{\top}+V-K_M\right)
-    \end{aligned}
+    \end{aligned}\tag{3}\label{de-KL}
 $$
 
 ### Calculating the gradients of the VLB
@@ -229,5 +229,21 @@ $$
 <p>
 The paper has put the first step of the chain rule in detail. A $\frac{1}{\sqrt{2\pi}}$ is missing in Eq. (7) of the original paper, but it does not affect the final outcome since the missing term is absorbed into the subscript of the expectation in the last step of Eq. (8). The second step can be obtained easily through \eqref{VLB-m} and \eqref{VLB-V}.
 </p>
+
+<p>
+After calculating the derivatives of KL term, i.e. \eqref{de-KL}, we put together the derivatives of the two parts of VLB. Then we get the derivatives of the VLB,
+</p>
+
+$$
+    \frac{\partial \mathrm{VLB}}{\partial \boldsymbol{m}}=\sum_{i}\left(\rho_{i} K_{M}^{-1} K_{M i}\right)-K_{M}^{-1}\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)\tag{4}\label{de-m}
+$$
+
+$$
+\frac{\partial \mathrm{VLB}}{\partial V}=\frac{1}{2} \sum_{i}\left(\lambda_{i} K_{M}^{-1} K_{M i} K_{i M} K_{M}^{-1}\right)+\frac{1}{2}\left(V^{-1}-K_{M}^{-1}\right)\tag{4}\label{de-V}
+$$
+
+<p>where $\rho_i$ and $\lambda_i$ are derived from the first step of chain rule when we calculate the derivatives of log likelihood expectation. They are expectations of the first derivatives and second derivatives.</p>
+
+
 
 Generally, we employ gradient ascent to optimize variational parameters.
