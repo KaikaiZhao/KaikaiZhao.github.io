@@ -33,7 +33,7 @@ $$
 $$
 \begin{aligned}
     \frac{\partial^2}{\partial f^2} \log p(y|f)&=\frac{\partial^2 \log p(y|f)}{\partial \lambda^2} \frac{\partial \lambda}{\partial f}\frac{\partial \lambda}{\partial f}+\frac{\partial \log p(y|f)}{\partial \lambda} \frac{\partial^2 \lambda}{\partial f^2}\\
-    &\overset{\lambda=\ln(1+e^{f})}{=\joinrel=\joinrel=}(-\frac{y}{\lambda^2})\frac{e^{f}}{1+e^{f}}\frac{e^{f}}{1+e^{f}}+(-1 + \frac{y}{\lambda})\frac{e^{-f}}{(1+e^{-f})^2}\\
+    &\overset{\lambda=\ln(1+e^{f})}{==}(-\frac{y}{\lambda^2})\frac{e^{f}}{1+e^{f}}\frac{e^{f}}{1+e^{f}}+(-1 + \frac{y}{\lambda})\frac{e^{-f}}{(1+e^{-f})^2}\\
     &=(-\frac{y}{\lambda^2})\frac{1}{(1+e^{-f})^2}+(-1 + \frac{y}{\lambda})\frac{e^{-f}}{(1+e^{-f})^2}\\
     &=\left( (\frac{y}{\ln(1+e^f)}-1)e^{-f}-\frac{y}{\ln^2(1+e^f)} \right)\frac{1}{(1+e^{-f})^2}\\
 \end{aligned}
