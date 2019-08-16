@@ -224,5 +224,8 @@ $$
 \frac{\partial \mathrm{VL} \mathrm{B}}{\partial \boldsymbol{V}}=\frac{\partial VLB}{\partial \sqrt{v_{q_{i}}}}\frac{\partial(\sqrt{v_{q_{i}}})}{\partial V}
 $$
 
+<p>
+The paper has put the first step of the chain rule in detail. A $\frac{1}{\sqrt{2\pi}}$ is missing in Eq. (7) of the original paper, but it does not affect the final outcome since the missing term is absorbed into the subscript of the expectation in the last step of Eq. (8).
+</p>
 
 Generally, we employ gradient ascent to optimize variational parameters.
