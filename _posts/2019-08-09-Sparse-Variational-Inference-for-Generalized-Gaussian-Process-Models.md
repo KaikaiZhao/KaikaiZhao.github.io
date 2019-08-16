@@ -169,14 +169,14 @@ where we use the fact that $\Gamma(x+1)=x!$ and $\int e^{-\frac{1}{2\sigma^2}x^2
 </p>
 
 <p>
-However, the closed form for the expectation of log Poisson likelihood with the link function of $\lambda=\ln(1+e^{f})$ is not available. In this case, Gaussian-Hermite quadrature is employed to calculate the approximate expectation.
+However, the closed form for the expectation of log Poisson likelihood with the link function of $\lambda=\ln(1+e^{f})$ is not available. In this case, Gaussian-Hermite quadrature is employed to calculate the approximate expectation. If you are not familiar with Gaussian-Hermite quadrature, check out my blog on <a href="https://kaikaizhao.github.io/notes/2019/08/02/Numerical-Integration-Gaussian-Hermite-Quadrature" target="_blank">Numerical Integration - Gaussian-Hermite Quadrature</a>.
 </p>
 
 <h4>
 Binary Classification
 </h4>
 <p>
-For binary classification tasks, we use <b>sigmoid function</b> as the likelihood function. Unfortunately, the closed form for expectation of log likelihood is not available either. 
+For binary classification tasks, we use <b>sigmoid function</b> as the likelihood function. Unfortunately, the closed form for expectation of log likelihood is not available either. Here we can still use Gaussian-Hermite quadrature to get an approximate value.
 </p>
 
 $$
