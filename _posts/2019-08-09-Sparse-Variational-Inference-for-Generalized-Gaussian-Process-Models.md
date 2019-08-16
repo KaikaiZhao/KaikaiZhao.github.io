@@ -193,6 +193,13 @@ where $z$ denotes sample points and $w$ represents the corresponding weights, so
 
 ### KL divergence
 
+<p>
+Recall for two Gaussian distributions $\mathcal{N}\left(\boldsymbol{\mu}_{0}, \Sigma_{0}\right)$ and $\mathcal{N}\left(\boldsymbol{\mu}_{1}, \Sigma_{1}\right)$, we have 
+</p>
 
+$$
+\begin{aligned} \mathrm{KL}\left(\mathcal{N}_{0} \| \mathcal{N}_{1}\right)=& \frac{1}{2} \log \left|\Sigma_{1} \Sigma_{0}^{-1}\right|+\\ & \frac{1}{2} \operatorname{tr} \Sigma_{1}^{-1}\left(\left(\boldsymbol{\mu}_{0}-\boldsymbol{\mu}_{1}\right)\left(\boldsymbol{\mu}_{0}-\boldsymbol{\mu}_{1}\right)^{\top}+\Sigma_{0}-\Sigma_{1}\right) 
+\end{aligned}
+$$
 
 Generally, we employ gradient ascent to optimize variational parameters.
