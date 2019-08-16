@@ -94,7 +94,20 @@ As $q(f_{\mathcal{X}},f_{\mathcal{U}})$ is a joint Gaussian distribution, the ma
 v_{q}(\boldsymbol{x})=k(\boldsymbol{x}, \boldsymbol{x})+K_{x M} K_{M}^{-1}\left(V-K_{M}\right) K_{M}^{-1} K_{M x}
 \end{equation}
 
-#### Calculating VLB
+### Calculating VLB
+In this section we first calculate the VLB and then we derive the gradients for variational parameters in next section. 
 <p>
-The VLB consists of two parts: the expectation of log likelihood and the KL divergence. Actually, we don't need to compute the VLB, because we can stop iterations when there are no changes for the variational parameters $\boldsymbol{m}$ and $\boldsymbol{V}$. However, we would like to observe the changes for the VLB.
+The VLB consists of two parts: the expectation of log likelihood and the KL divergence. Actually, we don't need to compute the VLB, because we can stop iterations when there are no changes for the variational parameters $\boldsymbol{m}$ and $\boldsymbol{V}$. However, we would like to observe the changes for the VLB, hence we will calculate it explicitly.
 </p>
+
+#### Expectation of log likelihood
+<p>
+We use a change of variable to simply the calculation, that is, $f_i = z_{i} \sqrt{v_{q_{i}}}+m_{q_{i}}$. Then the expectation of log likelihood has the following form,
+</p>
+
+$$\label{VLB-1}
+    \mathbb{E}_{q_{i}\left(f_{i}\right)}\left[\log p\left(y_{i} | f_{i}\right)\right]=\frac{1}{\sqrt{2 \pi}} \int \log p\left(y_{i} | z_{i} \sqrt{v_{q_{i}}}+m_{q_{i}}\right) e^{-\frac{1}{2} z_{i}^{2}} d z_{i}
+$$
+
+
+Generally, we employ gadient ascent to optimize variational parameters.
