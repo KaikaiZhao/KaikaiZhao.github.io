@@ -39,13 +39,17 @@ $$
 <p>
 where the conditional GP prior is $p\left(\mathbf{f} | \mathbf{f}_{m}\right)=N\left(\mathbf{f} | K_{n m} K_{m m}^{-1} \mathbf{f}_{m}, K_{n n}-K_{n m} K_{m m}^{-1} K_{m n}\right)$. Then the true marginal likelihood can be written as
 </p>
+
 $$
     \log p(\mathbf{y})=\log \int p(\mathbf{y} | \mathbf{f}) p\left(\mathbf{f} | \mathbf{f}_{m}\right) p\left(\mathbf{f}_{m}\right) d \mathbf{f} d \mathbf{f}_{m}
 $$
+
 <p>
 The posterior $p(\mathbf{f},\mathbf{f}_{m}|\mathbf{y})$ is approximated by the variational distribution
 </p>
+
 $$
 q\left(\mathbf{f}, \mathbf{f}_{m}\right)=p\left(\mathbf{f} | \mathbf{f}_{m}\right) \phi\left(\mathbf{f}_{m}\right)
 $$
+
 <p>where $\phi$ is a multivariate Gaussian distribution with mean $\boldsymbol{m}}$ and covaraince $\boldsymbol{V}}$ and these two parameters are exactly what we are going to optimize.</p>
