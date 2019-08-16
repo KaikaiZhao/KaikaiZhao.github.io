@@ -82,7 +82,7 @@ $$
     \tag{1}\label{VLB}
 $$
 <p>
-where $q(f(x_i))$ is the marginal distribution of latent function values $f(x_i)$ w.r.t the approximate posterior $q(f_{\mathcal{X}},f_{\mathcal{U}})$. The right hand side of Eq.(\ref{VLB}) is the so-called variational lower bound(VLB).
+where $q(f(x_i))$ is the marginal distribution of latent function values $f(x_i)$ w.r.t the approximate posterior $q(f_{\mathcal{X}},f_{\mathcal{U}})$. The right hand side of Eq.(\ref{VLB}) is the so-called <b>variational lower bound(VLB)</b>.
 </p>
 <p>
 As $q(f_{\mathcal{X}},f_{\mathcal{U}})$ is a joint Gaussian distribution, the marginal distribution of $f(x_i)$ is specified by a univariate Gaussian with mean $m_q(x_i)$ and variance $v_q(x_i)$ where
@@ -93,3 +93,8 @@ As $q(f_{\mathcal{X}},f_{\mathcal{U}})$ is a joint Gaussian distribution, the ma
 \begin{equation}
 v_{q}(\boldsymbol{x})=k(\boldsymbol{x}, \boldsymbol{x})+K_{x M} K_{M}^{-1}\left(V-K_{M}\right) K_{M}^{-1} K_{M x}
 \end{equation}
+
+#### Calculating VLB
+<p>
+The VLB consists of two parts: the expectation of log likelihood and the KL divergence.
+</p>
