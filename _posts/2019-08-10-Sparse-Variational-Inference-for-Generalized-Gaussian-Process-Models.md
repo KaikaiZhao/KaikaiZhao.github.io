@@ -38,3 +38,7 @@ $$
     &=\left( (\frac{y}{\ln(1+e^f)}-1)e^{-f}-\frac{y}{\ln^2(1+e^f)} \right)\frac{1}{(1+e^{-f})^2}\\
 \end{aligned}
 $$
+
+<p>
+Once we obtain the above formulae, we can get expectations of the deravatives w.r.t $\mathcal{N}(f | m, v)$ through Gaussian-Hermite quadrature since the closed form expressions are not available.
+</p>
