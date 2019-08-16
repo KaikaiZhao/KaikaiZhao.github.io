@@ -157,5 +157,9 @@ $$\label{cal-exp-loglik}
 \end{aligned}
 $$
 
+<p>
+where we use the fact that $\Gamma(x+1)=x!$ and $\int e^{-\frac{1}{2\sigma^2}x^2}dx=(2\pi \sigma^2)^{\frac{1}{2}}$.
+</p>
+
 
 Generally, we employ gradient ascent to optimize variational parameters.
