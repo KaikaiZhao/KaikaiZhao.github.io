@@ -111,8 +111,11 @@ $$\label{VLB-1}
     \mathbb{E}_{q_{i}\left(f_{i}\right)}\left[\log p\left(y_{i} | f_{i}\right)\right]=\frac{1}{\sqrt{2 \pi}} \int \log p\left(y_{i} | z_{i} \sqrt{v_{q_{i}}}+m_{q_{i}}\right) e^{-\frac{1}{2} z_{i}^{2}} d z_{i}
 $$
 
+<h5>
+Regression
+</h5>
 <p>
-For the case of Gaussian likelihood, 
+For regression tasks, we employ <b>Gaussian likelihood</b>, 
 </p>
 
 $$
@@ -128,13 +131,16 @@ $$
 \end{aligned}\label{cal-exp-logGausslik}
 $$
 
+<h5>
+Count Regression
+</h5>
 <p>
-For the case of count regression, we employ Poisson likelihood.
+For count regression tasks, we employ <b>Poisson likelihood</b>, 
 </p>
 
 $$
     p(y|\lambda)=\frac{1}{y!}e^{-\lambda}\lambda^y
-\label{Poisson-lik-lambda}
+    \label{Poisson-lik-lambda}
 $$
 
 <p>
@@ -158,7 +164,7 @@ $$\label{cal-exp-loglik}
 $$
 
 <p>
-where we use the fact that $\Gamma(x+1)=x!$ and $\int e^{-\frac{1}{2\sigma^2}x^2}dx=(2\pi \sigma^2)^{\frac{1}{2}}$.
+where we use the fact that $\Gamma(x+1)=x!$ and $\int e^{-\frac{1}{2\sigma^2}x^2}dx=(2\pi \sigma^2)^{\frac{1}{2}}$. However, we do not have the closed form for the expectation of log Poisson likelihood with the link function of $\lambda=\ln(1+e^{f})$.
 </p>
 
 
