@@ -40,5 +40,5 @@ $$
 $$
 
 <p>
-Once we obtain the above formulae, we can get expectations of the deravatives w.r.t $\mathcal{N}(f | m, v)$ through Gaussian-Hermite quadrature since the closed form expressions are not available.
+Once we obtain the above formulae, we can get expectations of the deravatives w.r.t $\mathcal{N}(f | m, v)$, i.e. $\rho_i$ and $\lambda_i$ in Eq. (4) and (5) of <a href="https://kaikaizhao.github.io/notes/2019/08/09/Sparse-Variational-Inference-for-Generalized-Gaussian-Process-Models" target="_blank">Tutorial 1</a>,  through Gaussian-Hermite quadrature since the closed form expressions are not available.
 </p>
