@@ -225,7 +225,7 @@ $$
 $$
 
 <p>
-The paper has put the first step of the chain rule in detail. A $\frac{1}{\sqrt{2\pi}}$ is missing in Eq. (7) of the original paper, but it does not affect the final outcome since the missing term is absorbed into the subscript of the expectation in the last step of Eq. (8).
+The paper has put the first step of the chain rule in detail. A $\frac{1}{\sqrt{2\pi}}$ is missing in Eq. (7) of the original paper, but it does not affect the final outcome since the missing term is absorbed into the subscript of the expectation in the last step of Eq. (8). The second step can be obtained easily through 
 </p>
 
 Generally, we employ gradient ascent to optimize variational parameters.
