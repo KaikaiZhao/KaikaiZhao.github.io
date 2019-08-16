@@ -81,6 +81,7 @@ $$
     \log p(\boldsymbol{y}) \geq \sum_{i=1}^{N} \mathbb{E}_{q\left(f\left(\boldsymbol{x}_{i}\right)\right)}\left[\log p\left(y_{i} | f\left(\boldsymbol{x}_{i}\right)\right)\right] -\mathrm{KL}\left(\phi\left(\boldsymbol{f}_{\mathcal{U}}\right) \| p\left(\boldsymbol{f}_{\mathcal{U}}\right)\right)
     \tag{1}\label{VLB}
 $$
+
 <p>
 where $q(f(x_i))$ is the marginal distribution of latent function values $f(x_i)$ w.r.t the approximate posterior $q(f_{\mathcal{X}},f_{\mathcal{U}})$. The right hand side of Eq.(\ref{VLB}) is the so-called <b>variational lower bound(VLB)</b>.
 </p>
@@ -89,11 +90,11 @@ As $q(f_{\mathcal{X}},f_{\mathcal{U}})$ is a joint Gaussian distribution, the ma
 </p>
 
 $$
-    m_{q}(\boldsymbol{x})=m(\boldsymbol{x})+K_{x M} K_{M}^{-1}\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)
+    m_{q}(\boldsymbol{x})=m(\boldsymbol{x})+K_{x M} K_{M}^{-1}\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)\tag{2a}\label{VLB-m}
 $$
 
 $$
-v_{q}(\boldsymbol{x})=k(\boldsymbol{x}, \boldsymbol{x})+K_{x M} K_{M}^{-1}\left(V-K_{M}\right) K_{M}^{-1} K_{M x}
+    v_{q}(\boldsymbol{x})=k(\boldsymbol{x}, \boldsymbol{x})+K_{x M} K_{M}^{-1}\left(V-K_{M}\right) K_{M}^{-1} K_{M x}\tag{2b}\label{VLB-V}
 $$
 
 ## Calculating VLB
@@ -216,6 +217,7 @@ $$
 <p>
 Now we have the VLB handy. Our goal is to optimize variational parameters, so we need to calculate the gradients of the VLB w.r.t $\boldsymbol{m}$ and $\boldsymbol{V}$. In the first paper, the chain rule is employed when  the gradients of the log likelihood expectation term are calculated. Specifically, 
 </p>
+
 $$
 \frac{\partial \mathrm{VL} \mathrm{B}}{\partial \boldsymbol{m}}=\frac{\partial VLB}{\partial m_{q_{i}}}\frac{\partial m_{q_{i}}}{\partial m}
 $$
@@ -225,7 +227,7 @@ $$
 $$
 
 <p>
-The paper has put the first step of the chain rule in detail. A $\frac{1}{\sqrt{2\pi}}$ is missing in Eq. (7) of the original paper, but it does not affect the final outcome since the missing term is absorbed into the subscript of the expectation in the last step of Eq. (8). The second step can be obtained easily through 
+The paper has put the first step of the chain rule in detail. A $\frac{1}{\sqrt{2\pi}}$ is missing in Eq. (7) of the original paper, but it does not affect the final outcome since the missing term is absorbed into the subscript of the expectation in the last step of Eq. (8). The second step can be obtained easily through \eqref{VLB-m} and \eqref{VLB-V}.
 </p>
 
 Generally, we employ gradient ascent to optimize variational parameters.
