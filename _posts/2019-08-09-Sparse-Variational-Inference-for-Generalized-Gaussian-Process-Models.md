@@ -31,3 +31,7 @@ We will assume prior knowledge of (sparse) Gaussian process and variational infe
 <p>
 For sparse variational Gaussian Processes, we follow <a href="http://proceedings.mlr.press/v5/titsias09a/titsias09a.pdf" target="_blank">Titsias 2009</a>. We first need to select the inducing inputs $X_m$, and $f$ and $f_m$ denote the training latent function values and the inducing variables, respectively. Then, the initial joint model is
 </p>
+
+$$
+    p\left(\mathbf{y}, \mathbf{f}, \mathbf{f}_{m}\right)=p(\mathbf{y} | \mathbf{f}) p\left(\mathbf{f} | \mathbf{f}_{m}\right) p\left(\mathbf{f}_{m}\right)
+$$
