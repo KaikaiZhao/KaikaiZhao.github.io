@@ -96,5 +96,5 @@ v_{q}(\boldsymbol{x})=k(\boldsymbol{x}, \boldsymbol{x})+K_{x M} K_{M}^{-1}\left(
 
 #### Calculating VLB
 <p>
-The VLB consists of two parts: the expectation of log likelihood and the KL divergence.
+The VLB consists of two parts: the expectation of log likelihood and the KL divergence. Actually, we don't need to compute the VLB, because we can stop iterations when there are no changes for the variational parameters $\boldsymbol{m}$ and $\boldsymbol{V}$. However, we would like to observe the changes for the VLB.
 </p>
