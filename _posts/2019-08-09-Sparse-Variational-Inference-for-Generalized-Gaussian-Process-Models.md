@@ -87,12 +87,13 @@ where $q(f(x_i))$ is the marginal distribution of latent function values $f(x_i)
 <p>
 As $q(f_{\mathcal{X}},f_{\mathcal{U}})$ is a joint Gaussian distribution, the marginal distribution of $f(x_i)$ is specified by a univariate Gaussian with mean $m_q(x_i)$ and variance $v_q(x_i)$ where
 </p>
-\begin{equation}
+
+$$
     m_{q}(\boldsymbol{x})=m(\boldsymbol{x})+K_{x M} K_{M}^{-1}\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)
-\end{equation}
-\begin{equation}
+$$
+$$
 v_{q}(\boldsymbol{x})=k(\boldsymbol{x}, \boldsymbol{x})+K_{x M} K_{M}^{-1}\left(V-K_{M}\right) K_{M}^{-1} K_{M x}
-\end{equation}
+$$
 
 ### Calculating VLB
 In this section we first calculate the VLB and then we derive the gradients for variational parameters in next section. 
