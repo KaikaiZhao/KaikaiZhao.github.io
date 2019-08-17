@@ -41,7 +41,7 @@ $$
 
 ### VLB optimization
 <p>
-By first-order optimality, the optimal variational parameters can be found via the conditions $\left.\frac{\partial \mathrm{VLB}}{\partial \boldsymbol{m}}\right|_{\boldsymbol{m}=\boldsymbol{m}^{*}}=0$ and $\frac{\partial \mathrm{VLB}}{\partial V} |_V=V^{\star}=0$.
+By first-order optimality, the optimal variational parameters can be found via the conditions $\left.\frac{\partial \mathrm{VLB}}{\partial \boldsymbol{m}}\right|_{\boldsymbol{m}=\boldsymbol{m}^{*}}=0$ and $\frac{\partial \mathrm{VLB}}{\partial V} |_{V=V^{\star}}=0$.
 </p>
 
 $$
