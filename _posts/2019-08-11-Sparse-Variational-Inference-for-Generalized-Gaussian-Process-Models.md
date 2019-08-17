@@ -63,7 +63,7 @@ $$
 $$
 
 <p>
-where the third equality follows from $m(\boldsymbol{x})=\boldsymbol{0}$ and $\boldsymbol{m}_{\mathcal{U}}=\boldsymbol{0}$ and the last equality follows from $\frac{\partial K^{-1}}{\partial \theta}=-K^{-1} \frac{\partial K}{\partial \theta} K^{-1}$. These kernel matrices $K_{iM}$, $K_M$, $K_M^{-1}$, $K_{iM}$ and $K_{ii}$ depend on $\boldsymbol{\theta}$ while $\boldsymbol{m}$ and $\boldsymbol{V}$ do not depend on $\boldsymbol{\theta}$. Hence, we can take $\boldsymbol{m}$ and $\boldsymbol{V}$ as constants when we calculate the gradients of VLB w.r.t $\boldsymbol{\theta}$.
+where the third equality follows from $m(\boldsymbol{x})=\boldsymbol{0}$ and $\boldsymbol{m}_{\mathcal{U}}=\boldsymbol{0}$, and the last equality follows from $\frac{\partial K^{-1}}{\partial \theta}=-K^{-1} \frac{\partial K}{\partial \theta} K^{-1}$. These kernel matrices $K_{iM}$, $K_M$, $K_M^{-1}$, $K_{iM}$ and $K_{ii}$ depend on $\boldsymbol{\theta}$ while $\boldsymbol{m}$ and $\boldsymbol{V}$ do not depend on $\boldsymbol{\theta}$. Hence, we can take $\boldsymbol{m}$ and $\boldsymbol{V}$ as constants when we calculate the gradients of VLB w.r.t $\boldsymbol{\theta}$.
 </p>
 
 #### The gradients of KL term w.r.t hyperparameters
