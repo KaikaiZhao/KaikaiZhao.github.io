@@ -213,33 +213,37 @@ $$
     \end{aligned}\tag{3}\label{de-KL}
 $$
 
-### Calculating the gradients of the VLB
+### Deriving the formulae related to $\lambda=\ln(1+e^{f})$
 <p>
-Now we have the VLB handy. Our goal is to optimize variational parameters, so we need to calculate the gradients of the VLB w.r.t $\boldsymbol{m}$ and $\boldsymbol{V}$. In the first paper, the chain rule is employed when  the gradients of the log likelihood expectation term are calculated. Specifically, 
+Since the canonical link function $\lambda=e^{f}$ may bring numerical issues, we introduce a good alternative link function, that is, $\lambda=\ln(1+e^{f})$ which could be stabler. In this section, we will talk about calculating the first derivatives and the second derivatives for this link, including the corresponding expectations. We still use the chain rule. Specifically, we first calculate derivatives of log Poisson likelihood w.r.t $\lambda$ and then calculate derivatives of link function $\lambda=\ln(1+e^{f})$ w.r.t $f$.
 </p>
 
 $$
-\frac{\partial \mathrm{VL} \mathrm{B}}{\partial \boldsymbol{m}}=\frac{\partial VLB}{\partial m_{q_{i}}}\frac{\partial m_{q_{i}}}{\partial \boldsymbol{m}}
+\begin{aligned}
+\log p(y|f)&=\ln(\frac{1}{y!}\frac{1}{1+e^f}[\ln(1+e^f)]^y)\\
+&=-\ln\Gamma(y+1) -\ln(1+e^f) + y\ln\ln(1+e^f)
+\end{aligned}
 $$
 
 $$
-\frac{\partial \mathrm{VL} \mathrm{B}}{\partial \boldsymbol{V}}=\frac{\partial VLB}{\partial \sqrt{v_{q_{i}}}}\frac{\partial(\sqrt{v_{q_{i}}})}{\partial \boldsymbol{V}}
+\begin{aligned}
+    \frac{\partial}{\partial f} \log p(y|f)&=\frac{\partial \log p(y|f)}{\partial \lambda} \frac{\partial \lambda}{\partial f}\\
+    &\overset{\lambda=\ln(1+e^{f})}{=}(-1 + \frac{y}{\lambda})\frac{e^{f}}{1+e^{f}}\\
+    &=\left(\frac{y}{\ln(1+e^{f})}-1\right)\frac{1}{1+e^{-f}}\\
+    &=\frac{y}{(1+e^{-f})\ln(1+e^{f})}-\frac{1}{1+e^{-f}}\\
+    &=\left(\frac{y}{\ln(1+e^{f})}-1\right)\frac{1}{1+e^{-f}}\\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+    \frac{\partial^2}{\partial f^2} \log p(y|f)&=\frac{\partial^2 \log p(y|f)}{\partial \lambda^2} \frac{\partial \lambda}{\partial f}\frac{\partial \lambda}{\partial f}+\frac{\partial \log p(y|f)}{\partial \lambda} \frac{\partial^2 \lambda}{\partial f^2}\\
+    &\overset{\lambda=\ln(1+e^{f})}{=}(-\frac{y}{\lambda^2})\frac{e^{f}}{1+e^{f}}\frac{e^{f}}{1+e^{f}}+(-1 + \frac{y}{\lambda})\frac{e^{-f}}{(1+e^{-f})^2}\\
+    &=(-\frac{y}{\lambda^2})\frac{1}{(1+e^{-f})^2}+(-1 + \frac{y}{\lambda})\frac{e^{-f}}{(1+e^{-f})^2}\\
+    &=\left( (\frac{y}{\ln(1+e^f)}-1)e^{-f}-\frac{y}{\ln^2(1+e^f)} \right)\frac{1}{(1+e^{-f})^2}\\
+\end{aligned}
 $$
 
 <p>
-The paper has put the first step of the chain rule in detail. A $\frac{1}{\sqrt{2\pi}}$ is missing in Eq. (7) of the original paper, but it does not affect the final outcome since the missing term is absorbed into the subscript of the expectation in the last step of Eq. (8). The second step can be obtained easily through \eqref{VLB-m} and \eqref{VLB-V}.
+Once we obtain the above formulae, we can get expectations of the deravatives w.r.t $\mathcal{N}(f | m, v)$  through Gaussian-Hermite quadrature since the closed form expressions are not available.
 </p>
-
-<p>
-After calculating the derivatives of KL term, i.e. \eqref{de-KL}, we put together the derivatives of the two parts of VLB. Then we get the derivatives of the VLB,
-</p>
-
-$$
-    \frac{\partial \mathrm{VLB}}{\partial \boldsymbol{m}}=\sum_{i}\left(\rho_{i} K_{M}^{-1} K_{M i}\right)-K_{M}^{-1}\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)\tag{4}\label{de-m}
-$$
-
-$$
-\frac{\partial \mathrm{VLB}}{\partial V}=\frac{1}{2} \sum_{i}\left(\lambda_{i} K_{M}^{-1} K_{M i} K_{i M} K_{M}^{-1}\right)+\frac{1}{2}\left(V^{-1}-K_{M}^{-1}\right)\tag{5}\label{de-V}
-$$
-
-<p>where $\rho_i$ and $\lambda_i$ are derived from the first step of chain rule when we calculate the derivatives of log likelihood expectation. They are expectations of the first derivatives and second derivatives of log likelihood. These are available in the Table 1 of the original paper. In the next article we will continue to talk about this topic.</p>
