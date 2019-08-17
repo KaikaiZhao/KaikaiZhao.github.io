@@ -56,3 +56,10 @@ $$
 <p>
 In general, \eqref{sol-m} and \eqref{sol-V} are a set of nonlinear equations coupled through their dependencies on $\boldsymbol{\rho}$ and $\lambda$, except Gaussian likelihood. For the case of count regression, when we calculate $\boldsymbol{m}$, we need to know $\boldsymbol{\rho}$ that is dependent on $m$ and $v$ from $\rho=-e^{m+\frac{1}{2} v}+y$. From (2a) and (2b) in <a href="https://kaikaizhao.github.io/notes/2019/08/09/Sparse-Variational-Inference-for-Generalized-Gaussian-Process-Models" target="_blank">Tutorial 1</a>, $m$ and $v$ are dependent on $\boldsymbol{m}$ and $\boldsymbol{V}$. Therefore, they are coupled, that is to say, if you want to compute $\boldsymbol{m}$, you have to know $\boldsymbol{m}$ and $\boldsymbol{V}$. So gradient ascent is a standard approach to solving this problem.
 </p>
+<p>
+For the covariance, we optimize the Cholesky factor $L$ of $V=LL^T$ instead of $V$ directly, which guarantees that $V$ is positive-definite. In our case the gradient is
+</p>
+
+$$
+\frac{\partial \mathrm{VLB}}{\partial L}=\sum_{i}\left(\lambda_{i} K_{M}^{-1} K_{M i} K_{i M} K_{M}^{-1} L\right)+\left(L^{-1^{T}}-K_{M}^{-1} L\right)
+$$
