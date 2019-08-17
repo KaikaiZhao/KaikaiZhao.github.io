@@ -43,3 +43,15 @@ $$
 Once we obtain the above formulae, we can get expectations of the deravatives w.r.t $\mathcal{N}(f | m, v)$, i.e. $\rho_i$ and $\lambda_i$ in Eq. (4) and (5) of <a href="https://kaikaizhao.github.io/notes/2019/08/09/Sparse-Variational-Inference-for-Generalized-Gaussian-Process-Models" target="_blank">Tutorial 1</a>,  through Gaussian-Hermite quadrature since the closed form expressions are not available.
 </p>
 
+### VLB optimization
+<p>
+By first-order optimality, the optimal variational parameters can be found via the conditions $\left.\frac{\partial \mathrm{VLB}}{\partial \boldsymbol{m}}\right|_{\boldsymbol{m}=\boldsymbol{m}^{*}}=0$ and $\frac{\partial \mathrm{VLB}}{\partial V} | V=V^{\star}=0$.
+</p>
+
+$$
+\boldsymbol{m}^{\star}=K_{M N} \boldsymbol{\rho}^{\star}+\boldsymbol{m}_{\mathcal{U}}
+$$
+
+$$
+V^{\star}=\left(K_{M}^{-1}-K_{M}^{-1} K_{M N} \operatorname{diag}\left(\lambda^{\star}\right) K_{N M} K_{M}^{-1}\right)^{-1}
+$$
