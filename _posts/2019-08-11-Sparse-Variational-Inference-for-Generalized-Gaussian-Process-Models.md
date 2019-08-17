@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sparse Variational Inference for Generalized Gaussian Process Models - Tutorial 2
+title: Sparse Variational Inference for Generalized Gaussian Process Models - Tutorial 3
 description: This is a tutorial for this ICML 2015 paper 'Sparse Variational Inference for Generalized Gaussian Process Models'. It covers hyperparameters optimization.
 date: 2019-08-11
 ---
