@@ -71,3 +71,4 @@ First of all, we introduce the description of fixed-point theorem.
 </p>
 
 > If a function $f$ defined on the real line with real values is Lipschitz continuous with Lipschitz constant $L<1$, then this function has precisely one fixed point, and the fixed-point iteration converges towards that fixed point for any initial guess $x_{0}$. This theorem can be generalized to any metric space.
+
