@@ -105,11 +105,12 @@ Here we omit some derivations which can be found in the appendix of the second p
 </p>
 
 $$
-V^{-1} \boldsymbol{m} \leftarrow \Sigma^{-1} \mu+\sum_{i}\left(\rho_{i}+\left(\boldsymbol{m}^{T} d_{i}\right) \gamma_{i}\right) d_{i}
+V^{-1} \boldsymbol{m} \leftarrow \Sigma^{-1} \mu+\sum_{i}\left(\rho_{i}+\left(\boldsymbol{m}^{T} d_{i}\right) \gamma_{i}\right) d_{i}\tag{6}\label{nat-Vm}
 $$
 
 $$
 \frac{1}{2} V^{-1} \leftarrow \frac{1}{2} \Sigma^{-1}+\sum_{i} \frac{1}{2} \gamma_{i} d_{i} d_{i}^{T}
+\tag{6}\label{nat-V}
 $$
 
 <p>
@@ -117,14 +118,14 @@ where $\gamma_i=-\lambda_i$, $d_i=K_M^{-1}K_{Mi}$, so we can vectorize the updat
 </p>
 
 $$
-    \boldsymbol{m}\leftarrow \boldsymbol{V}\boldsymbol{d}(\mathbf{\rho}+\boldsymbol{d}^T\boldsymbol{m}\odot\mathbf{\gamma})
+    \boldsymbol{m}\leftarrow \boldsymbol{V}\boldsymbol{d}(\mathbf{\rho}+\boldsymbol{d}^T\boldsymbol{m}\odot\mathbf{\gamma})\tag{6}\label{nat-m}
 $$
 
 <p>
 where $\boldsymbol{d}=K_M^{-1}K_{Mx}$.
 </p>
 
-### Several Optimization Strategies
+### Optimization Strategies
 
 <p>
 In this section, we talk about four methods to optimize variational parameters, i.e. $\boldsymbol{m}$ and $\boldsymbol{m}$.
