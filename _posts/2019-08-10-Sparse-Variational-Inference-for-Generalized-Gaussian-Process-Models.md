@@ -61,7 +61,7 @@ For the covariance, we optimize the Cholesky factor $L$ of $V=LL^T$ instead of $
 </p>
 
 $$
-\frac{\partial \mathrm{VLB}}{\partial L}=\sum_{i}\left(\lambda_{i} K_{M}^{-1} K_{M i} K_{i M} K_{M}^{-1} L\right)+\left(L^{-1^{T}}-K_{M}^{-1} L\right)
+\frac{\partial \mathrm{VLB}}{\partial L}=\sum_{i}\left(\lambda_{i} K_{M}^{-1} K_{M i} K_{i M} K_{M}^{-1} L\right)+\left(L^{-1^{T}}-K_{M}^{-1} L\right)\tag{4}\label{L}
 $$
 
 ### Fixed point method
@@ -77,7 +77,7 @@ The first paper proposed to optimize the covariance via a fixed-point operator, 
 </p>
 
 $$
-    T(V)=\left(K_{M}^{-1}-K_{M}^{-1} K_{M N} \operatorname{diag}(\boldsymbol{\lambda}) K_{N M} K_{M}^{-1}\right)^{-1}\tag{4}\label{fp-V}
+    T(V)=\left(K_{M}^{-1}-K_{M}^{-1} K_{M N} \operatorname{diag}(\boldsymbol{\lambda}) K_{N M} K_{M}^{-1}\right)^{-1}\tag{5}\label{fp-V}
 $$
 
 <p>
@@ -133,7 +133,7 @@ In this section, we talk about four methods to optimize variational parameters, 
 #### Gradient Descent
 
 <p>
-The first strategy is to optimize $(boldsymbol{m},boldsymbol{V})$ by coordinate ascent across parameters. Although our problem is to maximize VLB, we minimize negative VLB in our implementation and hence we call it gradient descent.
+The first strategy is to optimize $(boldsymbol{m},boldsymbol{V})$ by coordinate ascent across parameters. Specifically, we alternately update $boldsymbol{m}$ and $boldsymbol{V}$ via the corresponding gradients, i.e. \eqref{de-m} and \eqref{de-V}, with an appropriate learning rate. Although our problem is to maximize VLB, we minimize negative VLB in our implementation and hence we call it gradient descent.
 </p>
 
 #### FPbatch(FPb)
