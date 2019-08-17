@@ -101,7 +101,7 @@ $$
 $$
 
 <p>
-Here we omit some derivations which can be found in the appendix of the second paper. And we directly present the fixed-point update for the mean and variance.
+Here we omit some derivations which can be found in the appendix of the second paper. And we directly present the fixed-point update for the mean and covariance. Fundamentally, the following two equations use natural gradients to update natural parameters.
 </p>
 
 $$
@@ -123,3 +123,16 @@ $$
 <p>
 where $\boldsymbol{d}=K_M^{-1}K_{Mx}$.
 </p>
+
+### Several Optimization Strategies
+
+<p>
+In this section, we talk about four methods to optimize variational parameters, i.e. $\boldsymbol{m}$ and $\boldsymbol{m}$.
+</p>
+
+#### Gradient Descent
+
+<p>
+The first strategy is to optimize $(boldsymbol{m},boldsymbol{V})$ by coordinate ascent across parameters. Although our problem is to maximize VLB, we minimize negative VLB in our implementation and hence we call it gradient descent.
+</p>
+
