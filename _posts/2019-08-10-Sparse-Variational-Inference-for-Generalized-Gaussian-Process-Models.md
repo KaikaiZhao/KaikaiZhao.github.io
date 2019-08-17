@@ -67,8 +67,22 @@ $$
 ### Fixed point method
 
 <p>
-First of all, we introduce the description of fixed-point theorem.
+First of all, we introduce the description of <b>fixed-point theorem</b>.
 </p>
 
 > If a function $f$ defined on the real line with real values is Lipschitz continuous with Lipschitz constant $L<1$, then this function has precisely one fixed point, and the fixed-point iteration converges towards that fixed point for any initial guess $x_{0}$. This theorem can be generalized to any metric space.
+
+<p>
+The first paper proposed to optimize the covariance via a fixed-point operator, $T$:
+</p>
+
+$$
+    T(V)=\left(K_{M}^{-1}-K_{M}^{-1} K_{M N} \operatorname{diag}(\boldsymbol{\lambda}) K_{N M} K_{M}^{-1}\right)^{-1}\tag{4}\label{fp-V}
+$$
+
+<p>
+The above formula exactly applies fixed-point iteration to \eqref{sol-V}. The critical condition is Lipschitz constant $L<1$, i.e.
+</p>
+
+
 
