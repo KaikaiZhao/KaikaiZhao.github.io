@@ -81,8 +81,10 @@ $$
 $$
 
 <p>
-The above formula exactly applies fixed-point iteration to \eqref{sol-V}. The critical condition is Lipschitz constant $L<1$, i.e.
+The above formula exactly applies fixed-point iteration to \eqref{sol-V}. The critical condition is Lipschitz constant $ L<1 $, i.e. for all $U$, $V$
 </p>
 
-
+$$
+\|T(V)-T(U)\| \leq L\|V-U\|
+$$
 
