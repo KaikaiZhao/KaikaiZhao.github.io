@@ -22,11 +22,11 @@ $$
 $$
 
 <p>
-The paper has put the first step of the chain rule in detail. One $\frac{1}{\sqrt{2\pi}}$ is missing in Eq. (7) of the original paper, but it does not affect the final outcome as the missing term is absorbed into the subscript of the expectation in the last step of Eq. (8). The second step can be obtained easily via  \eqref{VLB-m} and \eqref{VLB-V} Eq. (2a) and (2b) of <a href="https://kaikaizhao.github.io/notes/2019/08/09/Sparse-Variational-Inference-for-Generalized-Gaussian-Process-Models" target="_blank">Tutorial 1</a>.
+The paper has put the first step of the chain rule in detail. One $\frac{1}{\sqrt{2\pi}}$ is missing in Eq. (7) of the original paper, but it does not affect the final outcome as the missing term is absorbed into the subscript of the expectation in the last step of Eq. (8). The second step can be obtained easily via Eq. (2a) and (2b) in <a href="https://kaikaizhao.github.io/notes/2019/08/09/Sparse-Variational-Inference-for-Generalized-Gaussian-Process-Models" target="_blank">Tutorial 1</a>.
 </p>
 
 <p>
-After calculating the derivatives of KL term, i.e. \eqref{de-KL}, we put together the derivatives of the two parts of VLB. Then we get the derivatives of the VLB,
+After calculating the derivatives of KL term, we put together the derivatives of the two parts of VLB. Then we get the derivatives of the VLB,
 </p>
 
 $$
@@ -38,41 +38,6 @@ $$
 $$
 
 <p>where $\rho_i$ and $\lambda_i$ are derived from the first step of chain rule when we calculate the derivatives of log likelihood expectation. They are expectations of the first derivatives and second derivatives of log likelihood. These are available in the Table 1 of the original paper. In the next article we will continue to talk about this topic.</p>
-
-### Deriving the formulae related to $\lambda=\ln(1+e^{f})$
-<p>
-We still use the chain rule. Specifically, we first calculate derivatives of log Poisson likelihood w.r.t $\lambda$ and then calculate derivatives of link function $\lambda=\ln(1+e^{f})$ w.r.t $f$.
-</p>
-
-$$
-\begin{aligned}
-\log p(y|f)&=\ln(\frac{1}{y!}\frac{1}{1+e^f}[\ln(1+e^f)]^y)\\
-&=-\ln\Gamma(y+1) -\ln(1+e^f) + y\ln\ln(1+e^f)
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-    \frac{\partial}{\partial f} \log p(y|f)&=\frac{\partial \log p(y|f)}{\partial \lambda} \frac{\partial \lambda}{\partial f}\\
-    &\overset{\lambda=\ln(1+e^{f})}{=}(-1 + \frac{y}{\lambda})\frac{e^{f}}{1+e^{f}}\\
-    &=\left(\frac{y}{\ln(1+e^{f})}-1\right)\frac{1}{1+e^{-f}}\\
-    &=\frac{y}{(1+e^{-f})\ln(1+e^{f})}-\frac{1}{1+e^{-f}}\\
-    &=\left(\frac{y}{\ln(1+e^{f})}-1\right)\frac{1}{1+e^{-f}}\\
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-    \frac{\partial^2}{\partial f^2} \log p(y|f)&=\frac{\partial^2 \log p(y|f)}{\partial \lambda^2} \frac{\partial \lambda}{\partial f}\frac{\partial \lambda}{\partial f}+\frac{\partial \log p(y|f)}{\partial \lambda} \frac{\partial^2 \lambda}{\partial f^2}\\
-    &\overset{\lambda=\ln(1+e^{f})}{=}(-\frac{y}{\lambda^2})\frac{e^{f}}{1+e^{f}}\frac{e^{f}}{1+e^{f}}+(-1 + \frac{y}{\lambda})\frac{e^{-f}}{(1+e^{-f})^2}\\
-    &=(-\frac{y}{\lambda^2})\frac{1}{(1+e^{-f})^2}+(-1 + \frac{y}{\lambda})\frac{e^{-f}}{(1+e^{-f})^2}\\
-    &=\left( (\frac{y}{\ln(1+e^f)}-1)e^{-f}-\frac{y}{\ln^2(1+e^f)} \right)\frac{1}{(1+e^{-f})^2}\\
-\end{aligned}
-$$
-
-<p>
-Once we obtain the above formulae, we can get expectations of the deravatives w.r.t $\mathcal{N}(f | m, v)$, i.e. $\rho_i$ and $\lambda_i$ in Eq. (4) and (5) of <a href="https://kaikaizhao.github.io/notes/2019/08/09/Sparse-Variational-Inference-for-Generalized-Gaussian-Process-Models" target="_blank">Tutorial 1</a>,  through Gaussian-Hermite quadrature since the closed form expressions are not available.
-</p>
 
 ### VLB optimization
 <p>
