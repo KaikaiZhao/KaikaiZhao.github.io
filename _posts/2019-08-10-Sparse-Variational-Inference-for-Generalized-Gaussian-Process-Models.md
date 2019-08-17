@@ -63,3 +63,11 @@ For the covariance, we optimize the Cholesky factor $L$ of $V=LL^T$ instead of $
 $$
 \frac{\partial \mathrm{VLB}}{\partial L}=\sum_{i}\left(\lambda_{i} K_{M}^{-1} K_{M i} K_{i M} K_{M}^{-1} L\right)+\left(L^{-1^{T}}-K_{M}^{-1} L\right)
 $$
+
+### Fixed point method
+
+<p>
+First of all, we introduce the property of fixed-point iteration
+</p>
+
+> If a function {\displaystyle f} f defined on the real line with real values is Lipschitz continuous with Lipschitz constant {\displaystyle L<1} L<1, then this function has precisely one fixed point, and the fixed-point iteration converges towards that fixed point for any initial guess {\displaystyle x_{0}.} x_{0}. This theorem can be generalized to any metric space.
