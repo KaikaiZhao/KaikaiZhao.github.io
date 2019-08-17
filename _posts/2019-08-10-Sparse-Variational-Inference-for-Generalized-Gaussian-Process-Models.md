@@ -30,11 +30,11 @@ After calculating the derivatives of KL term, we put together the derivatives of
 </p>
 
 $$
-    \frac{\partial \mathrm{VLB}}{\partial \boldsymbol{m}}=\sum_{i}\left(\rho_{i} K_{M}^{-1} K_{M i}\right)-K_{M}^{-1}\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)\tag{4}\label{de-m}
+    \frac{\partial \mathrm{VLB}}{\partial \boldsymbol{m}}=\sum_{i}\left(\rho_{i} K_{M}^{-1} K_{M i}\right)-K_{M}^{-1}\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)\tag{1}\label{de-m}
 $$
 
 $$
-\frac{\partial \mathrm{VLB}}{\partial V}=\frac{1}{2} \sum_{i}\left(\lambda_{i} K_{M}^{-1} K_{M i} K_{i M} K_{M}^{-1}\right)+\frac{1}{2}\left(V^{-1}-K_{M}^{-1}\right)\tag{5}\label{de-V}
+\frac{\partial \mathrm{VLB}}{\partial V}=\frac{1}{2} \sum_{i}\left(\lambda_{i} K_{M}^{-1} K_{M i} K_{i M} K_{M}^{-1}\right)+\frac{1}{2}\left(V^{-1}-K_{M}^{-1}\right)\tag{2}\label{de-V}
 $$
 
 <p>where $\rho_i$ and $\lambda_i$ are derived from the first step of chain rule when we calculate the derivatives of log likelihood expectation. They are expectations of the first derivatives and second derivatives of log likelihood. These are available in the Table 1 of the original paper. In the next article we will continue to talk about this topic.</p>
@@ -46,8 +46,13 @@ By first-order optimality, the optimal variational parameters can be found via t
 
 $$
 \boldsymbol{m}^{\star}=K_{M N} \boldsymbol{\rho}^{\star}+\boldsymbol{m}_{\mathcal{U}}
+\tag{3a}\label{sol-m}
 $$
 
 $$
-V^{\star}=\left(K_{M}^{-1}-K_{M}^{-1} K_{M N} \operatorname{diag}\left(\lambda^{\star}\right) K_{N M} K_{M}^{-1}\right)^{-1}
+V^{\star}=\left(K_{M}^{-1}-K_{M}^{-1} K_{M N} \operatorname{diag}\left(\lambda^{\star}\right) K_{N M} K_{M}^{-1}\right)^{-1}\tag{3b}\label{sol-V}
 $$
+
+<p>
+In general, \eqref{sol-m} and \eqref{sol-V} are a set of nonlinear equations coupled through their dependencies on $\boldsymbol{\rho}$ and $\lambda$, except Gaussian likelihood. For the case of count regression, when we calculate $\boldsymbol{m}$, we need to know $\boldsymbol{\rho}$ that is dependent on $m$ and $v$ from $\rho=-e^{m+\frac{1}{2} v}+y$. From (2a) and (2b) in <a href="https://kaikaizhao.github.io/notes/2019/08/09/Sparse-Variational-Inference-for-Generalized-Gaussian-Process-Models" target="_blank">Tutorial 1</a>, $m$ and $v$ are dependent on $\boldsymbol{m}$ and $\boldsymbol{V}$. Therefore, they are coupled, that is to say, if you want to compute $\boldsymbol{m}$, you have to know $\boldsymbol{m}$ and $\boldsymbol{V}$. So gradient ascent is a standard approach to solving this problem.
+</p>
