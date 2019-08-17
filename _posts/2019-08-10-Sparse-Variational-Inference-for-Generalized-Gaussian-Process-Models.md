@@ -93,9 +93,12 @@ In the second paper, the authors try to build a connection between fixed-point u
 </p>
 
 <p>
-Recall that for the Gaussian distribution in the form of exponential family,
+Recall that for the Gaussian distribution in the form of exponential family, the natural parameters
 </p>
 
+$$
+\theta=\left[\begin{array}{c}{\frac{\mu}{\sigma_{1}^{2}}} \\ {\frac{1}{2 \sigma^{2}}}\end{array}\right]=\left[\begin{array}{c}{V^{-1} \boldsymbol{m}} \\ {\frac{1}{2} V^{-1}}\end{array}\right]
+$$
 
 $$
 V^{-1} \boldsymbol{m} \leftarrow \Sigma^{-1} \mu+\sum_{i}\left(\rho_{i}+\left(\boldsymbol{m}^{T} d_{i}\right) \gamma_{i}\right) d_{i}
