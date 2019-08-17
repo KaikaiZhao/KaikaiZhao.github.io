@@ -88,3 +88,31 @@ $$
 \|T(V)-T(U)\| \leq L\|V-U\|
 $$
 
+<p>
+In the second paper, the authors try to build a connection between fixed-point update between natural gradients.
+</p>
+
+<p>
+Recall that for the Gaussian distribution in the form of exponential family,
+</p>
+
+
+$$
+V^{-1} \boldsymbol{m} \leftarrow \Sigma^{-1} \mu+\sum_{i}\left(\rho_{i}+\left(\boldsymbol{m}^{T} d_{i}\right) \gamma_{i}\right) d_{i}
+$$
+
+$$
+\frac{1}{2} V^{-1} \leftarrow \frac{1}{2} \Sigma^{-1}+\sum_{i} \frac{1}{2} \gamma_{i} d_{i} d_{i}^{T}
+$$
+
+<p>
+where $\gamma_i=-\lambda_i$, $d_i=K_M^{-1}K_{Mi}$, so we can vectorize the update formula for $\boldsymbol{m}$ as
+</p>
+
+$$
+    \boldsymbol{m}\leftarrow \boldsymbol{V}\boldsymbol{d}(\mathbf{\rho}+\boldsymbol{d}^T\boldsymbol{m}\odot\mathbf{\gamma})
+$$
+
+<p>
+where $\boldsymbol{d}=K_M^{-1}K_{Mx}$.
+</p>
