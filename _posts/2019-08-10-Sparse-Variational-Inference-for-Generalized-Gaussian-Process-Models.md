@@ -100,6 +100,10 @@ $$
 \theta=\left[\begin{array}{c}{\frac{\mu}{\sigma_{1}^{2}}} \\ {\frac{1}{2 \sigma^{2}}}\end{array}\right]=\left[\begin{array}{c}{V^{-1} \boldsymbol{m}} \\ {\frac{1}{2} V^{-1}}\end{array}\right]
 $$
 
+<p>
+Here we omit some derivations which can be found in the appendix of the second paper. And we directly present the fixed-point update for the mean and variance.
+</p>
+
 $$
 V^{-1} \boldsymbol{m} \leftarrow \Sigma^{-1} \mu+\sum_{i}\left(\rho_{i}+\left(\boldsymbol{m}^{T} d_{i}\right) \gamma_{i}\right) d_{i}
 $$
