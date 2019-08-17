@@ -219,11 +219,11 @@ Now we have the VLB handy. Our goal is to optimize variational parameters, so we
 </p>
 
 $$
-\frac{\partial \mathrm{VL} \mathrm{B}}{\partial \boldsymbol{m}}=\frac{\partial VLB}{\partial m_{q_{i}}}\frac{\partial m_{q_{i}}}{\partial m}
+\frac{\partial \mathrm{VL} \mathrm{B}}{\partial \boldsymbol{m}}=\frac{\partial VLB}{\partial m_{q_{i}}}\frac{\partial m_{q_{i}}}{\partial \boldsymbol{m}}
 $$
 
 $$
-\frac{\partial \mathrm{VL} \mathrm{B}}{\partial \boldsymbol{V}}=\frac{\partial VLB}{\partial \sqrt{v_{q_{i}}}}\frac{\partial(\sqrt{v_{q_{i}}})}{\partial V}
+\frac{\partial \mathrm{VL} \mathrm{B}}{\partial \boldsymbol{V}}=\frac{\partial VLB}{\partial \sqrt{v_{q_{i}}}}\frac{\partial(\sqrt{v_{q_{i}}})}{\partial \boldsymbol{V}}
 $$
 
 <p>
