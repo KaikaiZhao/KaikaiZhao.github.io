@@ -17,6 +17,7 @@ In most cases, the kernel function is given by the following formula:
 $$
 k\left(x, x^{\prime}\right)=\sigma_{f}^{2} \exp \left(-\frac{1}{2l^2}\left(x-x^{\prime}\right)^{2}\right)
 $$
+
 <p>
 we can write our hyperparameters together as $\boldsymbol{\theta}=\{l, \sigma_f^2\}$.
 </p>
