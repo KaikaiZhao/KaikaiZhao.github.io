@@ -61,6 +61,7 @@ $$
 +K_{iM}K_{M}^{-1}(\boldsymbol{V}-K_{M})K_{M}^{-1}\frac{\partial  K_{M}}{\partial\boldsymbol{\theta}}K_{M}^{-1} K_{Mi})+K_{iM}K_{M}^{-1}(\boldsymbol{V}-K_{M})K_{M}^{-1}\frac{\partial K_{Mi}}{\partial\boldsymbol{\theta}} )
 \end{aligned}
 $$
+
 <p>
 where the third equality follows from $m(\boldsymbol{x})=\boldsymbol{0}$ and $\boldsymbol{m}_{\mathcal{U}}=\boldsymbol{0}$ and the last equality follows from $\frac{\partial K^{-1}}{\partial \theta}=-K^{-1} \frac{\partial K}{\partial \theta} K^{-1}$. These kernel matrices $K_{iM}$, $K_M$, $K_M^{-1}$, $K_{iM}$ and $K_{ii}$ depend on $\boldsymbol{\theta}$ while $\boldsymbol{m}$ and $\boldsymbol{V}$ do not depend on $\boldsymbol{\theta}$. Hence, we can take $\boldsymbol{m}$ and $\boldsymbol{V}$ as constants when we calculate the gradients of VLB w.r.t $\boldsymbol{\theta}$.
 </p>
@@ -84,6 +85,7 @@ $$
     &=\frac{1}{2} \operatorname{tr}\left( K_M^{-1}\frac{\partial K_M}{\partial \boldsymbol{\theta}} \right) + \frac{1}{2} \operatorname{tr} \left(K_M^{-1}\frac{\partial K_M}{\partial \boldsymbol{\theta}}K_M^{-1} \left((\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}})\left(\boldsymbol{m}-\boldsymbol{m}_{\mathcal{U}}\right)^{\top}+V-K_M\right)-\frac{\partial K_M}{\partial \boldsymbol{\theta}}\right)
     \end{aligned}
 $$
+
 <p>
 where we use the formula $\frac{\partial \log |K|}{\partial \theta}=\operatorname{tr}\left(K^{-1} \frac{\partial K}{\partial \theta}\right)$.
 </p>
@@ -94,6 +96,7 @@ where we use the formula $\frac{\partial \log |K|}{\partial \theta}=\operatornam
 $$
     (\frac{\partial K_M}{\partial l})_{mm^\prime}=\frac{1}{l^3}\cdot k(Z_m,Z_m')(Z_m-Z_m')^2 \qquad \frac{\partial K_M}{\partial l}=\frac{1}{l^3}\cdot S_M\odot K_M
 $$
+
 <p>
 where $k(,)$ denotes the squared exponential kernel function, $S$ is the squared distance matrix and $\odot$ is Hadamard product.
 </p>
