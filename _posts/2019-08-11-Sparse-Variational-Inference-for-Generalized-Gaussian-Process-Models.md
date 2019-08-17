@@ -130,3 +130,7 @@ $$
 $$
 \frac{\partial K_{ii}}{\partial \sigma_f^2}=1 \qquad \frac{\partial K_{ii}}{\partial \gamma}=\frac{\partial K_{ii}}{\partial \sigma_f^2}\frac{\partial \sigma_f^2}{\partial \gamma}=e^{\gamma}
 $$
+
+<p>
+where we optimize $\gamma$ instead of $\sigma_f^2$. After $\gamma$ is obtained, we get $\sigma_f^2$ via $\gamma=\log(\sigma_f^2)$.
+</p>
