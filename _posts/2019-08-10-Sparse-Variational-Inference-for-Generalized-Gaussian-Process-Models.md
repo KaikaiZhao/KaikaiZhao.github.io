@@ -152,6 +152,5 @@ FPi alternates between taking one gradient step for $\boldsymbol{m}$ and one fix
 #### SVI(FPi)
 
 <p>
-The coordinate ascent algorithm is inefficinet for large data sets. The fourth paper borrows the idea of stochastic optimization from <a href="http://www.columbia.edu/~jwp2128/Papers/HoffmanBleiWangPaisley2013.pdf" target="_blank">Stochastic Variational Inference</a>. More specifically, it subsamples the data to form noisy estimates of the natural gradient of the ELBO, and it follows these estimates with a decreasing step-size. 
-FPi alternates between taking one gradient step for $\boldsymbol{m}$ and one fixed point step for $\boldsymbol{V}$
+The coordinate ascent algorithm is inefficinet for large data sets. The fourth paper borrows the idea of stochastic optimization from <a href="http://www.columbia.edu/~jwp2128/Papers/HoffmanBleiWangPaisley2013.pdf" target="_blank">Stochastic Variational Inference</a>. More specifically, it subsamples the data to form noisy estimates of the natural gradient of the ELBO, and it follows these estimates with a decreasing step-size. The update formulae are almost the same to \eqref{nat-Vm} and \eqref{nat-V} and the only difference is that a step size $\rho_t$ is added.
 </p>
