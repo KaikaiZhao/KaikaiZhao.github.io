@@ -134,6 +134,10 @@ $$
 <p>
 where we optimize $\gamma$ instead of $\sigma_f^2$. After $\gamma$ is obtained, we get $\sigma_f^2$ via $\gamma=\log(\sigma_f^2)$.
 </p>
+
+<p>
+We'll explore how to optimize the locations of inducing points in the future. Then if we managed it, we'll complete this blog.
+</p>
 <br>
 <p>
 In the next blog, we'll talk about how to calculate the predictive distribution.
