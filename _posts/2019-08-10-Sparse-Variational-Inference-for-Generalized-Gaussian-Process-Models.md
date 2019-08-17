@@ -105,12 +105,12 @@ Here we omit some derivations which can be found in the appendix of the second p
 </p>
 
 $$
-V^{-1} \boldsymbol{m} \leftarrow \Sigma^{-1} \mu+\sum_{i}\left(\rho_{i}+\left(\boldsymbol{m}^{T} d_{i}\right) \gamma_{i}\right) d_{i}\tag{6}\label{nat-Vm}
+V^{-1} \boldsymbol{m} \leftarrow \Sigma^{-1} \mu+\sum_{i}\left(\rho_{i}+\left(\boldsymbol{m}^{T} d_{i}\right) \gamma_{i}\right) d_{i}\tag{6a}\label{nat-Vm}
 $$
 
 $$
 \frac{1}{2} V^{-1} \leftarrow \frac{1}{2} \Sigma^{-1}+\sum_{i} \frac{1}{2} \gamma_{i} d_{i} d_{i}^{T}
-\tag{6}\label{nat-V}
+\tag{6b}\label{nat-V}
 $$
 
 <p>
@@ -118,7 +118,7 @@ where $\gamma_i=-\lambda_i$, $d_i=K_M^{-1}K_{Mi}$, so we can vectorize the updat
 </p>
 
 $$
-    \boldsymbol{m}\leftarrow \boldsymbol{V}\boldsymbol{d}(\mathbf{\rho}+\boldsymbol{d}^T\boldsymbol{m}\odot\mathbf{\gamma})\tag{6}\label{nat-m}
+    \boldsymbol{m}\leftarrow \boldsymbol{V}\boldsymbol{d}(\mathbf{\rho}+\boldsymbol{d}^T\boldsymbol{m}\odot\mathbf{\gamma})\tag{6c}\label{nat-m}
 $$
 
 <p>
@@ -155,12 +155,16 @@ FPi alternates between taking one gradient step for $\boldsymbol{m}$ and one fix
 The coordinate ascent algorithm is inefficinet for large data sets. The fourth paper borrows the idea of stochastic optimization from <a href="http://www.columbia.edu/~jwp2128/Papers/HoffmanBleiWangPaisley2013.pdf" target="_blank">Stochastic Variational Inference</a>. The update formulae are almost the same to \eqref{nat-Vm} and \eqref{nat-V}. More specifically, it subsamples the data to form noisy estimates of the natural gradient of the ELBO, and it follows these estimates with a decreasing step-size. Besides, another difference is that a step size $\rho_t$ is added.
 </p>
 
-To make the formulae consistent with the preceding FP formulae, we changed the Eq. (24) and (25) a little bit.
+To make the formulae consistent with the preceding FP formulae, we changed the Eq. (24) and (25) in the fourth paper slightly.
 
 $$
-S^{-1} \leftarrow(1-\rho_t) S^{-1}+\rho_t\left(\Sigma^{-1}+ \frac{N}{|\mathcal{M}|} \sum_{i \in \mathcal{M}} \hat{\gamma}_{i} d_{i} d_{i}^{T}\right)
+V^{-1} \leftarrow(1-\rho_t) V^{-1}+\rho_t\left(\Sigma^{-1}+ \frac{N}{|\mathcal{M}|} \sum_{i \in \mathcal{M}} \hat{\gamma}_{i} d_{i} d_{i}^{T}\right)\tag{7a}\label{SVI-V}
 $$
 
 $$
-S^{-1} m \leftarrow(1-\rho_t) S^{-1} m+\rho_t\left(\Sigma^{-1} \mu+\frac{N}{|\mathcal{M}|} \sum_{i \in \mathcal{M}}\left(\hat{\rho}_{i}+\left(m^{T} d_{i}\right) \hat{\gamma}_{i}\right) d_{i}\right)
+V^{-1} m \leftarrow(1-\rho_t) V^{-1} m+\rho_t\left(\Sigma^{-1} \mu+\frac{N}{|\mathcal{M}|} \sum_{i \in \mathcal{M}}\left(\hat{\rho}_{i}+\left(m^{T} d_{i}\right) \hat{\gamma}_{i}\right) d_{i}\right)\tag{7b}\label{SVI-m}
 $$
+
+<p>
+where the last terms of both \eqref{SVI-m} and \eqref{SVI-V} represent a stochastic gradient estimated by sampling a mini-batch $\mathcal{M}$ uniformly at random from a dataset size $N$.
+</p>
