@@ -166,5 +166,9 @@ V^{-1} m \leftarrow(1-\rho_t) V^{-1} m+\rho_t\left(\Sigma^{-1} \mu+\frac{N}{|\ma
 $$
 
 <p>
-where the last terms of both \eqref{SVI-V} and \eqref{SVI-m} represent a stochastic gradient estimated by sampling a mini-batch $\mathcal{M}$ uniformly at random from a dataset size $N$.
+where the last terms of both \eqref{SVI-V} and \eqref{SVI-m} represent a stochastic gradient estimated by sampling a mini-batch $\mathcal{M}$ uniformly at random from a dataset of size $N$.
+</p>
+
+<p>
+In the next blog, we'll talk about how to hyperparameters, i.e. kernel parameters, including the length scale and the vertical scale.
 </p>
