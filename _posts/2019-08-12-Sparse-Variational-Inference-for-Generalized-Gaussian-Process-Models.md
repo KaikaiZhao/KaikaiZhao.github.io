@@ -129,7 +129,7 @@ For the binary classification case, we use sigmoid function $\sigma(f)$ as our l
 
 $$
 \begin{aligned}
-p\left(y_{*}=1 | \mathbf{x}_{*}, \boldsymbol{m}, \boldsymbol{V}\right) &\approx \int \sigma\left(f_{*}\right) p\left(f_{*} | \mathbf{x}_{*}, \boldsymbol{m}, \boldsymbol{V}\right) d f_{*}\\
+p\left(y_{*}=1 | \mathbf{x}_{*}, \boldsymbol{m}, \boldsymbol{V}\right)= \int \sigma\left(f_{*}\right) p\left(f_{*} | \mathbf{x}_{*}, \boldsymbol{m}, \boldsymbol{V}\right) d f_{*}\\
 &\approx\frac{1}{\sqrt{2\pi}} \sum_{j=1}^{n} w_{j}\sigma(\sqrt{v_*} z_j+\mu_*)
 \end{aligned}
 $$
@@ -140,7 +140,7 @@ As the probability of the two classes must sum to $1$, we have $p(y=-1 | \mathbf
 
 $$
 \begin{aligned}
-p\left(y_{*} | \mathbf{x}_{*}, \boldsymbol{m}, \boldsymbol{V}\right) &\approx \int \sigma\left(y_{*}f_{*}\right) p\left(f_{*} | \mathbf{x}_{*}, \boldsymbol{m}, \boldsymbol{V}\right) d f_{*}\\
+p\left(y_{*} | \mathbf{x}_{*}, \boldsymbol{m}, \boldsymbol{V}\right) = \int \sigma\left(y_{*}f_{*}\right) p\left(f_{*} | \mathbf{x}_{*}, \boldsymbol{m}, \boldsymbol{V}\right) d f_{*}\\
 &\approx\frac{1}{\sqrt{2\pi}} \sum_{j=1}^{n} w_{j}\sigma\left(y_{*}(\sqrt{v_*} z_j+\mu_*)\right)
 \end{aligned}
 $$
