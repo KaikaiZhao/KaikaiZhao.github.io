@@ -6,7 +6,7 @@ date: 2019-08-13
 ---
 
 <p>
-In this continued blog, we will talk about the details of implementation and experiments. Our python code is available <a href="" target="_blank">here</a>. It follows the formulas presented in the preceding blogs closely. Besides, it is by no-means optimized, rather, it is supposed to be easy to read and easy to understand. If you have any questions with reading the code, please feel free to email me:zhaokai@iu.edu.
+In this continued blog, we will talk about the details of implementation and experiments. Our python code is available <a href="https://github.com/KaikaiZhao/Sparse-Variational-Inference-for-Generalized-Gaussian-Process-Models---Tutorial" target="_blank">here</a>. It follows the formulas presented in the preceding blogs closely. Besides, it is by no-means optimized, rather, it is supposed to be easy to read and easy to understand. If you have any questions with reading the code, please feel free to email me:zhaokai@iu.edu.
 </p>
 
 ### Experiments
