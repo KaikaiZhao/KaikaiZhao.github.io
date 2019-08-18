@@ -7,3 +7,12 @@ date: 2019-08-13
 <p>
 In this continued blog, we will talk about the details of implementation and experiments.
 </p>
+
+![GD-FP](img/count-p2-segment-se.png)
+
+
+![GD-FP](img/class-SDSVI-VLB-err-musk-500.png)
+
+![GD-FP](img/class-MC-VLB-err-musk-500.png)
+
+![GD-FP](img/class-3SVI-err-musk-500.png)
