@@ -61,7 +61,9 @@ p\left(\boldsymbol{f}_{\star}\right)&=\mathcal{N}\left(\boldsymbol{f}_{\star} | 
 \end{aligned}
 $$
 
+<p>
 where $\mathbf{A}$ denotes $\mathbf{K}_{\star m} \mathbf{K}_{mm}^{-1}$.
+</p>
 
 To get the predictive distribution, we need to calculate the following integral
 
@@ -80,5 +82,7 @@ For the count regression case, if we use Poisson likelihood, here we consider on
 $$\label{Poisson-lik}
     p(y|x_*,f_*)=\frac{1}{y!} e^{-e^{f_*}} e^{f_* y}
 $$
+
+
 
 We need to integrate $f_*$ out, but the  analytical form is not available. So we turn to Gauss–Hermite quadrature. 
