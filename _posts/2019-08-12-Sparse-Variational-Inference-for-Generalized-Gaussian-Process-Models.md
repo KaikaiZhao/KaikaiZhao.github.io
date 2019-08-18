@@ -93,6 +93,30 @@ $$\label{Poisson-lik}
     p(y|x_*,f_*)=\frac{1}{y!} e^{-e^{f_*}} e^{f_* y}
 $$
 
+$$
+p(y|x_*)=\int_{-\infty}^{+\infty} \frac{1}{\sqrt{2 \pi v_*}} \exp \left(-\frac{(f_*-\mu_*)^{2}}{2 v_*}\right) \frac{1}{y!} e^{-e^{f_*}} e^{f_* y} df_*
+$$
+
 <p>
-We need to integrate $f_*$ out, but the  analytical form is not available. So we turn to Gauss–Hermite quadrature. 
+We need to integrate $f_*$ out, but the analytical form is not available. So we turn to Gauss–Hermite quadrature. Firstly, we change variables as follows
 </p>
+
+$$
+z_*=\frac{f_*-\mu_*}{\sqrt{v_*}} \Leftrightarrow f_*=\sqrt{v_*} z_*+\mu_*
+$$
+
+<p>
+we get
+</p>
+
+$$
+p(y|x_*)=\int_{-\infty}^{+\infty} \frac{1}{\sqrt{2\pi}} \exp \left(-\frac{z_*^{2}}{2}\right) \frac{1}{y!} e^{-e^{\sqrt{v_*} z_*+\mu_*}} e^{(\sqrt{v_*} z_*+\mu_*) y} dz_*
+$$
+
+<p>
+leading to
+</p>
+
+$$
+p(y|x_*) \approx \frac{1}{\sqrt{2\pi}} \sum_{j=1}^{n} w_{j}\frac{1}{y!}  \exp\left(-e^{\sqrt{v_*} z_j+\mu_*}+(\sqrt{v_*} z_j+\mu_*) y\right)
+$$
