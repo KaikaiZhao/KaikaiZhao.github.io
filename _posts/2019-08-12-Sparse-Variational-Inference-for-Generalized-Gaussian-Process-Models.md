@@ -14,8 +14,9 @@ In this continued blog, we will talk about how to calculate the predictive distr
 Consider a data vector $\mathbf{y}$, where each entry $y_i$ is a noisy observation of the function $f(\mathbf{x}_i)$, for all the points $\mathbf{X}=\left\{\mathbf{x}_{i}\right\}_{i=1}^{n}$. We consider the noise to be independent Gaussian with variance $\sigma^2$. Introducing a Gaussian process prior over $f(\cdot)$, let the vector $f$ contain values of the function at the points $\mathbf{X}$. We shall also introduce a set of inducing variables: let the vector $\boldsymbol{f_u}$ contain values of the function $f$ at the points $\mathbf{Z}=\left\{\mathbf{z}_{i}\right\}_{i=1}^{m}$ which live in the same space as $\mathbf{X}$. Using the standard Gaussian process methodologies, we can write
 </p>
 
-$$\label{noise}
+$$
 p(\mathbf{y} | \boldsymbol{f})=\mathcal{N}\left(\mathbf{y} | \boldsymbol{f}, \sigma^{2} \mathbf{I}\right)
+\tag{1}\label{noise}
 $$
 
 $$
@@ -54,11 +55,11 @@ $$
 
 After integrating out $\boldsymbol{f_u}$, we get
 
-$$\label{marginal-f_star}
+$$
 \begin{aligned}
 p\left(\boldsymbol{f}_{\star}\right)&=\mathcal{N}\left(\boldsymbol{f}_{\star} | \mathbf{K}_{\star m} \mathbf{K}_{mm}^{-1} \boldsymbol{m}, \mathbf{K}_{\star \star}+\mathbf{K}_{\star m} \mathbf{K}_{mm}^{-1} (\mathbf{V}-\mathbf{K}_{mm})\mathbf{K}_{mm}^{-1} \mathbf{K}_{m\star}\right)\\
 &=\mathcal{N}\left(\boldsymbol{f}_{\star} | \mathbf{A} \boldsymbol{m}, \mathbf{K}_{\star \star}+\mathbf{A} (\boldsymbol{V}-\mathbf{K}_{mm})\mathbf{A}^{\textbf{T}}\right)=\mathcal{N}\left(\boldsymbol{f}_{\star} | \boldsymbol{\mu_*}, \boldsymbol{V_*}\right)
-\end{aligned}
+\end{aligned}\tag{2}\label{marginal-f_star}
 $$
 
 <p>
@@ -67,11 +68,12 @@ where $\mathbf{A}$ denotes $\mathbf{K}_{\star m} \mathbf{K}_{mm}^{-1}$.
 
 To get the predictive distribution, we need to calculate the following integral
 
-$$\label{pred-y}
+$$
     p(y|x_*)=\int p(f_{*} |x_{*},\boldsymbol{m},\boldsymbol{V})p(y|x_*,f_*)df_*
+    \tag{2}\label{pred-y}
 $$
 
-For the standard GP regression, we use the Gaussian likelihood as Eq. \eqref{noise}, combining with Eq. \eqref{marginal-f_star} and Eq. \eqref{pred-y}. 
+For the standard GP regression, we use the Gaussian likelihood as \eqref{noise}, combining with Eq. \eqref{marginal-f_star} and Eq. \eqref{pred-y}. 
 
 $$ \label{pred-y-Gauss}
 p(\boldsymbol{y})=\mathcal{N}\left(\boldsymbol{y} ; \mathbf{A} \boldsymbol{m}, \mathbf{K}_{\star \star}+\mathbf{A} (\boldsymbol{V}-\mathbf{K}_{mm})\mathbf{A}^{\textbf{T}}+\sigma^{2} \mathbf{I}\right)=\mathcal{N}(\boldsymbol{y}; \boldsymbol{\mu_*}, \boldsymbol{V_*}+\sigma^{2} \mathbf{I})
