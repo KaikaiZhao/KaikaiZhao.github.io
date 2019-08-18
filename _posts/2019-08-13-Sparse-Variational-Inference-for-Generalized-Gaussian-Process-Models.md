@@ -9,23 +9,23 @@ In this continued blog, we will talk about the details of implementation and exp
 </p>
 
 <div>
-    <img src="img/d.png" alt="GD-FP"/>
+    <img src="/img/d.png" alt="GD-FP"/>
 </div>
 
 <img src="/img/guides/github-ruby-on-rails.png"/>
 
-<img src="img/d.png"/>
+<img src="/img/d.png"/>
 
-<img src="img/class-MC-VLB-err-musk-500.png"/>
+<img src="/img/class-MC-VLB-err-musk-500.png"/>
 
-<img src="img/class-3SVI-err-musk-500.png"/>
+<img src="/img/class-3SVI-err-musk-500.png"/>
 
-![GD-FP](img/d.png)
+![GD-FP](/img/d.png)
 
 
 
-![GD-SDSVI](img/class-SDSVI-VLB-err-musk-500.png)
+![GD-SDSVI](/img/class-SDSVI-VLB-err-musk-500.png)
 
-![HMC](img/class-MC-VLB-err-musk-500.png)
+![HMC](/img/class-MC-VLB-err-musk-500.png)
 
-![SVI](img/class-3SVI-err-musk-500.png)
+![SVI](/img/class-3SVI-err-musk-500.png)
