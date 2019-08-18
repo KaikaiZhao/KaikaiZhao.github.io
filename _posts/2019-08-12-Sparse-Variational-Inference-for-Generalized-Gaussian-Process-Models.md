@@ -144,3 +144,7 @@ p\left(y_{*} | \mathbf{x}_{*}, \boldsymbol{m}, \boldsymbol{V}\right) &= \int \si
 &\approx\frac{1}{\sqrt{2\pi}} \sum_{j=1}^{n} w_{j}\sigma\left(y_{*}(\sqrt{v_*} z_j+\mu_*)\right)
 \end{aligned}
 $$
+
+<p>
+In the next blog, we'll talk about the details of the implementation and experiments.
+</p>
