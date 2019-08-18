@@ -70,7 +70,7 @@ To get the predictive distribution, we need to calculate the following integral
 
 $$
     p(y|x_*)=\int p(f_{*} |x_{*},\boldsymbol{m},\boldsymbol{V})p(y|x_*,f_*)df_*
-    \tag{2}\label{pred-y}
+    \tag{3}\label{pred-y}
 $$
 
 For the standard GP regression, we use the Gaussian likelihood as \eqref{noise}, combining with Eq. \eqref{marginal-f_star} and Eq. \eqref{pred-y}. 
