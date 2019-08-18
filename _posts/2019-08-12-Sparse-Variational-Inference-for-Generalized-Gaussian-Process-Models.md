@@ -86,7 +86,7 @@ $$
 #### Count Regression
 
 <p>
-For the count regression case, if we use Poisson likelihood, here we consider one test instance
+For the count regression case, we use Poisson likelihood. Here we consider one test instance
 </p>
 
 $$\label{Poisson-lik}
@@ -119,4 +119,28 @@ leading to
 
 $$
 p(y|x_*) \approx \frac{1}{\sqrt{2\pi}} \sum_{j=1}^{n} w_{j}\frac{1}{y!}  \exp\left(-e^{\sqrt{v_*} z_j+\mu_*}+(\sqrt{v_*} z_j+\mu_*) y\right)
+$$
+
+#### Binary Classification
+
+<p>
+For the binary classification case, we use sigmoid function $\sigma(f)$ as our likelihood function. Here we consider one test instance
+</p>
+
+$$
+\begin{aligned}
+p\left(y_{*}=1 | \mathbf{x}_{*}, \boldsymbol{m}, \boldsymbol{V}\right) &\approx \int \sigma\left(f_{*}\right) p\left(f_{*} | \mathbf{x}_{*}, \boldsymbol{m}, \boldsymbol{V}\right) d f_{*}\\
+&\approx\frac{1}{\sqrt{2\pi}} \sum_{j=1}^{n} w_{j}\sigma(\sqrt{v_*} z_j+\mu_*)
+\end{aligned}
+$$
+
+<p>
+As the probability of the two classes must sum to $1$, we have $p(y=-1 | \mathbf{x}, \mathbf{w})=1-p(y=+1 | \mathbf{x}, \mathbf{w})$. Besides, $\sigma(-z)=1-\sigma(z)$. Hence, the above fomula can be written more consicely as
+</p>
+
+$$
+\begin{aligned}
+p\left(y_{*} | \mathbf{x}_{*}, \boldsymbol{m}, \boldsymbol{V}\right) &\approx \int \sigma\left(y_{*}f_{*}\right) p\left(f_{*} | \mathbf{x}_{*}, \boldsymbol{m}, \boldsymbol{V}\right) d f_{*}\\
+&\approx\frac{1}{\sqrt{2\pi}} \sum_{j=1}^{n} w_{j}\sigma\left(y_{*}(\sqrt{v_*} z_j+\mu_*)\right)
+\end{aligned}
 $$
