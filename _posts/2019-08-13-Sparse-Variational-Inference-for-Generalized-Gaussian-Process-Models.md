@@ -9,18 +9,18 @@ In this continued blog, we will talk about the details of implementation and exp
 </p>
 
 <div>
-    <img class="img-responsive" src="https://github.com/KaikaiZhao/KaikaiZhao.github.io/blob/master/img/count-p2-segment-se.png" alt="GD-FP"/>
+    <img src="img/d.png" alt="GD-FP"/>
 </div>
 
 <img src="/img/guides/github-ruby-on-rails.png"/>
 
-<img class="img-responsive" src="img/guides/class-SDSVI-VLB-err-musk-500.png"/>
+<img src="img/d.png"/>
 
 <img src="img/class-MC-VLB-err-musk-500.png"/>
 
 <img src="img/class-3SVI-err-musk-500.png"/>
 
-![GD-FP](img/count-p2-segment-se.png)
+![GD-FP](img/d.png)
 
 
 
