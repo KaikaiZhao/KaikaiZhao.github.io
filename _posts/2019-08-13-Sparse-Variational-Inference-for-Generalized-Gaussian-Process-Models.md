@@ -8,24 +8,14 @@ date: 2019-08-13
 In this continued blog, we will talk about the details of implementation and experiments.
 </p>
 
-<div>
-    <img margin: 40px auto src="/img/d.png" alt="GD-FP"/>
-</div>
 
-<img src="/img/guides/github-ruby-on-rails.png"/>
+<img class="img-responsive" src="/img/count-p2-segment-se.png" alt="GD-FP"/>
 
-<img src="/img/d.png"/>
+<img class="img-responsive" src="/img/class-SDSVI-VLB-err-musk-500.png" alt="GD-SDSVI"/>
 
-<img src="/img/class-MC-VLB-err-musk-500.png"/>
+<img src="/img/count-HMC-VLB-err-epid.png" alt="GD-HMC"/>
 
-<img src="/img/class-3SVI-err-musk-500.png"/>
+<img src="/img/class-MC-VLB-err-musk-500.png" alt="MC"/>
 
-![GD-FP](/img/d.png)
+<img src="/img/class-3SVI-err-musk-500.png" alt="SVI"/>
 
-
-
-![GD-SDSVI](/img/class-SDSVI-VLB-err-musk-500.png)
-
-![HMC](/img/class-MC-VLB-err-musk-500.png)
-
-![SVI](/img/class-3SVI-err-musk-500.png)
