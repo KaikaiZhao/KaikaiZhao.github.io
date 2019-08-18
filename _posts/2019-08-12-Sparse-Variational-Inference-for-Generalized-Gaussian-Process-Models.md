@@ -73,7 +73,9 @@ $$
     \tag{3}\label{pred-y}
 $$
 
-For the standard GP regression, we use the Gaussian likelihood as \eqref{noise}, combining with Eq. \eqref{marginal-f_star} and Eq. \eqref{pred-y}. 
+<p>
+For the standard GP regression, we use the Gaussian likelihood, i.e. \eqref{noise}, combining with Eq. \eqref{marginal-f_star} and Eq. \eqref{pred-y}.
+</p>
 
 $$ \label{pred-y-Gauss}
 p(\boldsymbol{y})=\mathcal{N}\left(\boldsymbol{y} ; \mathbf{A} \boldsymbol{m}, \mathbf{K}_{\star \star}+\mathbf{A} (\boldsymbol{V}-\mathbf{K}_{mm})\mathbf{A}^{\textbf{T}}+\sigma^{2} \mathbf{I}\right)=\mathcal{N}(\boldsymbol{y}; \boldsymbol{\mu_*}, \boldsymbol{V_*}+\sigma^{2} \mathbf{I})
@@ -85,6 +87,6 @@ $$\label{Poisson-lik}
     p(y|x_*,f_*)=\frac{1}{y!} e^{-e^{f_*}} e^{f_* y}
 $$
 
-
-
+<p>
 We need to integrate $f_*$ out, but the  analytical form is not available. So we turn to Gauss–Hermite quadrature. 
+</p>
