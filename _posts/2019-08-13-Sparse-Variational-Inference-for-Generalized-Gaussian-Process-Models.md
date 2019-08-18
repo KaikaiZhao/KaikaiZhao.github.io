@@ -9,7 +9,7 @@ In this continued blog, we will talk about the details of implementation and exp
 </p>
 
 <div>
-    <img src="/img/d.png" alt="GD-FP"/>
+    <img margin: 40px auto src="/img/d.png" alt="GD-FP"/>
 </div>
 
 <img src="/img/guides/github-ruby-on-rails.png"/>
