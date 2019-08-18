@@ -13,9 +13,9 @@ In this continued blog, we will talk about the details of implementation and exp
 
 <img class="img-responsive" src="/img/class-SDSVI-VLB-err-musk-500.png" alt="GD-SDSVI"/>
 
-<img src="/img/count-HMC-VLB-err-epid.png" alt="GD-HMC"/>
+<img class="img-responsive" src="/img/count-HMC-VLB-err-epid.png" alt="GD-HMC"/>
 
-<img src="/img/class-MC-VLB-err-musk-500.png" alt="MC"/>
+<img class="img-responsive" src="/img/class-MC-VLB-err-musk-500.png" alt="MC"/>
 
-<img src="/img/class-3SVI-err-musk-500.png" alt="SVI"/>
+<img class="img-responsive" src="/img/class-3SVI-err-musk-500.png" alt="SVI"/>
 
