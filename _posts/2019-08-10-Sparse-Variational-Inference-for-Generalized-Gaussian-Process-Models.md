@@ -128,7 +128,7 @@ where $\boldsymbol{d}=K_M^{-1}K_{Mx}$.
 ### Optimization Strategies
 
 <p>
-In this section, we talk about four methods to optimize variational parameters, i.e. $\boldsymbol{m}$ and $\boldsymbol{m}$.
+In this section, we talk about four methods to optimize variational parameters, i.e. $\boldsymbol{m}$ and $\boldsymbol{V}$.
 </p>
 
 #### Gradient Descent
