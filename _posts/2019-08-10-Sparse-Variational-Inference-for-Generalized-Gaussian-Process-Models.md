@@ -170,5 +170,5 @@ where the last terms of both \eqref{SVI-V} and \eqref{SVI-m} represent a stochas
 </p>
 
 <p>
-In the next blog, we'll talk about how to hyperparameters, i.e. kernel parameters, including the length scale and the vertical scale.
+In the next blog, we'll talk about how to optimize hyperparameters, i.e. kernel parameters, including the length scale and the vertical scale.
 </p>
