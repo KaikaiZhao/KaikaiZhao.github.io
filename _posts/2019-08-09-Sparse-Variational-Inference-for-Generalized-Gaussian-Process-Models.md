@@ -5,10 +5,10 @@ description: This is a tutorial for this ICML 2015 paper 'Sparse Variational Inf
 date: 2019-08-09
 ---
 
-<p>In Summer 2019 semester I am honored to work with Professor Roni Khardon for my independent study. Thank Lijiang Guo, Weizhe Chen and Yadi Wei for helpful discussions.</p>
+<p>In Summer 2019 semester I was honored to work with Professor Roni Khardon for my independent study. Thank Lijiang Guo, Weizhe Chen and Yadi Wei for helpful discussions.</p>
 
 <p>
-During this past summer I worked on the following papers. I spent some time understanding the algorithms proposed in the papers and implementing some of them. However, due to page limit the derivations in these papers are brief, hence we had to complete the unpublished derivation before implementation. Therefore, we will try to present a full picture of the first paper.
+During this summer I worked on the following papers. I spent some time understanding the algorithms proposed in the papers and implementing some of them. However, due to page limit the derivations in these papers are brief, hence we had to complete the unpublished derivation before implementation. Therefore, we will try to present a full picture of the first paper.
 </p>
 
 <ol>
@@ -19,7 +19,7 @@ During this past summer I worked on the following papers. I spent some time unde
 </ol>
 <!-- , but we will exactly explain the ideas in the fist paper, fixed point method, and the connection between FP method and SVI -->
 <p>
-In this tutorial we cannot cover all the ideas in the above papers. The main topic is sparse variational inference for generalized gaussian process models. To explain this main topic better, we will also include some ideas from other papers where appropriate, such as the fixed point method, SVI and their connection as well.
+In this tutorial we cannot cover all the ideas and details in the above papers. The main topic is sparse variational inference for generalized gaussian process models. To explain this main topic better, we will also include some ideas from other papers where appropriate, such as the fixed point method, SVI and their connection as well.
 </p>
 
 <p>
