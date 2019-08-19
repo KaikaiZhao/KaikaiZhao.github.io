@@ -5,7 +5,7 @@ description: This is a tutorial for this ICML 2015 paper 'Sparse Variational Inf
 date: 2019-08-10
 ---
 <p>
-In this continued blog, we will talk about VLB optimization, including calculating the gradients of the VLB and the fixed point method. Aditionally, we'll talk about a little stochastic variational inference.
+In this continued blog, we will talk about VLB optimization, including calculating the gradients of the VLB and the fixed point method. Aditionally, we'll talk a little about stochastic variational inference.
 </p>
 
 ### Calculating the gradients of the VLB
@@ -67,7 +67,7 @@ $$
 ### Fixed point method
 
 <p>
-First of all, we introduce the description of <b>fixed-point theorem</b>.
+First of all, we introduce the description of <b>fixed-point theorem</b> from <a href="https://en.wikipedia.org/wiki/Fixed-point_iteration" target="_blank">WIKIPEDIA</a>.
 </p>
 
 > If a function $f$ defined on the real line with real values is Lipschitz continuous with Lipschitz constant $L<1$, then this function has precisely one fixed point, and the fixed-point iteration converges towards that fixed point for any initial guess $x_{0}$. This theorem can be generalized to any metric space.
