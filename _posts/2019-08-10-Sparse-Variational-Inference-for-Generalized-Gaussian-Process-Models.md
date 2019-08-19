@@ -101,7 +101,7 @@ $$
 $$
 
 <p>
-Here we omit some derivations which can be found in the appendix of the second paper. And we directly present the fixed-point update for the mean and covariance. Fundamentally, the following two equations use natural gradients to update natural parameters.
+Here we omit some derivations which can be found in the appendix of the second paper. And we directly present the fixed-point update for the mean and the covariance. Fundamentally, the following two equations use natural gradients to update natural parameters.
 </p>
 
 $$
