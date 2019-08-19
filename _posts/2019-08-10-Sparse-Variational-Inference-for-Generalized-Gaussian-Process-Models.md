@@ -134,7 +134,7 @@ In this section, we talk about four methods to optimize variational parameters, 
 #### Gradient Descent
 
 <p>
-The first strategy is to optimize $(\boldsymbol{m},\boldsymbol{V})$ by coordinate ascent across parameters. Specifically, we alternately update $boldsymbol{m}$ and $boldsymbol{V}$ via the corresponding gradients, i.e. \eqref{de-m} and \eqref{de-V}, with an appropriate learning rate. Although our problem is to maximize VLB, we minimize negative VLB in our implementation and hence we call it gradient descent.
+The first strategy is to optimize $(\boldsymbol{m},\boldsymbol{V})$ by coordinate ascent across parameters. Specifically, we alternately update $\boldsymbol{m}$ and $\boldsymbol{V}$ via the corresponding gradients, i.e. \eqref{de-m} and \eqref{de-V}, with an appropriate learning rate. Although our problem is to maximize VLB, we minimize negative VLB in our implementation and hence we call it gradient descent.
 </p>
 
 #### FPbatch(FPb)
