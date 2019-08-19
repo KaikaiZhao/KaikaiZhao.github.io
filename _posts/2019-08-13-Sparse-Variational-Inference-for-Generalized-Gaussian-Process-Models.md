@@ -19,11 +19,27 @@ The first experiment is to compare gradient descent(GD), FPb, FPi, and FPi-mean.
 
 <img class="img-responsive" src="/img/count-p2-segment-se.png" alt="GD-FP"/>
 
+<p>
+The second experiment is to compare GD and S-DSVI. S-DSVI refers to the analogous approach using a structured variational approximation but using standard gradients in the standard parameter space.
+</p>
+
 <img class="img-responsive" src="/img/class-SDSVI-VLB-err-musk-500.png" alt="GD-SDSVI"/>
+
+<p>
+The second experiment is to compare GD and S-DSVI. S-DSVI refers to the analogous approach using a structured variational approximation but using standard gradients in the standard parameter space.
+</p>
 
 <img class="img-responsive" src="/img/count-HMC-VLB-err-epid.png" alt="GD-HMC"/>
 
+<p>
+The second experiment is to compare GD and S-DSVI. S-DSVI refers to the analogous approach using a structured variational approximation but using standard gradients in the standard parameter space.
+</p>
+
 <img class="img-responsive" src="/img/class-MC-VLB-err-musk-500.png" alt="MC"/>
+
+<p>
+The second experiment is to compare GD and S-DSVI. S-DSVI refers to the analogous approach using a structured variational approximation but using standard gradients in the standard parameter space.
+</p>
 
 <img class="img-responsive" src="/img/class-3SVI-err-musk-500.png" alt="SVI"/>
 
