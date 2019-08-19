@@ -140,13 +140,13 @@ The first strategy is to optimize $(\boldsymbol{m},\boldsymbol{V})$ by coordinat
 #### FPbatch(FPb)
 
 <p>
-FPb takes gradient steps for $\boldsymbol{m}$ until there is no change in VLB or it takes FP update for $\boldsymbol{V}$ until no change in VLB as well. FP update means updating $\boldsymbol{V}$ via \eqref{L}.
+FPb takes gradient steps for $\boldsymbol{m}$ until there is no change in VLB or it takes FP update for $\boldsymbol{V}$ until no change in VLB as well. FP update means updating $\boldsymbol{V}$ via \eqref{fp-V}.
 </p>
 
 #### FPincremental(FPi)
 
 <p>
-FPi alternates between taking one gradient step for $\boldsymbol{m}$ and one fixed point step for $\boldsymbol{V}$.
+FPi alternates between taking one gradient step for $\boldsymbol{m}$ and one fixed point step for $\boldsymbol{V}$ until no change in VLB.
 </p>
 
 #### SVI
