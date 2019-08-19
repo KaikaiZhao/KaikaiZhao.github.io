@@ -11,7 +11,7 @@ In this continued blog, we will talk about the details of implementation and exp
 
 ### Experiments
 
-We will present five sets of experimental results. Our code is written from scratch, except that we use <a href="https://sheffieldml.github.io/GPy/" target="_blank">GPy</a> to initialize kernel hyperparameters with Laplace approximation.
+We will present five sets of experimental results. Our code is written from scratch, except that we use <a href="https://sheffieldml.github.io/GPy/" target="_blank">GPy</a> to initialize kernel hyperparameters with Laplace approximation. In the following figures, if you are interested in the SVI related approaches, please refer to the fourth paper.
 
 <p>
 The first experiment is to compare gradient descent(GD), FPb, FPi, and FPi-mean. FPi-mean denotes FPi with fixed-point update for the mean. As can be seen from the following figure, the performance of the FPi-mean method outperforms other methods but its drawback is instability, which has been mentioned in the second paper.
@@ -26,19 +26,19 @@ The second experiment is to compare GD and S-DSVI. S-DSVI refers to the analogou
 <img class="img-responsive" src="/img/class-SDSVI-VLB-err-musk-500.png" alt="GD-SDSVI"/>
 
 <p>
-The second experiment is to compare GD and S-DSVI. S-DSVI refers to the analogous approach using a structured variational approximation but using standard gradients in the standard parameter space.
+The third experiment is to compare FPi and H-MC-SSVI. H-MC-SSVI refers to the approach combining natural gradients for the covariance with standard gradients on the mean.
 </p>
 
 <img class="img-responsive" src="/img/count-HMC-VLB-err-epid.png" alt="GD-HMC"/>
 
 <p>
-The second experiment is to compare GD and S-DSVI. S-DSVI refers to the analogous approach using a structured variational approximation but using standard gradients in the standard parameter space.
+The fourth experiment is to compare FPi-mean and MC-SSVI. MC-SSVI refers to Monte Carlo Structured SVI using natural gradients for both the mean and the covariance.
 </p>
 
 <img class="img-responsive" src="/img/class-MC-VLB-err-musk-500.png" alt="MC"/>
 
 <p>
-The second experiment is to compare GD and S-DSVI. S-DSVI refers to the analogous approach using a structured variational approximation but using standard gradients in the standard parameter space.
+The fifth experiment is to compare three SVI methods: S-DSVI, H-MC-SSVI and MC-SSVI. For this experiment, it seems to me that the result does not make sense. Specifically, the performance of MC-SSVI is supposed to be better than MC-SSVI, but the following figure does not indicate that.
 </p>
 
 <img class="img-responsive" src="/img/class-3SVI-err-musk-500.png" alt="SVI"/>
