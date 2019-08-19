@@ -8,7 +8,7 @@ date: 2019-08-09
 <p>In Summer 2019 semester I was honored to work with Professor Roni Khardon for my independent study. Thank Lijiang Guo, Weizhe Chen and Yadi Wei for helpful discussions.</p>
 
 <p>
-During this summer I worked on the following papers. I spent some time understanding the algorithms proposed in the papers and implementing some of them. However, due to page limit the derivations in these papers are brief, hence we had to complete the unpublished derivation before implementation. Therefore, we will try to present a full picture of the first paper.
+During this summer I worked on the following papers. I spent some time understanding the algorithms proposed in the papers and implementing some of them. However, due to page limit the derivations in these papers are brief, hence we had to complete the unpublished derivation by ourselves. Therefore, we will try to present a full picture of the first paper.
 </p>
 
 <ol>
