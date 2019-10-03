@@ -32,7 +32,7 @@ The third experiment is to compare FPi and H-MC-SSVI. H-MC-SSVI refers to the ap
 <img class="img-responsive" src="/img/count-HMC-VLB-err-epid.png" alt="GD-HMC"/>
 
 <p>
-The fourth experiment is to compare FPi-mean and MC-SSVI. MC-SSVI refers to Monte Carlo Structured SVI using natural gradients for both the mean and the covariance. For this experiment, it seems to me that the result does not make sense. Specifically, the performance of MC-SSVI is supposed to be better than MC-SSVI, but the following figure does not indicate that.
+The fourth experiment is to compare FPi-mean and MC-SSVI. MC-SSVI refers to Monte Carlo Structured SVI using natural gradients for both the mean and the covariance. For this experiment, it seems to me that the result does not make sense. Specifically, the performance of MC-SSVI is supposed to be better than MC-SSVI, but the following figure does not indicate that. Note that we need to update the covariance first and then update mean.
 </p>
 
 <img class="img-responsive" src="/img/class-MC-VLB-err-musk-500.png" alt="MC"/>
